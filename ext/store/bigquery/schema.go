@@ -1,11 +1,5 @@
 package bigquery
 
-import (
-	"strings"
-
-	"github.com/raystack/optimus/internal/errors"
-)
-
 const (
 	ModeNullable = "nullable"
 	ModeRequired = "required"
@@ -23,15 +17,7 @@ const (
 
 type Schema []Field
 
-func (s Schema) Validate() error {
-	for _, f := range s {
-		err := f.Validate()
-		if err != nil {
-			return err
-		}
-	}
-	return nil
-}
+func (s Schema) Validate() error { _ = "STUB: not implemented"; return nil }
 
 type Field struct {
 	Name        string `mapstructure:"name,omitempty"`
@@ -43,22 +29,7 @@ type Field struct {
 	Schema Schema `mapstructure:"schema,omitempty"`
 }
 
-func (f Field) Validate() error { // nolint:gocritic
-	if strings.TrimSpace(f.Name) == "" {
-		return errors.InvalidArgument(EntityResourceSchema, "field name is empty")
-	}
-	if strings.TrimSpace(f.Type) == "" {
-		return errors.InvalidArgument(EntityResourceSchema, "field type is empty for "+f.Name)
-	}
-	modeLower := strings.ToLower(f.Mode)
-	if modeLower != "" && modeLower != ModeNullable && modeLower != ModeRepeated && modeLower != ModeRequired {
-		return errors.InvalidArgument(EntityResourceSchema, "unknown field mode "+modeLower+" for "+f.Name)
-	}
-	if f.Schema != nil {
-		err := f.Schema.Validate()
-		if err != nil {
-			return err
-		}
-	}
+func (f Field) Validate() error {
+	_ = "STUB: not implemented" // nolint:gocritic
 	return nil
 }

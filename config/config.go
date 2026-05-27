@@ -1,10 +1,5 @@
 package config
 
-import (
-	"fmt"
-	"strconv"
-)
-
 type Optimus struct {
 	// configuration version
 	Version int `mapstructure:"version"`
@@ -23,18 +18,8 @@ type Optimus struct {
 }
 
 func (o *Optimus) GetNamespaceByName(name string) (*Namespace, error) {
-	if o.namespaceNameToNamespace == nil {
-		o.namespaceNameToNamespace = make(map[string]*Namespace)
-		for _, namespace := range o.Namespaces {
-			o.namespaceNameToNamespace[namespace.Name] = namespace
-		}
-	}
-	if o.namespaceNameToNamespace[name] == nil {
-		return nil, fmt.Errorf("namespace [%s] is not found", name)
-	}
-	return o.namespaceNameToNamespace[name], nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (o *Optimus) GetVersion() string {
-	return strconv.Itoa(o.Version)
-}
+func (o *Optimus) GetVersion() string { _ = "STUB: not implemented"; return "" }

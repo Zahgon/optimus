@@ -11,9 +11,8 @@ type ProjectService struct {
 }
 
 func NewProjectService(projectRepo ProjectRepository) *ProjectService {
-	return &ProjectService{
-		projectRepo: projectRepo,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type ProjectRepository interface {
@@ -23,13 +22,16 @@ type ProjectRepository interface {
 }
 
 func (s ProjectService) Save(ctx context.Context, project *tenant.Project) error {
-	return s.projectRepo.Save(ctx, project)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (s ProjectService) Get(ctx context.Context, name tenant.ProjectName) (*tenant.Project, error) {
-	return s.projectRepo.GetByName(ctx, name)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (s ProjectService) GetAll(ctx context.Context) ([]*tenant.Project, error) {
-	return s.projectRepo.GetAll(ctx)
+	_ = "STUB: not implemented"
+	return nil, nil
 }

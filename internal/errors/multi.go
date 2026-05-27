@@ -1,51 +1,18 @@
 package errors
 
-import "errors"
-
 type MultiError struct {
 	msg    string
 	Errors []error
 }
 
-func NewMultiError(msg string) *MultiError {
-	return &MultiError{
-		msg: msg,
-	}
-}
+func NewMultiError(msg string) *MultiError { _ = "STUB: not implemented"; return nil }
 
-func (m *MultiError) Append(err error) {
-	if err == nil {
-		return
-	}
+func (m *MultiError) Append(err error) { _ = "STUB: not implemented"; return }
 
-	var me *MultiError
-	if errors.As(err, &me) { // Flatten the multi error
-		m.Errors = append(m.Errors, me.Errors...)
-		return
-	}
+// Flatten the multi error
 
-	m.Errors = append(m.Errors, err)
-}
+func (m *MultiError) Error() string { _ = "STUB: not implemented"; return "" }
 
-func (m *MultiError) Error() string {
-	errStr := m.msg
-	for _, err := range m.Errors {
-		errStr = errStr + ":\n " + err.Error()
-	}
-	return errStr
-}
+func MultiToError(e error) error { _ = "STUB: not implemented"; return nil }
 
-func MultiToError(e error) error {
-	var me *MultiError
-	if errors.As(e, &me) {
-		return me.ToErr()
-	}
-	return e
-}
-
-func (m *MultiError) ToErr() error {
-	if len(m.Errors) == 0 {
-		return nil
-	}
-	return m
-}
+func (m *MultiError) ToErr() error { _ = "STUB: not implemented"; return nil }

@@ -9,13 +9,11 @@ type deployResourceSpecificationResponseWriter struct {
 }
 
 func NewDeployResourceSpecificationResponseWriter(stream pb.ResourceService_DeployResourceSpecificationServer) LogWriter {
-	return &deployResourceSpecificationResponseWriter{stream: stream}
+	_ = "STUB: not implemented"
+	return *new(LogWriter)
 }
 
 func (l *deployResourceSpecificationResponseWriter) Write(level LogLevel, message string) error {
-	logStatus := newLogStatusProto(level, message)
-	resp := pb.DeployResourceSpecificationResponse{
-		LogStatus: logStatus,
-	}
-	return l.stream.Send(&resp)
+	_ = "STUB: not implemented"
+	return nil
 }

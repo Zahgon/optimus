@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -32,34 +31,23 @@ type backupServiceClient struct {
 }
 
 func NewBackupServiceClient(cc grpc.ClientConnInterface) BackupServiceClient {
-	return &backupServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(BackupServiceClient)
 }
 
 func (c *backupServiceClient) CreateBackup(ctx context.Context, in *CreateBackupRequest, opts ...grpc.CallOption) (*CreateBackupResponse, error) {
-	out := new(CreateBackupResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.BackupService/CreateBackup", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *backupServiceClient) ListBackups(ctx context.Context, in *ListBackupsRequest, opts ...grpc.CallOption) (*ListBackupsResponse, error) {
-	out := new(ListBackupsResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.BackupService/ListBackups", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *backupServiceClient) GetBackup(ctx context.Context, in *GetBackupRequest, opts ...grpc.CallOption) (*GetBackupResponse, error) {
-	out := new(GetBackupResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.BackupService/GetBackup", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BackupServiceServer is the server API for BackupService service.
@@ -77,79 +65,51 @@ type UnimplementedBackupServiceServer struct {
 }
 
 func (UnimplementedBackupServiceServer) CreateBackup(context.Context, *CreateBackupRequest) (*CreateBackupResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateBackup not implemented")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
-func (UnimplementedBackupServiceServer) ListBackups(context.Context, *ListBackupsRequest) (*ListBackupsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListBackups not implemented")
-}
-func (UnimplementedBackupServiceServer) GetBackup(context.Context, *GetBackupRequest) (*GetBackupResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetBackup not implemented")
-}
-func (UnimplementedBackupServiceServer) mustEmbedUnimplementedBackupServiceServer() {}
 
-// UnsafeBackupServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to BackupServiceServer will
-// result in compilation errors.
+func (UnimplementedBackupServiceServer) ListBackups(context.Context, *ListBackupsRequest) (*ListBackupsResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedBackupServiceServer) GetBackup(context.Context, *GetBackupRequest) (*GetBackupResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedBackupServiceServer) mustEmbedUnimplementedBackupServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeBackupServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to BackupServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeBackupServiceServer interface {
 	mustEmbedUnimplementedBackupServiceServer()
 }
 
 func RegisterBackupServiceServer(s grpc.ServiceRegistrar, srv BackupServiceServer) {
-	s.RegisterService(&BackupService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _BackupService_CreateBackup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CreateBackupRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(BackupServiceServer).CreateBackup(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.BackupService/CreateBackup",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BackupServiceServer).CreateBackup(ctx, req.(*CreateBackupRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _BackupService_ListBackups_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ListBackupsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(BackupServiceServer).ListBackups(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.BackupService/ListBackups",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BackupServiceServer).ListBackups(ctx, req.(*ListBackupsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _BackupService_GetBackup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetBackupRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(BackupServiceServer).GetBackup(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.BackupService/GetBackup",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BackupServiceServer).GetBackup(ctx, req.(*GetBackupRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // BackupService_ServiceDesc is the grpc.ServiceDesc for BackupService service.

@@ -7,13 +7,13 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -31,44 +31,21 @@ type ListReplayRequest struct {
 	ProjectName string `protobuf:"bytes,1,opt,name=project_name,json=projectName,proto3" json:"project_name,omitempty"`
 }
 
-func (x *ListReplayRequest) Reset() {
-	*x = ListReplayRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListReplayRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListReplayRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListReplayRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListReplayRequest) ProtoMessage() {}
+func (*ListReplayRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListReplayRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListReplayRequest.ProtoReflect.Descriptor instead.
-func (*ListReplayRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{0}
-}
+func (*ListReplayRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ListReplayRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ListReplayRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 type ListReplayResponse struct {
 	state         protoimpl.MessageState
@@ -78,42 +55,22 @@ type ListReplayResponse struct {
 	Replays []*GetReplayResponse `protobuf:"bytes,1,rep,name=replays,proto3" json:"replays,omitempty"`
 }
 
-func (x *ListReplayResponse) Reset() {
-	*x = ListReplayResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListReplayResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListReplayResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListReplayResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListReplayResponse) ProtoMessage() {}
+func (*ListReplayResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListReplayResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListReplayResponse.ProtoReflect.Descriptor instead.
-func (*ListReplayResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{1}
-}
+func (*ListReplayResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 func (x *ListReplayResponse) GetReplays() []*GetReplayResponse {
-	if x != nil {
-		return x.Replays
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -126,51 +83,23 @@ type GetReplayRequest struct {
 	ProjectName string `protobuf:"bytes,2,opt,name=project_name,json=projectName,proto3" json:"project_name,omitempty"`
 }
 
-func (x *GetReplayRequest) Reset() {
-	*x = GetReplayRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetReplayRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetReplayRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetReplayRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetReplayRequest) ProtoMessage() {}
+func (*GetReplayRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetReplayRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetReplayRequest.ProtoReflect.Descriptor instead.
-func (*GetReplayRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{2}
-}
+func (*GetReplayRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetReplayRequest) GetReplayId() string {
-	if x != nil {
-		return x.ReplayId
-	}
-	return ""
-}
+func (x *GetReplayRequest) GetReplayId() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetReplayRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetReplayRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 type GetReplayResponse struct {
 	state         protoimpl.MessageState
@@ -184,72 +113,29 @@ type GetReplayResponse struct {
 	ReplayRuns   []*ReplayRun  `protobuf:"bytes,5,rep,name=replay_runs,json=replayRuns,proto3" json:"replay_runs,omitempty"`
 }
 
-func (x *GetReplayResponse) Reset() {
-	*x = GetReplayResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetReplayResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetReplayResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetReplayResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetReplayResponse) ProtoMessage() {}
+func (*GetReplayResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetReplayResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetReplayResponse.ProtoReflect.Descriptor instead.
-func (*GetReplayResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{3}
-}
+func (*GetReplayResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetReplayResponse) GetId() string {
-	if x != nil {
-		return x.Id
-	}
-	return ""
-}
+func (x *GetReplayResponse) GetId() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetReplayResponse) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *GetReplayResponse) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetReplayResponse) GetStatus() string {
-	if x != nil {
-		return x.Status
-	}
-	return ""
-}
+func (x *GetReplayResponse) GetStatus() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetReplayResponse) GetReplayConfig() *ReplayConfig {
-	if x != nil {
-		return x.ReplayConfig
-	}
-	return nil
-}
+func (x *GetReplayResponse) GetReplayConfig() *ReplayConfig { _ = "STUB: not implemented"; return nil }
 
-func (x *GetReplayResponse) GetReplayRuns() []*ReplayRun {
-	if x != nil {
-		return x.ReplayRuns
-	}
-	return nil
-}
+func (x *GetReplayResponse) GetReplayRuns() []*ReplayRun { _ = "STUB: not implemented"; return nil }
 
 type ReplayConfig struct {
 	state         protoimpl.MessageState
@@ -263,72 +149,29 @@ type ReplayConfig struct {
 	Description string                 `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
 }
 
-func (x *ReplayConfig) Reset() {
-	*x = ReplayConfig{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayConfig) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayConfig) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayConfig) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayConfig) ProtoMessage() {}
+func (*ReplayConfig) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayConfig.ProtoReflect.Descriptor instead.
-func (*ReplayConfig) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{4}
-}
+func (*ReplayConfig) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ReplayConfig) GetStartTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.StartTime
-	}
-	return nil
-}
+func (x *ReplayConfig) GetStartTime() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
-func (x *ReplayConfig) GetEndTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.EndTime
-	}
-	return nil
-}
+func (x *ReplayConfig) GetEndTime() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
-func (x *ReplayConfig) GetParallel() bool {
-	if x != nil {
-		return x.Parallel
-	}
-	return false
-}
+func (x *ReplayConfig) GetParallel() bool { _ = "STUB: not implemented"; return false }
 
-func (x *ReplayConfig) GetJobConfig() map[string]string {
-	if x != nil {
-		return x.JobConfig
-	}
-	return nil
-}
+func (x *ReplayConfig) GetJobConfig() map[string]string { _ = "STUB: not implemented"; return nil }
 
-func (x *ReplayConfig) GetDescription() string {
-	if x != nil {
-		return x.Description
-	}
-	return ""
-}
+func (x *ReplayConfig) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
 type ReplayRun struct {
 	state         protoimpl.MessageState
@@ -339,51 +182,23 @@ type ReplayRun struct {
 	Status      string                 `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
 }
 
-func (x *ReplayRun) Reset() {
-	*x = ReplayRun{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayRun) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayRun) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayRun) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayRun) ProtoMessage() {}
+func (*ReplayRun) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayRun) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayRun.ProtoReflect.Descriptor instead.
-func (*ReplayRun) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{5}
-}
+func (*ReplayRun) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ReplayRun) GetScheduledAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ScheduledAt
-	}
-	return nil
-}
+func (x *ReplayRun) GetScheduledAt() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
-func (x *ReplayRun) GetStatus() string {
-	if x != nil {
-		return x.Status
-	}
-	return ""
-}
+func (x *ReplayRun) GetStatus() string { _ = "STUB: not implemented"; return "" }
 
 type ReplayDryRunResponse struct {
 	state         protoimpl.MessageState
@@ -393,44 +208,24 @@ type ReplayDryRunResponse struct {
 	ReplayRuns []*ReplayRun `protobuf:"bytes,1,rep,name=replay_runs,json=replayRuns,proto3" json:"replay_runs,omitempty"`
 }
 
-func (x *ReplayDryRunResponse) Reset() {
-	*x = ReplayDryRunResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayDryRunResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayDryRunResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayDryRunResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayDryRunResponse) ProtoMessage() {}
+func (*ReplayDryRunResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayDryRunResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayDryRunResponse.ProtoReflect.Descriptor instead.
 func (*ReplayDryRunResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{6}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ReplayDryRunResponse) GetReplayRuns() []*ReplayRun {
-	if x != nil {
-		return x.ReplayRuns
-	}
-	return nil
-}
+func (x *ReplayDryRunResponse) GetReplayRuns() []*ReplayRun { _ = "STUB: not implemented"; return nil }
 
 type ReplayRequest struct {
 	state         protoimpl.MessageState
@@ -447,93 +242,38 @@ type ReplayRequest struct {
 	JobConfig     string                 `protobuf:"bytes,8,opt,name=job_config,json=jobConfig,proto3" json:"job_config,omitempty"`
 }
 
-func (x *ReplayRequest) Reset() {
-	*x = ReplayRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayRequest) ProtoMessage() {}
+func (*ReplayRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayRequest.ProtoReflect.Descriptor instead.
-func (*ReplayRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{7}
-}
+func (*ReplayRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ReplayRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ReplayRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *ReplayRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *ReplayRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ReplayRequest) GetStartTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.StartTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *ReplayRequest) GetEndTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.EndTime
-	}
-	return nil
-}
+func (x *ReplayRequest) GetEndTime() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
-func (x *ReplayRequest) GetParallel() bool {
-	if x != nil {
-		return x.Parallel
-	}
-	return false
-}
+func (x *ReplayRequest) GetParallel() bool { _ = "STUB: not implemented"; return false }
 
-func (x *ReplayRequest) GetDescription() string {
-	if x != nil {
-		return x.Description
-	}
-	return ""
-}
+func (x *ReplayRequest) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayRequest) GetJobConfig() string {
-	if x != nil {
-		return x.JobConfig
-	}
-	return ""
-}
+func (x *ReplayRequest) GetJobConfig() string { _ = "STUB: not implemented"; return "" }
 
 type ReplayDryRunRequest struct {
 	state         protoimpl.MessageState
@@ -550,93 +290,44 @@ type ReplayDryRunRequest struct {
 	JobConfig     string                 `protobuf:"bytes,8,opt,name=job_config,json=jobConfig,proto3" json:"job_config,omitempty"`
 }
 
-func (x *ReplayDryRunRequest) Reset() {
-	*x = ReplayDryRunRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayDryRunRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayDryRunRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayDryRunRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayDryRunRequest) ProtoMessage() {}
+func (*ReplayDryRunRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayDryRunRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayDryRunRequest.ProtoReflect.Descriptor instead.
 func (*ReplayDryRunRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{8}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ReplayDryRunRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ReplayDryRunRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayDryRunRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *ReplayDryRunRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayDryRunRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *ReplayDryRunRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ReplayDryRunRequest) GetStartTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.StartTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *ReplayDryRunRequest) GetEndTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.EndTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *ReplayDryRunRequest) GetParallel() bool {
-	if x != nil {
-		return x.Parallel
-	}
-	return false
-}
+func (x *ReplayDryRunRequest) GetParallel() bool { _ = "STUB: not implemented"; return false }
 
-func (x *ReplayDryRunRequest) GetDescription() string {
-	if x != nil {
-		return x.Description
-	}
-	return ""
-}
+func (x *ReplayDryRunRequest) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReplayDryRunRequest) GetJobConfig() string {
-	if x != nil {
-		return x.JobConfig
-	}
-	return ""
-}
+func (x *ReplayDryRunRequest) GetJobConfig() string { _ = "STUB: not implemented"; return "" }
 
 type ReplayResponse struct {
 	state         protoimpl.MessageState
@@ -646,44 +337,21 @@ type ReplayResponse struct {
 	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 }
 
-func (x *ReplayResponse) Reset() {
-	*x = ReplayResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplayResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplayResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplayResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplayResponse) ProtoMessage() {}
+func (*ReplayResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplayResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplayResponse.ProtoReflect.Descriptor instead.
-func (*ReplayResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP(), []int{9}
-}
+func (*ReplayResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ReplayResponse) GetId() string {
-	if x != nil {
-		return x.Id
-	}
-	return ""
-}
+func (x *ReplayResponse) GetId() string { _ = "STUB: not implemented"; return "" }
 
 var File_raystack_optimus_core_v1beta1_replay_proto protoreflect.FileDescriptor
 
@@ -872,10 +540,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_replay_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_replay_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_replay_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_replay_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_replay_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_replay_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
@@ -921,149 +587,5 @@ var file_raystack_optimus_core_v1beta1_replay_proto_depIdxs = []int32{
 	0,  // [0:12] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_replay_proto_init() }
-func file_raystack_optimus_core_v1beta1_replay_proto_init() {
-	if File_raystack_optimus_core_v1beta1_replay_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListReplayRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListReplayResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetReplayRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetReplayResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayConfig); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayRun); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayDryRunResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayDryRunRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_replay_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplayResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_replay_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   11,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_replay_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_replay_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_replay_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_replay_proto = out.File
-	file_raystack_optimus_core_v1beta1_replay_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_replay_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_replay_proto_depIdxs = nil
-}
+func init()                                                 { file_raystack_optimus_core_v1beta1_replay_proto_init() }
+func file_raystack_optimus_core_v1beta1_replay_proto_init() { _ = "STUB: not implemented"; return }

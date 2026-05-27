@@ -1,39 +1,17 @@
 package dag
 
 import (
-	"strings"
 	"text/template"
 )
 
-func OptimusFuncMap() template.FuncMap {
-	return map[string]any{
-		"replace":     Replace,
-		"quote":       Quote,
-		"trunc":       Trunc,
-		"ReplaceDash": ReplaceDash,
-		"DisplayName": DisplayName,
-	}
-}
+func OptimusFuncMap() template.FuncMap { _ = "STUB: not implemented"; return *new(template.FuncMap) }
 
-func ReplaceDash(name string) string {
-	return strings.ReplaceAll(name, "-", "__dash__")
-}
+func ReplaceDash(name string) string { _ = "STUB: not implemented"; return "" }
 
-func DisplayName(name string) string {
-	return strings.ReplaceAll(ReplaceDash(name), ".", "__dot__")
-}
+func DisplayName(name string) string { _ = "STUB: not implemented"; return "" }
 
-func Replace(old, newStr, name string) string {
-	return strings.ReplaceAll(name, old, newStr)
-}
+func Replace(old, newStr, name string) string { _ = "STUB: not implemented"; return "" }
 
-func Quote(str string) string {
-	return `"` + str + `"`
-}
+func Quote(str string) string { _ = "STUB: not implemented"; return "" }
 
-func Trunc(c int, s string) string {
-	if c >= 0 && len(s) > c {
-		return s[:c]
-	}
-	return s
-}
+func Trunc(c int, s string) string { _ = "STUB: not implemented"; return "" }

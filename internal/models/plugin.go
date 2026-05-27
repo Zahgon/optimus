@@ -1,10 +1,7 @@
 package models
 
 import (
-	"context"
 	"errors"
-	"fmt"
-	"sort"
 
 	"github.com/raystack/optimus/sdk/plugin"
 )
@@ -17,90 +14,40 @@ type PluginRepository struct {
 }
 
 func (s *PluginRepository) lazySortPluginKeys() {
+	_ = "STUB: not implemented"
 	// already sorted
-	if len(s.data) == 0 || len(s.sortedKeys) > 0 {
-		return
-	}
-
-	for k := range s.data {
-		s.sortedKeys = append(s.sortedKeys, k)
-	}
-	sort.Strings(s.sortedKeys)
+	return
 }
 
 func (s *PluginRepository) GetByName(name string) (*plugin.Plugin, error) {
-	if unit, ok := s.data[name]; ok {
-		return unit, nil
-	}
-	return nil, fmt.Errorf("%s: %w", name, ErrUnsupportedPlugin)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (s *PluginRepository) GetAll() []*plugin.Plugin {
-	var list []*plugin.Plugin
-	s.lazySortPluginKeys() // sorts keys if not sorted
-	for _, pluginName := range s.sortedKeys {
-		list = append(list, s.data[pluginName])
-	}
-	return list
-}
+func (s *PluginRepository) GetAll() []*plugin.Plugin { _ = "STUB: not implemented"; return nil }
 
-func (s *PluginRepository) GetTasks() []*plugin.Plugin {
-	var list []*plugin.Plugin
-	s.lazySortPluginKeys() // sorts keys if not sorted
-	for _, pluginName := range s.sortedKeys {
-		unit := s.data[pluginName]
-		if unit.Info().PluginType == plugin.TypeTask {
-			list = append(list, unit)
-		}
-	}
-	return list
-}
+// sorts keys if not sorted
 
-func (s *PluginRepository) GetHooks() []*plugin.Plugin {
-	var list []*plugin.Plugin
-	s.lazySortPluginKeys()
-	for _, pluginName := range s.sortedKeys {
-		unit := s.data[pluginName]
-		if unit.Info().PluginType == plugin.TypeHook {
-			list = append(list, unit)
-		}
-	}
-	return list
-}
+func (s *PluginRepository) GetTasks() []*plugin.Plugin { _ = "STUB: not implemented"; return nil }
+
+// sorts keys if not sorted
+
+func (s *PluginRepository) GetHooks() []*plugin.Plugin { _ = "STUB: not implemented"; return nil }
 
 func (s *PluginRepository) AddYaml(yamlMod plugin.YamlMod) error {
-	info := yamlMod.PluginInfo()
-	if err := info.Validate(); err != nil {
-		return err
-	}
-
-	if _, ok := s.data[info.Name]; ok {
-		// duplicated yaml plugin
-		return fmt.Errorf("plugin name already in use %s", info.Name)
-	}
-
-	s.data[info.Name] = &plugin.Plugin{YamlMod: yamlMod}
+	_ = "STUB: not implemented"
 	return nil
 }
+
+// duplicated yaml plugin
 
 func (s *PluginRepository) AddBinary(drMod plugin.DependencyResolverMod) error {
-	name, err := drMod.GetName(context.Background())
-	if err != nil {
-		return err
-	}
-
-	if plugin, ok := s.data[name]; !ok || plugin.YamlMod == nil {
-		// any binary plugin should have its yaml version (for the plugin information)
-		return fmt.Errorf("please provide yaml version of the plugin %s", name)
-	} else if s.data[name].DependencyMod != nil {
-		// duplicated binary plugin
-		return fmt.Errorf("plugin name already in use %s", name)
-	}
-
-	s.data[name].DependencyMod = drMod
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func NewPluginRepository() *PluginRepository {
-	return &PluginRepository{data: map[string]*plugin.Plugin{}}
-}
+// any binary plugin should have its yaml version (for the plugin information)
+
+// duplicated binary plugin
+
+func NewPluginRepository() *PluginRepository { _ = "STUB: not implemented"; return nil }

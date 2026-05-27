@@ -7,12 +7,12 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -30,42 +30,25 @@ type RegisterProjectRequest struct {
 	Project *ProjectSpecification `protobuf:"bytes,1,opt,name=project,proto3" json:"project,omitempty"`
 }
 
-func (x *RegisterProjectRequest) Reset() {
-	*x = RegisterProjectRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterProjectRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterProjectRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterProjectRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterProjectRequest) ProtoMessage() {}
+func (*RegisterProjectRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterProjectRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterProjectRequest.ProtoReflect.Descriptor instead.
 func (*RegisterProjectRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *RegisterProjectRequest) GetProject() *ProjectSpecification {
-	if x != nil {
-		return x.Project
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -78,51 +61,26 @@ type RegisterProjectResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *RegisterProjectResponse) Reset() {
-	*x = RegisterProjectResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterProjectResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterProjectResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterProjectResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterProjectResponse) ProtoMessage() {}
+func (*RegisterProjectResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterProjectResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterProjectResponse.ProtoReflect.Descriptor instead.
 func (*RegisterProjectResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *RegisterProjectResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *RegisterProjectResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *RegisterProjectResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *RegisterProjectResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 type ListProjectsRequest struct {
 	state         protoimpl.MessageState
@@ -130,36 +88,21 @@ type ListProjectsRequest struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *ListProjectsRequest) Reset() {
-	*x = ListProjectsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListProjectsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListProjectsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListProjectsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListProjectsRequest) ProtoMessage() {}
+func (*ListProjectsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListProjectsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListProjectsRequest.ProtoReflect.Descriptor instead.
 func (*ListProjectsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ListProjectsResponse struct {
@@ -170,42 +113,25 @@ type ListProjectsResponse struct {
 	Projects []*ProjectSpecification `protobuf:"bytes,1,rep,name=projects,proto3" json:"projects,omitempty"`
 }
 
-func (x *ListProjectsResponse) Reset() {
-	*x = ListProjectsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListProjectsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListProjectsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListProjectsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListProjectsResponse) ProtoMessage() {}
+func (*ListProjectsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListProjectsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListProjectsResponse.ProtoReflect.Descriptor instead.
 func (*ListProjectsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListProjectsResponse) GetProjects() []*ProjectSpecification {
-	if x != nil {
-		return x.Projects
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -217,44 +143,21 @@ type GetProjectRequest struct {
 	ProjectName string `protobuf:"bytes,1,opt,name=project_name,json=projectName,proto3" json:"project_name,omitempty"`
 }
 
-func (x *GetProjectRequest) Reset() {
-	*x = GetProjectRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetProjectRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetProjectRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetProjectRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetProjectRequest) ProtoMessage() {}
+func (*GetProjectRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetProjectRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetProjectRequest.ProtoReflect.Descriptor instead.
-func (*GetProjectRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{4}
-}
+func (*GetProjectRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetProjectRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetProjectRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 type GetProjectResponse struct {
 	state         protoimpl.MessageState
@@ -264,42 +167,22 @@ type GetProjectResponse struct {
 	Project *ProjectSpecification `protobuf:"bytes,1,opt,name=project,proto3" json:"project,omitempty"`
 }
 
-func (x *GetProjectResponse) Reset() {
-	*x = GetProjectResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetProjectResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetProjectResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetProjectResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetProjectResponse) ProtoMessage() {}
+func (*GetProjectResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetProjectResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetProjectResponse.ProtoReflect.Descriptor instead.
-func (*GetProjectResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{5}
-}
+func (*GetProjectResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 func (x *GetProjectResponse) GetProject() *ProjectSpecification {
-	if x != nil {
-		return x.Project
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -313,56 +196,29 @@ type ProjectSpecification struct {
 	Secrets []*ProjectSpecification_ProjectSecret `protobuf:"bytes,3,rep,name=secrets,proto3" json:"secrets,omitempty"`
 }
 
-func (x *ProjectSpecification) Reset() {
-	*x = ProjectSpecification{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ProjectSpecification) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ProjectSpecification) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ProjectSpecification) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ProjectSpecification) ProtoMessage() {}
+func (*ProjectSpecification) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ProjectSpecification) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ProjectSpecification.ProtoReflect.Descriptor instead.
 func (*ProjectSpecification) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{6}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ProjectSpecification) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *ProjectSpecification) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ProjectSpecification) GetConfig() map[string]string {
-	if x != nil {
-		return x.Config
-	}
-	return nil
-}
+func (x *ProjectSpecification) GetConfig() map[string]string { _ = "STUB: not implemented"; return nil }
 
 func (x *ProjectSpecification) GetSecrets() []*ProjectSpecification_ProjectSecret {
-	if x != nil {
-		return x.Secrets
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -375,49 +231,27 @@ type ProjectSpecification_ProjectSecret struct {
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
-func (x *ProjectSpecification_ProjectSecret) Reset() {
-	*x = ProjectSpecification_ProjectSecret{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ProjectSpecification_ProjectSecret) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ProjectSpecification_ProjectSecret) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ProjectSpecification_ProjectSecret) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ProjectSpecification_ProjectSecret) ProtoMessage() {}
+func (*ProjectSpecification_ProjectSecret) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ProjectSpecification_ProjectSecret) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_project_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ProjectSpecification_ProjectSecret.ProtoReflect.Descriptor instead.
 func (*ProjectSpecification_ProjectSecret) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP(), []int{6, 1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ProjectSpecification_ProjectSecret) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *ProjectSpecification_ProjectSecret) GetName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ProjectSpecification_ProjectSecret) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -536,10 +370,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_project_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_project_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_project_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_project_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_project_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_project_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
@@ -573,125 +405,5 @@ var file_raystack_optimus_core_v1beta1_project_proto_depIdxs = []int32{
 	0, // [0:5] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_project_proto_init() }
-func file_raystack_optimus_core_v1beta1_project_proto_init() {
-	if File_raystack_optimus_core_v1beta1_project_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterProjectRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterProjectResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListProjectsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListProjectsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetProjectRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetProjectResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProjectSpecification); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_project_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProjectSpecification_ProjectSecret); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_project_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   9,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_project_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_project_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_project_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_project_proto = out.File
-	file_raystack_optimus_core_v1beta1_project_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_project_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_project_proto_depIdxs = nil
-}
+func init()                                                  { file_raystack_optimus_core_v1beta1_project_proto_init() }
+func file_raystack_optimus_core_v1beta1_project_proto_init() { _ = "STUB: not implemented"; return }

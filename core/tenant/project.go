@@ -1,10 +1,5 @@
 package tenant
 
-import (
-	"github.com/raystack/optimus/internal/errors"
-	"github.com/raystack/optimus/internal/utils"
-)
-
 const (
 	EntityProject = "project"
 
@@ -15,55 +10,25 @@ const (
 type ProjectName string
 
 func ProjectNameFrom(name string) (ProjectName, error) {
-	if name == "" {
-		return "", errors.InvalidArgument(EntityProject, "project name is empty")
-	}
-	return ProjectName(name), nil
+	_ = "STUB: not implemented"
+	return *new(ProjectName), nil
 }
 
-func (pn ProjectName) String() string {
-	return string(pn)
-}
+func (pn ProjectName) String() string { _ = "STUB: not implemented"; return "" }
 
 type Project struct {
 	name   ProjectName
 	config map[string]string
 }
 
-func (p *Project) Name() ProjectName {
-	return p.name
-}
+func (p *Project) Name() ProjectName { _ = "STUB: not implemented"; return *new(ProjectName) }
 
-func (p *Project) GetConfig(key string) (string, error) {
-	for k, v := range p.config {
-		if key == k {
-			return v, nil
-		}
-	}
-	return "", errors.NotFound(EntityProject, "config not found: "+key)
-}
+func (p *Project) GetConfig(key string) (string, error) { _ = "STUB: not implemented"; return "", nil }
 
 // GetConfigs returns a clone of project configurations
-func (p *Project) GetConfigs() map[string]string {
-	confs := make(map[string]string, len(p.config))
-	for k, v := range p.config {
-		confs[k] = v
-	}
-	return confs
-}
+func (p *Project) GetConfigs() map[string]string { _ = "STUB: not implemented"; return nil }
 
 func NewProject(name string, config map[string]string) (*Project, error) {
-	prjName, err := ProjectNameFrom(name)
-	if err != nil {
-		return nil, err
-	}
-
-	if !utils.Contains(config, ProjectStoragePathKey, ProjectSchedulerHost) {
-		return nil, errors.InvalidArgument(EntityProject, "missing mandatory configuration")
-	}
-
-	return &Project{
-		name:   prjName,
-		config: config,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

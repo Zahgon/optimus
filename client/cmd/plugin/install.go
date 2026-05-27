@@ -4,9 +4,7 @@ import (
 	"github.com/raystack/salt/log"
 	"github.com/spf13/cobra"
 
-	"github.com/raystack/optimus/client/cmd/internal/logger"
 	"github.com/raystack/optimus/config"
-	"github.com/raystack/optimus/plugin"
 )
 
 type installCommand struct {
@@ -16,30 +14,14 @@ type installCommand struct {
 }
 
 // NewInstallCommand initializes plugin install command
-func NewInstallCommand() *cobra.Command {
-	install := &installCommand{
-		logger: logger.NewClientLogger(),
-	}
-	cmd := &cobra.Command{
-		Use:     "install",
-		Short:   "download and extract plugins to a dir (on server)",
-		Example: "optimus plugin install",
-		RunE:    install.RunE,
-		PreRunE: install.PreRunE,
-	}
-	cmd.PersistentFlags().StringVarP(&install.configFilePath, "config", "c", install.configFilePath, "File path for server configuration")
-	return cmd
-}
+func NewInstallCommand() *cobra.Command { _ = "STUB: not implemented"; return nil }
 
 func (i *installCommand) PreRunE(_ *cobra.Command, _ []string) error {
-	c, err := config.LoadServerConfig(i.configFilePath)
-	if err != nil {
-		return err
-	}
-	i.serverConfig = c
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (i *installCommand) RunE(_ *cobra.Command, _ []string) error {
-	return plugin.InstallPlugins(i.serverConfig)
+	_ = "STUB: not implemented"
+	return nil
 }

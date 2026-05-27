@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -35,34 +34,23 @@ type namespaceServiceClient struct {
 }
 
 func NewNamespaceServiceClient(cc grpc.ClientConnInterface) NamespaceServiceClient {
-	return &namespaceServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(NamespaceServiceClient)
 }
 
 func (c *namespaceServiceClient) RegisterProjectNamespace(ctx context.Context, in *RegisterProjectNamespaceRequest, opts ...grpc.CallOption) (*RegisterProjectNamespaceResponse, error) {
-	out := new(RegisterProjectNamespaceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.NamespaceService/RegisterProjectNamespace", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *namespaceServiceClient) ListProjectNamespaces(ctx context.Context, in *ListProjectNamespacesRequest, opts ...grpc.CallOption) (*ListProjectNamespacesResponse, error) {
-	out := new(ListProjectNamespacesResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.NamespaceService/ListProjectNamespaces", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *namespaceServiceClient) GetNamespace(ctx context.Context, in *GetNamespaceRequest, opts ...grpc.CallOption) (*GetNamespaceResponse, error) {
-	out := new(GetNamespaceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.NamespaceService/GetNamespace", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NamespaceServiceServer is the server API for NamespaceService service.
@@ -83,79 +71,51 @@ type UnimplementedNamespaceServiceServer struct {
 }
 
 func (UnimplementedNamespaceServiceServer) RegisterProjectNamespace(context.Context, *RegisterProjectNamespaceRequest) (*RegisterProjectNamespaceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RegisterProjectNamespace not implemented")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
-func (UnimplementedNamespaceServiceServer) ListProjectNamespaces(context.Context, *ListProjectNamespacesRequest) (*ListProjectNamespacesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListProjectNamespaces not implemented")
-}
-func (UnimplementedNamespaceServiceServer) GetNamespace(context.Context, *GetNamespaceRequest) (*GetNamespaceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetNamespace not implemented")
-}
-func (UnimplementedNamespaceServiceServer) mustEmbedUnimplementedNamespaceServiceServer() {}
 
-// UnsafeNamespaceServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to NamespaceServiceServer will
-// result in compilation errors.
+func (UnimplementedNamespaceServiceServer) ListProjectNamespaces(context.Context, *ListProjectNamespacesRequest) (*ListProjectNamespacesResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedNamespaceServiceServer) GetNamespace(context.Context, *GetNamespaceRequest) (*GetNamespaceResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedNamespaceServiceServer) mustEmbedUnimplementedNamespaceServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeNamespaceServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to NamespaceServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeNamespaceServiceServer interface {
 	mustEmbedUnimplementedNamespaceServiceServer()
 }
 
 func RegisterNamespaceServiceServer(s grpc.ServiceRegistrar, srv NamespaceServiceServer) {
-	s.RegisterService(&NamespaceService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _NamespaceService_RegisterProjectNamespace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterProjectNamespaceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(NamespaceServiceServer).RegisterProjectNamespace(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.NamespaceService/RegisterProjectNamespace",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NamespaceServiceServer).RegisterProjectNamespace(ctx, req.(*RegisterProjectNamespaceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _NamespaceService_ListProjectNamespaces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ListProjectNamespacesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(NamespaceServiceServer).ListProjectNamespaces(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.NamespaceService/ListProjectNamespaces",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NamespaceServiceServer).ListProjectNamespaces(ctx, req.(*ListProjectNamespacesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _NamespaceService_GetNamespace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetNamespaceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(NamespaceServiceServer).GetNamespace(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.NamespaceService/GetNamespace",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(NamespaceServiceServer).GetNamespace(ctx, req.(*GetNamespaceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // NamespaceService_ServiceDesc is the grpc.ServiceDesc for NamespaceService service.

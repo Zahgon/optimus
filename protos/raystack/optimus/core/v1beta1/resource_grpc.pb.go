@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -45,16 +44,13 @@ type resourceServiceClient struct {
 }
 
 func NewResourceServiceClient(cc grpc.ClientConnInterface) ResourceServiceClient {
-	return &resourceServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(ResourceServiceClient)
 }
 
 func (c *resourceServiceClient) DeployResourceSpecification(ctx context.Context, opts ...grpc.CallOption) (ResourceService_DeployResourceSpecificationClient, error) {
-	stream, err := c.cc.NewStream(ctx, &ResourceService_ServiceDesc.Streams[0], "/raystack.optimus.core.v1beta1.ResourceService/DeployResourceSpecification", opts...)
-	if err != nil {
-		return nil, err
-	}
-	x := &resourceServiceDeployResourceSpecificationClient{stream}
-	return x, nil
+	_ = "STUB: not implemented"
+	return *new(ResourceService_DeployResourceSpecificationClient), nil
 }
 
 type ResourceService_DeployResourceSpecificationClient interface {
@@ -68,69 +64,43 @@ type resourceServiceDeployResourceSpecificationClient struct {
 }
 
 func (x *resourceServiceDeployResourceSpecificationClient) Send(m *DeployResourceSpecificationRequest) error {
-	return x.ClientStream.SendMsg(m)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (x *resourceServiceDeployResourceSpecificationClient) Recv() (*DeployResourceSpecificationResponse, error) {
-	m := new(DeployResourceSpecificationResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) ListResourceSpecification(ctx context.Context, in *ListResourceSpecificationRequest, opts ...grpc.CallOption) (*ListResourceSpecificationResponse, error) {
-	out := new(ListResourceSpecificationResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/ListResourceSpecification", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) CreateResource(ctx context.Context, in *CreateResourceRequest, opts ...grpc.CallOption) (*CreateResourceResponse, error) {
-	out := new(CreateResourceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/CreateResource", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) ReadResource(ctx context.Context, in *ReadResourceRequest, opts ...grpc.CallOption) (*ReadResourceResponse, error) {
-	out := new(ReadResourceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/ReadResource", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) UpdateResource(ctx context.Context, in *UpdateResourceRequest, opts ...grpc.CallOption) (*UpdateResourceResponse, error) {
-	out := new(UpdateResourceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/UpdateResource", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) ChangeResourceNamespace(ctx context.Context, in *ChangeResourceNamespaceRequest, opts ...grpc.CallOption) (*ChangeResourceNamespaceResponse, error) {
-	out := new(ChangeResourceNamespaceResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/ChangeResourceNamespace", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *resourceServiceClient) ApplyResources(ctx context.Context, in *ApplyResourcesRequest, opts ...grpc.CallOption) (*ApplyResourcesResponse, error) {
-	out := new(ApplyResourcesResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ResourceService/ApplyResources", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ResourceServiceServer is the server API for ResourceService service.
@@ -161,41 +131,61 @@ type UnimplementedResourceServiceServer struct {
 }
 
 func (UnimplementedResourceServiceServer) DeployResourceSpecification(ResourceService_DeployResourceSpecificationServer) error {
-	return status.Errorf(codes.Unimplemented, "method DeployResourceSpecification not implemented")
+	_ = "STUB: not implemented"
+	return nil
 }
-func (UnimplementedResourceServiceServer) ListResourceSpecification(context.Context, *ListResourceSpecificationRequest) (*ListResourceSpecificationResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListResourceSpecification not implemented")
-}
-func (UnimplementedResourceServiceServer) CreateResource(context.Context, *CreateResourceRequest) (*CreateResourceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateResource not implemented")
-}
-func (UnimplementedResourceServiceServer) ReadResource(context.Context, *ReadResourceRequest) (*ReadResourceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReadResource not implemented")
-}
-func (UnimplementedResourceServiceServer) UpdateResource(context.Context, *UpdateResourceRequest) (*UpdateResourceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateResource not implemented")
-}
-func (UnimplementedResourceServiceServer) ChangeResourceNamespace(context.Context, *ChangeResourceNamespaceRequest) (*ChangeResourceNamespaceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ChangeResourceNamespace not implemented")
-}
-func (UnimplementedResourceServiceServer) ApplyResources(context.Context, *ApplyResourcesRequest) (*ApplyResourcesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ApplyResources not implemented")
-}
-func (UnimplementedResourceServiceServer) mustEmbedUnimplementedResourceServiceServer() {}
 
-// UnsafeResourceServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ResourceServiceServer will
-// result in compilation errors.
+func (UnimplementedResourceServiceServer) ListResourceSpecification(context.Context, *ListResourceSpecificationRequest) (*ListResourceSpecificationResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) CreateResource(context.Context, *CreateResourceRequest) (*CreateResourceResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) ReadResource(context.Context, *ReadResourceRequest) (*ReadResourceResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) UpdateResource(context.Context, *UpdateResourceRequest) (*UpdateResourceResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) ChangeResourceNamespace(context.Context, *ChangeResourceNamespaceRequest) (*ChangeResourceNamespaceResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) ApplyResources(context.Context, *ApplyResourcesRequest) (*ApplyResourcesResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedResourceServiceServer) mustEmbedUnimplementedResourceServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeResourceServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to ResourceServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeResourceServiceServer interface {
 	mustEmbedUnimplementedResourceServiceServer()
 }
 
 func RegisterResourceServiceServer(s grpc.ServiceRegistrar, srv ResourceServiceServer) {
-	s.RegisterService(&ResourceService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _ResourceService_DeployResourceSpecification_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(ResourceServiceServer).DeployResourceSpecification(&resourceServiceDeployResourceSpecificationServer{stream})
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type ResourceService_DeployResourceSpecificationServer interface {
@@ -209,123 +199,43 @@ type resourceServiceDeployResourceSpecificationServer struct {
 }
 
 func (x *resourceServiceDeployResourceSpecificationServer) Send(m *DeployResourceSpecificationResponse) error {
-	return x.ServerStream.SendMsg(m)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (x *resourceServiceDeployResourceSpecificationServer) Recv() (*DeployResourceSpecificationRequest, error) {
-	m := new(DeployResourceSpecificationRequest)
-	if err := x.ServerStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_ListResourceSpecification_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ListResourceSpecificationRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).ListResourceSpecification(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/ListResourceSpecification",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).ListResourceSpecification(ctx, req.(*ListResourceSpecificationRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_CreateResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CreateResourceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).CreateResource(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/CreateResource",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).CreateResource(ctx, req.(*CreateResourceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_ReadResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ReadResourceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).ReadResource(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/ReadResource",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).ReadResource(ctx, req.(*ReadResourceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_UpdateResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateResourceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).UpdateResource(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/UpdateResource",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).UpdateResource(ctx, req.(*UpdateResourceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_ChangeResourceNamespace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ChangeResourceNamespaceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).ChangeResourceNamespace(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/ChangeResourceNamespace",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).ChangeResourceNamespace(ctx, req.(*ChangeResourceNamespaceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ResourceService_ApplyResources_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ApplyResourcesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ResourceServiceServer).ApplyResources(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ResourceService/ApplyResources",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ResourceServiceServer).ApplyResources(ctx, req.(*ApplyResourcesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ResourceService_ServiceDesc is the grpc.ServiceDesc for ResourceService service.

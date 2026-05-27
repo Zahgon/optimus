@@ -1,97 +1,44 @@
 package compiler
 
 import (
-	"strconv"
-	"strings"
 	"text/template"
 	"time"
 )
 
-func OptimusFuncMap() template.FuncMap {
-	return map[string]any{
-		"Date":        Date,
-		"replace":     Replace,
-		"trunc":       Trunc,
-		"date":        date,
-		"date_modify": DateModify,
-		"toDate":      toDate,
-		"unixEpoch":   UnixEpoch,
-		"list":        List,
-		"join":        Join,
-	}
-}
+func OptimusFuncMap() template.FuncMap { _ = "STUB: not implemented"; return *new(template.FuncMap) }
 
-func Date(timeStr string) (string, error) {
-	t, err := time.Parse(ISOTimeFormat, timeStr)
-	if err != nil {
-		return "", err
-	}
-	return t.Format(ISODateFormat), nil
-}
+func Date(timeStr string) (string, error) { _ = "STUB: not implemented"; return "", nil }
 
-func Replace(old, newStr, name string) string {
-	return strings.ReplaceAll(name, old, newStr)
-}
+func Replace(old, newStr, name string) string { _ = "STUB: not implemented"; return "" }
 
-func Trunc(c int, s string) string {
-	if c >= 0 && len(s) > c {
-		return s[:c]
-	}
-	return s
-}
+func Trunc(c int, s string) string { _ = "STUB: not implemented"; return "" }
 
 func date(fmt string, date interface{}) string {
+	_ = "STUB: not implemented"
 	// Cannot have a reliable test, depends on local machine time
-	return dateInZone(fmt, date, "Local")
+	return ""
 }
 
 func dateInZone(fmt string, date interface{}, zone string) string {
-	var t time.Time
-	switch date := date.(type) {
-	default:
-		t = time.Now()
-	case time.Time:
-		t = date
-	case *time.Time:
-		t = *date
-	case int64:
-		t = time.Unix(date, 0)
-	case int:
-		t = time.Unix(int64(date), 0)
-	case int32:
-		t = time.Unix(int64(date), 0)
-	}
-
-	loc, err := time.LoadLocation(zone)
-	if err != nil {
-		loc, _ = time.LoadLocation("UTC")
-	}
-
-	return t.In(loc).Format(fmt)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 func DateModify(fmt string, date time.Time) time.Time {
-	d, err := time.ParseDuration(fmt)
-	if err != nil {
-		return date
-	}
-	return date.Add(d)
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 func toDate(fmt, str string) time.Time {
+	_ = "STUB: not implemented"
 	// Cannot have a reliable test, depends on local machine time
-	t, _ := time.ParseInLocation(fmt, str, time.Local)
-	return t
+	return *new(time.Time)
 }
 
-func UnixEpoch(date time.Time) string {
-	return strconv.FormatInt(date.Unix(), 10) //nolint
-}
+func UnixEpoch(date time.Time) string { _ = "STUB: not implemented"; return "" }
 
-func List(v ...string) []string {
-	return v
-}
+//nolint
 
-func Join(sep string, v []string) string {
-	return strings.Join(v, sep)
-}
+func List(v ...string) []string { _ = "STUB: not implemented"; return nil }
+
+func Join(sep string, v []string) string { _ = "STUB: not implemented"; return "" }

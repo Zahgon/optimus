@@ -2,15 +2,10 @@ package connection
 
 import (
 	"errors"
-	"os"
 	"time"
 
 	"github.com/MakeNowJust/heredoc"
-	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	grpc_retry "github.com/grpc-ecosystem/go-grpc-middleware/retry"
-	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/raystack/salt/log"
-	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
 
 	"github.com/raystack/optimus/config"
@@ -37,41 +32,10 @@ type Connection interface {
 }
 
 func New(l log.Logger, cfg *config.ClientConfig) Connection {
-	if useInsecure() {
-		return NewInsecure(l)
-	}
-
-	return NewSecure(l, cfg)
+	_ = "STUB: not implemented"
+	return *new(Connection)
 }
 
-func useInsecure() bool {
-	if insecure := os.Getenv("OPTIMUS_INSECURE"); insecure != "" {
-		return true
-	}
-	return false
-}
+func useInsecure() bool { _ = "STUB: not implemented"; return false }
 
-func defaultDialOptions() []grpc.DialOption {
-	retryOpts := []grpc_retry.CallOption{
-		grpc_retry.WithBackoff(grpc_retry.BackoffExponential(backoffDuration)),
-		grpc_retry.WithMax(grpcMaxRetry),
-	}
-	var opts []grpc.DialOption
-	opts = append(opts,
-		grpc.WithBlock(),
-		grpc.WithDefaultCallOptions(
-			grpc.MaxCallSendMsgSize(grpcMaxClientSendSize),
-			grpc.MaxCallRecvMsgSize(grpcMaxClientRecvSize),
-		),
-		grpc.WithUnaryInterceptor(grpc_middleware.ChainUnaryClient(
-			grpc_retry.UnaryClientInterceptor(retryOpts...),
-			otelgrpc.UnaryClientInterceptor(),
-			grpc_prometheus.UnaryClientInterceptor,
-		)),
-		grpc.WithStreamInterceptor(grpc_middleware.ChainStreamClient(
-			otelgrpc.StreamClientInterceptor(),
-			grpc_prometheus.StreamClientInterceptor,
-		)),
-	)
-	return opts
-}
+func defaultDialOptions() []grpc.DialOption { _ = "STUB: not implemented"; return nil }

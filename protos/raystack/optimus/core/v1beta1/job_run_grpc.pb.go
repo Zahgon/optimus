@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -37,43 +36,28 @@ type jobRunServiceClient struct {
 }
 
 func NewJobRunServiceClient(cc grpc.ClientConnInterface) JobRunServiceClient {
-	return &jobRunServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(JobRunServiceClient)
 }
 
 func (c *jobRunServiceClient) JobRunInput(ctx context.Context, in *JobRunInputRequest, opts ...grpc.CallOption) (*JobRunInputResponse, error) {
-	out := new(JobRunInputResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.JobRunService/JobRunInput", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *jobRunServiceClient) JobRun(ctx context.Context, in *JobRunRequest, opts ...grpc.CallOption) (*JobRunResponse, error) {
-	out := new(JobRunResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.JobRunService/JobRun", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *jobRunServiceClient) RegisterJobEvent(ctx context.Context, in *RegisterJobEventRequest, opts ...grpc.CallOption) (*RegisterJobEventResponse, error) {
-	out := new(RegisterJobEventResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.JobRunService/RegisterJobEvent", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *jobRunServiceClient) UploadToScheduler(ctx context.Context, in *UploadToSchedulerRequest, opts ...grpc.CallOption) (*UploadToSchedulerResponse, error) {
-	out := new(UploadToSchedulerResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.JobRunService/UploadToScheduler", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // JobRunServiceServer is the server API for JobRunService service.
@@ -96,100 +80,61 @@ type UnimplementedJobRunServiceServer struct {
 }
 
 func (UnimplementedJobRunServiceServer) JobRunInput(context.Context, *JobRunInputRequest) (*JobRunInputResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method JobRunInput not implemented")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
-func (UnimplementedJobRunServiceServer) JobRun(context.Context, *JobRunRequest) (*JobRunResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method JobRun not implemented")
-}
-func (UnimplementedJobRunServiceServer) RegisterJobEvent(context.Context, *RegisterJobEventRequest) (*RegisterJobEventResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RegisterJobEvent not implemented")
-}
-func (UnimplementedJobRunServiceServer) UploadToScheduler(context.Context, *UploadToSchedulerRequest) (*UploadToSchedulerResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UploadToScheduler not implemented")
-}
-func (UnimplementedJobRunServiceServer) mustEmbedUnimplementedJobRunServiceServer() {}
 
-// UnsafeJobRunServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to JobRunServiceServer will
-// result in compilation errors.
+func (UnimplementedJobRunServiceServer) JobRun(context.Context, *JobRunRequest) (*JobRunResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedJobRunServiceServer) RegisterJobEvent(context.Context, *RegisterJobEventRequest) (*RegisterJobEventResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedJobRunServiceServer) UploadToScheduler(context.Context, *UploadToSchedulerRequest) (*UploadToSchedulerResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedJobRunServiceServer) mustEmbedUnimplementedJobRunServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeJobRunServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to JobRunServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeJobRunServiceServer interface {
 	mustEmbedUnimplementedJobRunServiceServer()
 }
 
 func RegisterJobRunServiceServer(s grpc.ServiceRegistrar, srv JobRunServiceServer) {
-	s.RegisterService(&JobRunService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _JobRunService_JobRunInput_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(JobRunInputRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(JobRunServiceServer).JobRunInput(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.JobRunService/JobRunInput",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JobRunServiceServer).JobRunInput(ctx, req.(*JobRunInputRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _JobRunService_JobRun_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(JobRunRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(JobRunServiceServer).JobRun(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.JobRunService/JobRun",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JobRunServiceServer).JobRun(ctx, req.(*JobRunRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _JobRunService_RegisterJobEvent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterJobEventRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(JobRunServiceServer).RegisterJobEvent(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.JobRunService/RegisterJobEvent",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JobRunServiceServer).RegisterJobEvent(ctx, req.(*RegisterJobEventRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _JobRunService_UploadToScheduler_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UploadToSchedulerRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(JobRunServiceServer).UploadToScheduler(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.JobRunService/UploadToScheduler",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JobRunServiceServer).UploadToScheduler(ctx, req.(*UploadToSchedulerRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // JobRunService_ServiceDesc is the grpc.ServiceDesc for JobRunService service.

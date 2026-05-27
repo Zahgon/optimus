@@ -2,7 +2,6 @@ package plugin
 
 import (
 	"context"
-	"fmt"
 	"time"
 )
 
@@ -61,9 +60,7 @@ type GenerateDestinationResponse struct {
 	Type        string
 }
 
-func (gdr GenerateDestinationResponse) URN() string {
-	return fmt.Sprintf(DestinationURNFormat, gdr.Type, gdr.Destination)
-}
+func (gdr GenerateDestinationResponse) URN() string { _ = "STUB: not implemented"; return "" }
 
 type GenerateDependenciesRequest struct {
 	// Task configs

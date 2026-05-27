@@ -1,10 +1,5 @@
 package tenant
 
-import (
-	"github.com/raystack/optimus/internal/errors"
-	"github.com/raystack/optimus/internal/utils"
-)
-
 const EntityTenant = "tenant"
 
 type Tenant struct {
@@ -12,33 +7,18 @@ type Tenant struct {
 	nsName   NamespaceName
 }
 
-func (t Tenant) ProjectName() ProjectName {
-	return t.projName
-}
+func (t Tenant) ProjectName() ProjectName { _ = "STUB: not implemented"; return *new(ProjectName) }
 
 func (t Tenant) NamespaceName() NamespaceName {
-	return t.nsName
+	_ = "STUB: not implemented"
+	return *new(NamespaceName)
 }
 
-func (t Tenant) IsInvalid() bool {
-	return t.projName.String() == ""
-}
+func (t Tenant) IsInvalid() bool { _ = "STUB: not implemented"; return false }
 
 func NewTenant(projectName, namespaceName string) (Tenant, error) {
-	projName, err := ProjectNameFrom(projectName)
-	if err != nil {
-		return Tenant{}, err
-	}
-
-	nsName, err := NamespaceNameFrom(namespaceName)
-	if err != nil {
-		return Tenant{}, err
-	}
-
-	return Tenant{
-		projName: projName,
-		nsName:   nsName,
-	}, nil
+	_ = "STUB: not implemented"
+	return *new(Tenant), nil
 }
 
 type WithDetails struct {
@@ -48,55 +28,23 @@ type WithDetails struct {
 }
 
 func NewTenantDetails(proj *Project, namespace *Namespace, secrets PlainTextSecrets) (*WithDetails, error) {
-	if proj == nil {
-		return nil, errors.InvalidArgument(EntityTenant, "project is nil")
-	}
-	if namespace == nil {
-		return nil, errors.InvalidArgument(EntityTenant, "namespace is nil")
-	}
-
-	return &WithDetails{
-		project:    *proj,
-		namespace:  *namespace,
-		secretsMap: secrets.ToMap(),
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (w *WithDetails) ToTenant() Tenant {
-	return Tenant{
-		projName: w.project.Name(),
-		nsName:   w.namespace.Name(),
-	}
-}
+func (w *WithDetails) ToTenant() Tenant { _ = "STUB: not implemented"; return *new(Tenant) }
 
 func (w *WithDetails) GetConfig(key string) (string, error) {
-	config, err := w.namespace.GetConfig(key)
-	if err == nil {
-		return config, nil
-	}
-
-	// key not present in namespace, check project
-	config, err = w.project.GetConfig(key)
-	if err == nil {
-		return config, nil
-	}
-
-	return "", errors.NotFound(EntityTenant, "config not present in tenant "+key)
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
-func (w *WithDetails) GetConfigs() map[string]string {
-	m1 := w.namespace.GetConfigs()
-	return utils.MergeMaps(w.project.GetConfigs(), m1)
-}
+// key not present in namespace, check project
 
-func (w *WithDetails) Project() *Project {
-	return &w.project
-}
+func (w *WithDetails) GetConfigs() map[string]string { _ = "STUB: not implemented"; return nil }
 
-func (w *WithDetails) Namespace() *Namespace {
-	return &w.namespace
-}
+func (w *WithDetails) Project() *Project { _ = "STUB: not implemented"; return nil }
 
-func (w *WithDetails) SecretsMap() map[string]string {
-	return w.secretsMap
-}
+func (w *WithDetails) Namespace() *Namespace { _ = "STUB: not implemented"; return nil }
+
+func (w *WithDetails) SecretsMap() map[string]string { _ = "STUB: not implemented"; return nil }

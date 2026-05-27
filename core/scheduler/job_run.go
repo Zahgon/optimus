@@ -6,31 +6,18 @@ import (
 	"github.com/google/uuid"
 
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 type JobRunID uuid.UUID
 
 func JobRunIDFromString(runID string) (JobRunID, error) {
-	if runID == "" {
-		return JobRunID(uuid.Nil), nil
-	}
-
-	parsed, err := uuid.Parse(runID)
-	if err != nil {
-		return JobRunID{}, errors.InvalidArgument(EntityJobRun, "invalid value for job run id "+runID)
-	}
-
-	return JobRunID(parsed), nil
+	_ = "STUB: not implemented"
+	return *new(JobRunID), nil
 }
 
-func (i JobRunID) UUID() uuid.UUID {
-	return uuid.UUID(i)
-}
+func (i JobRunID) UUID() uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
-func (i JobRunID) IsEmpty() bool {
-	return i.UUID() == uuid.Nil
-}
+func (i JobRunID) IsEmpty() bool { _ = "STUB: not implemented"; return false }
 
 type JobRun struct {
 	ID uuid.UUID

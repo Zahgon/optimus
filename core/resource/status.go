@@ -1,7 +1,5 @@
 package resource
 
-import "strings"
-
 type Status string
 
 const (
@@ -17,49 +15,15 @@ const (
 	StatusSuccess           Status = "success"
 )
 
-func (s Status) String() string {
-	return string(s)
-}
+func (s Status) String() string { _ = "STUB: not implemented"; return "" }
 
-func FromStringToStatus(status string) Status {
-	switch strings.ToLower(status) {
-	case StatusValidationFailure.String():
-		return StatusValidationFailure
-	case StatusValidationSuccess.String():
-		return StatusValidationSuccess
-	case StatusToCreate.String():
-		return StatusToCreate
-	case StatusToUpdate.String():
-		return StatusToUpdate
-	case StatusSkipped.String():
-		return StatusSkipped
-	case StatusCreateFailure.String():
-		return StatusCreateFailure
-	case StatusUpdateFailure.String():
-		return StatusUpdateFailure
-	case StatusExistInStore.String():
-		return StatusExistInStore
-	case StatusSuccess.String():
-		return StatusSuccess
-	default:
-		return StatusUnknown
-	}
-}
+func FromStringToStatus(status string) Status { _ = "STUB: not implemented"; return *new(Status) }
 
-func StatusForToCreate(status Status) bool {
-	return status == StatusCreateFailure || status == StatusToCreate
-}
+func StatusForToCreate(status Status) bool { _ = "STUB: not implemented"; return false }
 
-func StatusForToUpdate(status Status) bool {
-	return status == StatusSuccess ||
-		status == StatusToUpdate ||
-		status == StatusExistInStore ||
-		status == StatusUpdateFailure
-}
+func StatusForToUpdate(status Status) bool { _ = "STUB: not implemented"; return false }
 
-func StatusIsSuccess(status Status) bool {
-	return status == StatusSuccess
-}
+func StatusIsSuccess(status Status) bool { _ = "STUB: not implemented"; return false }
 
 type SyncResponse struct {
 	ResourceNames    []string

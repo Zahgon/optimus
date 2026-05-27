@@ -2,7 +2,6 @@ package bigquery
 
 import (
 	"github.com/raystack/optimus/core/resource"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 const (
@@ -19,26 +18,9 @@ type ExternalTable struct {
 	ExtraConfig map[string]interface{} `mapstructure:",remain"`
 }
 
-func (e *ExternalTable) FullName() string {
-	return e.Name.String()
-}
+func (e *ExternalTable) FullName() string { _ = "STUB: not implemented"; return "" }
 
-func (e *ExternalTable) Validate() error {
-	if len(e.Schema) > 0 {
-		err := e.Schema.Validate()
-		if err != nil {
-			return errors.AddErrContext(err, EntityExternalTable, "error in schema for "+e.FullName())
-		}
-	}
-
-	if e.Source == nil {
-		return errors.InvalidArgument(EntityExternalTable, "empty external table source for "+e.FullName())
-	}
-	if err := e.Source.Validate(); err != nil {
-		return errors.AddErrContext(err, EntityExternalTable, "error in source for "+e.FullName())
-	}
-	return nil
-}
+func (e *ExternalTable) Validate() error { _ = "STUB: not implemented"; return nil }
 
 type ExternalSource struct {
 	SourceType string   `mapstructure:"type,omitempty"`
@@ -48,19 +30,4 @@ type ExternalSource struct {
 	Config map[string]interface{} `mapstructure:"config"`
 }
 
-func (e ExternalSource) Validate() error {
-	if e.SourceType == "" {
-		return errors.InvalidArgument(EntityExternalTable, "source type is empty")
-	}
-	if len(e.SourceURIs) == 0 {
-		return errors.InvalidArgument(EntityExternalTable, "source uri list is empty")
-	}
-
-	for _, uri := range e.SourceURIs {
-		if uri == "" {
-			return errors.InvalidArgument(EntityExternalTable, "uri is empty")
-		}
-	}
-
-	return nil
-}
+func (e ExternalSource) Validate() error { _ = "STUB: not implemented"; return nil }

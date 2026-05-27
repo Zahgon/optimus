@@ -1,12 +1,9 @@
 package scheduler
 
 import (
-	"fmt"
-	"strings"
 	"time"
 
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 	"github.com/raystack/optimus/internal/models"
 )
 
@@ -15,9 +12,7 @@ type (
 	OperatorType string
 )
 
-func (o OperatorType) String() string {
-	return string(o)
-}
+func (o OperatorType) String() string { _ = "STUB: not implemented"; return "" }
 
 const (
 	EntityJobRun = "jobRun"
@@ -31,16 +26,11 @@ const (
 )
 
 func JobNameFrom(name string) (JobName, error) {
-	if name == "" {
-		return "", errors.InvalidArgument(EntityJobRun, "job name is empty")
-	}
-
-	return JobName(name), nil
+	_ = "STUB: not implemented"
+	return *new(JobName), nil
 }
 
-func (n JobName) String() string {
-	return string(n)
-}
+func (n JobName) String() string { _ = "STUB: not implemented"; return "" }
 
 type Job struct {
 	Name   JobName
@@ -53,14 +43,7 @@ type Job struct {
 	Assets      map[string]string
 }
 
-func (j *Job) GetHook(hookName string) (*Hook, error) {
-	for _, hook := range j.Hooks {
-		if hook.Name == hookName {
-			return hook, nil
-		}
-	}
-	return nil, errors.NotFound(EntityJobRun, "hook:"+hookName)
-}
+func (j *Job) GetHook(hookName string) (*Hook, error) { _ = "STUB: not implemented"; return nil, nil }
 
 type Task struct {
 	Name   string
@@ -86,35 +69,14 @@ type JobWithDetails struct {
 	Upstreams     Upstreams
 }
 
-func (j *JobWithDetails) GetName() string {
-	return j.Name.String()
-}
+func (j *JobWithDetails) GetName() string { _ = "STUB: not implemented"; return "" }
 
 func GroupJobsByTenant(j []*JobWithDetails) map[tenant.Tenant][]*JobWithDetails {
-	jobsGroup := make(map[tenant.Tenant][]*JobWithDetails)
-	for _, job := range j {
-		tnnt := job.Job.Tenant
-		jobsGroup[tnnt] = append(jobsGroup[tnnt], job)
-	}
-	return jobsGroup
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (j *JobWithDetails) SLADuration() (int64, error) {
-	for _, notify := range j.Alerts {
-		if notify.On == EventCategorySLAMiss {
-			if _, ok := notify.Config["duration"]; !ok {
-				continue
-			}
-
-			dur, err := time.ParseDuration(notify.Config["duration"])
-			if err != nil {
-				return 0, fmt.Errorf("failed to parse sla_miss duration %s: %w", notify.Config["duration"], err)
-			}
-			return int64(dur.Seconds()), nil
-		}
-	}
-	return 0, nil
-}
+func (j *JobWithDetails) SLADuration() (int64, error) { _ = "STUB: not implemented"; return 0, nil }
 
 type JobMetadata struct {
 	Version     int
@@ -130,25 +92,9 @@ type Schedule struct {
 	Interval      string
 }
 
-func (j *JobWithDetails) GetLabelsAsString() string {
-	labels := ""
-	for k, v := range j.JobMetadata.Labels {
-		labels += fmt.Sprintf("%s=%s,", strings.TrimSpace(k), strings.TrimSpace(v))
-	}
-	return strings.TrimRight(labels, ",")
-}
+func (j *JobWithDetails) GetLabelsAsString() string { _ = "STUB: not implemented"; return "" }
 
-func (j *JobWithDetails) GetUniqueLabelValues() []string {
-	labelValues := []string{}
-	m := map[string]bool{}
-	for _, v := range j.JobMetadata.Labels {
-		if _, ok := m[v]; !ok {
-			labelValues = append(labelValues, v)
-		}
-		m[v] = true
-	}
-	return labelValues
-}
+func (j *JobWithDetails) GetUniqueLabelValues() []string { _ = "STUB: not implemented"; return nil }
 
 type Retry struct {
 	ExponentialBackoff bool

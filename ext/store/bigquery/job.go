@@ -4,8 +4,6 @@ import (
 	"context"
 
 	"cloud.google.com/go/bigquery"
-
-	"github.com/raystack/optimus/internal/errors"
 )
 
 type BQJob interface {
@@ -16,18 +14,6 @@ type JobHandle struct {
 	bqJob BQJob
 }
 
-func NewJob(job BQJob) *JobHandle {
-	return &JobHandle{bqJob: job}
-}
+func NewJob(job BQJob) *JobHandle { _ = "STUB: not implemented"; return nil }
 
-func (j JobHandle) Wait(ctx context.Context) error {
-	status, err := j.bqJob.Wait(ctx)
-	if err != nil {
-		return errors.InternalError(store, "error while wait for bq job", err)
-	}
-
-	if err = status.Err(); err != nil {
-		return errors.InternalError(store, "error in job status", err)
-	}
-	return nil
-}
+func (j JobHandle) Wait(ctx context.Context) error { _ = "STUB: not implemented"; return nil }

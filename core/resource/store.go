@@ -1,7 +1,5 @@
 package resource
 
-import "github.com/raystack/optimus/internal/errors"
-
 const (
 	Bigquery Store = "bigquery"
 )
@@ -9,15 +7,9 @@ const (
 // Store represents the type of datasource, resource corresponds to
 type Store string
 
-func (s Store) String() string {
-	return string(s)
-}
+func (s Store) String() string { _ = "STUB: not implemented"; return "" }
 
 func FromStringToStore(name string) (Store, error) {
-	switch name {
-	case string(Bigquery):
-		return Bigquery, nil
-	default:
-		return "", errors.InvalidArgument(EntityResource, "unknown store "+name)
-	}
+	_ = "STUB: not implemented"
+	return *new(Store), nil
 }

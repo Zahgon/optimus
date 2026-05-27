@@ -7,11 +7,11 @@
 package optimus
 
 import (
+	sync "sync"
+
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -27,37 +27,19 @@ type GetNameRequest struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *GetNameRequest) Reset() {
-	*x = GetNameRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetNameRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetNameRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetNameRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetNameRequest) ProtoMessage() {}
+func (*GetNameRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetNameRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetNameRequest.ProtoReflect.Descriptor instead.
-func (*GetNameRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{0}
-}
+func (*GetNameRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 type GetNameResponse struct {
 	state         protoimpl.MessageState
@@ -67,44 +49,21 @@ type GetNameResponse struct {
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 }
 
-func (x *GetNameResponse) Reset() {
-	*x = GetNameResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetNameResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetNameResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetNameResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetNameResponse) ProtoMessage() {}
+func (*GetNameResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetNameResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetNameResponse.ProtoReflect.Descriptor instead.
-func (*GetNameResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{1}
-}
+func (*GetNameResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetNameResponse) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *GetNameResponse) GetName() string { _ = "STUB: not implemented"; return "" }
 
 type GenerateDestinationRequest struct {
 	state         protoimpl.MessageState
@@ -116,56 +75,29 @@ type GenerateDestinationRequest struct {
 	Options *PluginOptions `protobuf:"bytes,40,opt,name=options,proto3" json:"options,omitempty"`
 }
 
-func (x *GenerateDestinationRequest) Reset() {
-	*x = GenerateDestinationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GenerateDestinationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GenerateDestinationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GenerateDestinationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GenerateDestinationRequest) ProtoMessage() {}
+func (*GenerateDestinationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GenerateDestinationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GenerateDestinationRequest.ProtoReflect.Descriptor instead.
 func (*GenerateDestinationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GenerateDestinationRequest) GetConfig() *Configs {
-	if x != nil {
-		return x.Config
-	}
-	return nil
-}
+func (x *GenerateDestinationRequest) GetConfig() *Configs { _ = "STUB: not implemented"; return nil }
 
-func (x *GenerateDestinationRequest) GetAssets() *Assets {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *GenerateDestinationRequest) GetAssets() *Assets { _ = "STUB: not implemented"; return nil }
 
 func (x *GenerateDestinationRequest) GetOptions() *PluginOptions {
-	if x != nil {
-		return x.Options
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -178,49 +110,27 @@ type GenerateDestinationResponse struct {
 	DestinationType string `protobuf:"bytes,2,opt,name=destination_type,json=destinationType,proto3" json:"destination_type,omitempty"`
 }
 
-func (x *GenerateDestinationResponse) Reset() {
-	*x = GenerateDestinationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GenerateDestinationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GenerateDestinationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GenerateDestinationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GenerateDestinationResponse) ProtoMessage() {}
+func (*GenerateDestinationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GenerateDestinationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GenerateDestinationResponse.ProtoReflect.Descriptor instead.
 func (*GenerateDestinationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GenerateDestinationResponse) GetDestination() string {
-	if x != nil {
-		return x.Destination
-	}
-	return ""
-}
+func (x *GenerateDestinationResponse) GetDestination() string { _ = "STUB: not implemented"; return "" }
 
 func (x *GenerateDestinationResponse) GetDestinationType() string {
-	if x != nil {
-		return x.DestinationType
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -234,56 +144,29 @@ type GenerateDependenciesRequest struct {
 	Options *PluginOptions `protobuf:"bytes,40,opt,name=options,proto3" json:"options,omitempty"`
 }
 
-func (x *GenerateDependenciesRequest) Reset() {
-	*x = GenerateDependenciesRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GenerateDependenciesRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GenerateDependenciesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GenerateDependenciesRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GenerateDependenciesRequest) ProtoMessage() {}
+func (*GenerateDependenciesRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GenerateDependenciesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GenerateDependenciesRequest.ProtoReflect.Descriptor instead.
 func (*GenerateDependenciesRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{4}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GenerateDependenciesRequest) GetConfig() *Configs {
-	if x != nil {
-		return x.Config
-	}
-	return nil
-}
+func (x *GenerateDependenciesRequest) GetConfig() *Configs { _ = "STUB: not implemented"; return nil }
 
-func (x *GenerateDependenciesRequest) GetAssets() *Assets {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *GenerateDependenciesRequest) GetAssets() *Assets { _ = "STUB: not implemented"; return nil }
 
 func (x *GenerateDependenciesRequest) GetOptions() *PluginOptions {
-	if x != nil {
-		return x.Options
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -295,42 +178,25 @@ type GenerateDependenciesResponse struct {
 	Dependencies []string `protobuf:"bytes,1,rep,name=dependencies,proto3" json:"dependencies,omitempty"`
 }
 
-func (x *GenerateDependenciesResponse) Reset() {
-	*x = GenerateDependenciesResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GenerateDependenciesResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GenerateDependenciesResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GenerateDependenciesResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GenerateDependenciesResponse) ProtoMessage() {}
+func (*GenerateDependenciesResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GenerateDependenciesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GenerateDependenciesResponse.ProtoReflect.Descriptor instead.
 func (*GenerateDependenciesResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{5}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *GenerateDependenciesResponse) GetDependencies() []string {
-	if x != nil {
-		return x.Dependencies
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -342,44 +208,21 @@ type Configs struct {
 	Configs []*Configs_Config `protobuf:"bytes,1,rep,name=configs,proto3" json:"configs,omitempty"`
 }
 
-func (x *Configs) Reset() {
-	*x = Configs{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *Configs) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *Configs) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *Configs) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*Configs) ProtoMessage() {}
+func (*Configs) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *Configs) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use Configs.ProtoReflect.Descriptor instead.
-func (*Configs) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{6}
-}
+func (*Configs) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *Configs) GetConfigs() []*Configs_Config {
-	if x != nil {
-		return x.Configs
-	}
-	return nil
-}
+func (x *Configs) GetConfigs() []*Configs_Config { _ = "STUB: not implemented"; return nil }
 
 type Assets struct {
 	state         protoimpl.MessageState
@@ -389,44 +232,21 @@ type Assets struct {
 	Assets []*Assets_Asset `protobuf:"bytes,1,rep,name=assets,proto3" json:"assets,omitempty"`
 }
 
-func (x *Assets) Reset() {
-	*x = Assets{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *Assets) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *Assets) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *Assets) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*Assets) ProtoMessage() {}
+func (*Assets) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *Assets) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use Assets.ProtoReflect.Descriptor instead.
-func (*Assets) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{7}
-}
+func (*Assets) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *Assets) GetAssets() []*Assets_Asset {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *Assets) GetAssets() []*Assets_Asset { _ = "STUB: not implemented"; return nil }
 
 type InstanceData struct {
 	state         protoimpl.MessageState
@@ -438,58 +258,25 @@ type InstanceData struct {
 	Type  string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
 }
 
-func (x *InstanceData) Reset() {
-	*x = InstanceData{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *InstanceData) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *InstanceData) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *InstanceData) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*InstanceData) ProtoMessage() {}
+func (*InstanceData) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *InstanceData) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use InstanceData.ProtoReflect.Descriptor instead.
-func (*InstanceData) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{8}
-}
+func (*InstanceData) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *InstanceData) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *InstanceData) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *InstanceData) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *InstanceData) GetValue() string { _ = "STUB: not implemented"; return "" }
 
-func (x *InstanceData) GetType() string {
-	if x != nil {
-		return x.Type
-	}
-	return ""
-}
+func (x *InstanceData) GetType() string { _ = "STUB: not implemented"; return "" }
 
 type CompileAssetsRequest struct {
 	state         protoimpl.MessageState
@@ -504,79 +291,43 @@ type CompileAssetsRequest struct {
 	Options      *PluginOptions         `protobuf:"bytes,40,opt,name=options,proto3" json:"options,omitempty"`
 }
 
-func (x *CompileAssetsRequest) Reset() {
-	*x = CompileAssetsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CompileAssetsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CompileAssetsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CompileAssetsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CompileAssetsRequest) ProtoMessage() {}
+func (*CompileAssetsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CompileAssetsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CompileAssetsRequest.ProtoReflect.Descriptor instead.
 func (*CompileAssetsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{9}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CompileAssetsRequest) GetConfigs() *Configs {
-	if x != nil {
-		return x.Configs
-	}
-	return nil
-}
+func (x *CompileAssetsRequest) GetConfigs() *Configs { _ = "STUB: not implemented"; return nil }
 
-func (x *CompileAssetsRequest) GetAssets() *Assets {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *CompileAssetsRequest) GetAssets() *Assets { _ = "STUB: not implemented"; return nil }
 
 func (x *CompileAssetsRequest) GetInstanceData() []*InstanceData {
-	if x != nil {
-		return x.InstanceData
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *CompileAssetsRequest) GetStartTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.StartTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *CompileAssetsRequest) GetEndTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.EndTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *CompileAssetsRequest) GetOptions() *PluginOptions {
-	if x != nil {
-		return x.Options
-	}
-	return nil
-}
+func (x *CompileAssetsRequest) GetOptions() *PluginOptions { _ = "STUB: not implemented"; return nil }
 
 type CompileAssetsResponse struct {
 	state         protoimpl.MessageState
@@ -586,44 +337,24 @@ type CompileAssetsResponse struct {
 	Assets *Assets `protobuf:"bytes,1,opt,name=assets,proto3" json:"assets,omitempty"`
 }
 
-func (x *CompileAssetsResponse) Reset() {
-	*x = CompileAssetsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CompileAssetsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CompileAssetsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CompileAssetsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CompileAssetsResponse) ProtoMessage() {}
+func (*CompileAssetsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CompileAssetsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CompileAssetsResponse.ProtoReflect.Descriptor instead.
 func (*CompileAssetsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{10}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CompileAssetsResponse) GetAssets() *Assets {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *CompileAssetsResponse) GetAssets() *Assets { _ = "STUB: not implemented"; return nil }
 
 type PluginOptions struct {
 	state         protoimpl.MessageState
@@ -633,44 +364,21 @@ type PluginOptions struct {
 	DryRun bool `protobuf:"varint,1,opt,name=dry_run,json=dryRun,proto3" json:"dry_run,omitempty"`
 }
 
-func (x *PluginOptions) Reset() {
-	*x = PluginOptions{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[11]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *PluginOptions) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *PluginOptions) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *PluginOptions) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*PluginOptions) ProtoMessage() {}
+func (*PluginOptions) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *PluginOptions) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[11]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use PluginOptions.ProtoReflect.Descriptor instead.
-func (*PluginOptions) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{11}
-}
+func (*PluginOptions) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *PluginOptions) GetDryRun() bool {
-	if x != nil {
-		return x.DryRun
-	}
-	return false
-}
+func (x *PluginOptions) GetDryRun() bool { _ = "STUB: not implemented"; return false }
 
 type Configs_Config struct {
 	state         protoimpl.MessageState
@@ -681,51 +389,23 @@ type Configs_Config struct {
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
-func (x *Configs_Config) Reset() {
-	*x = Configs_Config{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[12]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *Configs_Config) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *Configs_Config) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *Configs_Config) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*Configs_Config) ProtoMessage() {}
+func (*Configs_Config) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *Configs_Config) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[12]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use Configs_Config.ProtoReflect.Descriptor instead.
-func (*Configs_Config) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{6, 0}
-}
+func (*Configs_Config) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *Configs_Config) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *Configs_Config) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *Configs_Config) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *Configs_Config) GetValue() string { _ = "STUB: not implemented"; return "" }
 
 type Assets_Asset struct {
 	state         protoimpl.MessageState
@@ -736,51 +416,23 @@ type Assets_Asset struct {
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
-func (x *Assets_Asset) Reset() {
-	*x = Assets_Asset{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[13]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *Assets_Asset) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *Assets_Asset) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *Assets_Asset) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*Assets_Asset) ProtoMessage() {}
+func (*Assets_Asset) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *Assets_Asset) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[13]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use Assets_Asset.ProtoReflect.Descriptor instead.
-func (*Assets_Asset) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP(), []int{7, 0}
-}
+func (*Assets_Asset) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *Assets_Asset) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *Assets_Asset) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *Assets_Asset) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *Assets_Asset) GetValue() string { _ = "STUB: not implemented"; return "" }
 
 var File_raystack_optimus_plugins_v1beta1_dependency_resolver_proto protoreflect.FileDescriptor
 
@@ -953,10 +605,8 @@ var (
 )
 
 func file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescData)
-	})
-	return file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
@@ -1010,195 +660,6 @@ var file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_depIdxs = []
 
 func init() { file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_init() }
 func file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_init() {
-	if File_raystack_optimus_plugins_v1beta1_dependency_resolver_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNameRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNameResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenerateDestinationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenerateDestinationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenerateDependenciesRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GenerateDependenciesResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Configs); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Assets); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*InstanceData); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CompileAssetsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CompileAssetsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PluginOptions); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Configs_Config); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Assets_Asset); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   14,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_plugins_v1beta1_dependency_resolver_proto = out.File
-	file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_rawDesc = nil
-	file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_goTypes = nil
-	file_raystack_optimus_plugins_v1beta1_dependency_resolver_proto_depIdxs = nil
+	_ = "STUB: not implemented"
+	return
 }

@@ -15,15 +15,12 @@ type VersionHandler struct {
 	pb.UnimplementedRuntimeServiceServer
 }
 
-func (vh VersionHandler) Version(_ context.Context, version *pb.VersionRequest) (*pb.VersionResponse, error) { // nolint: unparam
-	vh.l.Info("client requested for ping", "version", version.Client)
-	response := &pb.VersionResponse{Server: vh.version}
-	return response, nil
+func (vh VersionHandler) Version(_ context.Context, version *pb.VersionRequest) (*pb.VersionResponse, error) {
+	_ = "STUB: not implemented" // nolint: unparam
+	return nil, nil
 }
 
 func NewVersionHandler(l log.Logger, version string) *VersionHandler {
-	return &VersionHandler{
-		l:       l,
-		version: version,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

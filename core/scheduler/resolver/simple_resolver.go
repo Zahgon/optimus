@@ -18,24 +18,14 @@ const (
 
 type SimpleResolver struct{}
 
-func NewSimpleResolver() *SimpleResolver {
-	return &SimpleResolver{}
-}
+func NewSimpleResolver() *SimpleResolver { _ = "STUB: not implemented"; return nil }
 
-func (SimpleResolver) Resolve(_ context.Context, details []*scheduler.JobWithDetails) error { // nolint:unparam
-	for _, job := range details {
-		priority := maxPriorityWeight - numberOfUpstreams(job.Upstreams, job.Job.Tenant)*priorityWeightGap
-		job.Priority = priority
-	}
+func (SimpleResolver) Resolve(_ context.Context, details []*scheduler.JobWithDetails) error {
+	_ = "STUB: not implemented" // nolint:unparam
 	return nil
 }
 
 func numberOfUpstreams(upstream scheduler.Upstreams, tnnt tenant.Tenant) int {
-	count := 0
-	for _, u := range upstream.UpstreamJobs {
-		if u.Tenant == tnnt {
-			count++
-		}
-	}
-	return count
+	_ = "STUB: not implemented"
+	return 0
 }

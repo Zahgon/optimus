@@ -13,53 +13,39 @@ type ScheduleSpec struct {
 // Next accepts the time and returns the next run time that should
 // be used for execution
 func (s *ScheduleSpec) Next(t time.Time) time.Time {
-	return s.schd.Next(t)
+	_ = "STUB: not implemented"
+	return *
+
+	// ParseCronSchedule can parse standard cron notation
+	// it returns a new crontab schedule representing the given
+	// standardSpec (https://en.wikipedia.org/wiki/Cron). It requires 5 entries
+	// representing: minute, hour, day of month, month and day of week, in that
+	// order. It returns a descriptive error if the spec is not valid.
+	//
+	// It accepts
+	//   - Standard crontab specs, e.g. "* * * * ?"
+	//   - Descriptors, e.g. "@midnight", "@every 1h30m"
+	new(time.Time)
 }
 
-// ParseCronSchedule can parse standard cron notation
-// it returns a new crontab schedule representing the given
-// standardSpec (https://en.wikipedia.org/wiki/Cron). It requires 5 entries
-// representing: minute, hour, day of month, month and day of week, in that
-// order. It returns a descriptive error if the spec is not valid.
-//
-// It accepts
-//   - Standard crontab specs, e.g. "* * * * ?"
-//   - Descriptors, e.g. "@midnight", "@every 1h30m"
 func ParseCronSchedule(interval string) (*ScheduleSpec, error) {
-	roboCronSchedule, err := roboCron.ParseStandard(interval)
-	if err != nil {
-		return nil, err
-	}
-
-	return &ScheduleSpec{
-		schd: roboCronSchedule,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (s *ScheduleSpec) Prev(currTime time.Time) time.Time {
-	startTime := s.getEarliestTimeToStartCron(currTime)
-	return s.getPreviousSchedule(currTime, startTime)
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 func (s *ScheduleSpec) getPreviousSchedule(currTime, startTime time.Time) time.Time {
-	previousSchedule := startTime
-	for {
-		nextSchedule := s.Next(previousSchedule)
-		if nextSchedule.After(currTime) || nextSchedule.Equal(currTime) {
-			return previousSchedule
-		}
-		previousSchedule = nextSchedule
-	}
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
 
 func (s *ScheduleSpec) getEarliestTimeToStartCron(currTime time.Time) time.Time {
-	initialDelay := -time.Hour * 24 * 7 //nolint:gomnd
-	startTime := currTime
-	for {
-		startTime = startTime.Add(initialDelay)
-		if s.Next(startTime).Before(currTime) {
-			break
-		}
-	}
-	return startTime
+	_ = "STUB: not implemented"
+	return *new(time.Time)
 }
+
+//nolint:gomnd

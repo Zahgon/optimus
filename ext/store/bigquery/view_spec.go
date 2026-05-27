@@ -2,7 +2,6 @@ package bigquery
 
 import (
 	"github.com/raystack/optimus/core/resource"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 const (
@@ -18,9 +17,4 @@ type View struct {
 	ExtraConfig map[string]interface{} `mapstructure:",remain"`
 }
 
-func (v *View) Validate() error {
-	if v.ViewQuery == "" {
-		return errors.InvalidArgument(EntityView, "view query is empty for "+v.Name.String())
-	}
-	return nil
-}
+func (v *View) Validate() error { _ = "STUB: not implemented"; return nil }

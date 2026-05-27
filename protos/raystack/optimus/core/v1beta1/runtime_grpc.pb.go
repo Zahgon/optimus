@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -31,16 +30,13 @@ type runtimeServiceClient struct {
 }
 
 func NewRuntimeServiceClient(cc grpc.ClientConnInterface) RuntimeServiceClient {
-	return &runtimeServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(RuntimeServiceClient)
 }
 
 func (c *runtimeServiceClient) Version(ctx context.Context, in *VersionRequest, opts ...grpc.CallOption) (*VersionResponse, error) {
-	out := new(VersionResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.RuntimeService/Version", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RuntimeServiceServer is the server API for RuntimeService service.
@@ -57,37 +53,31 @@ type UnimplementedRuntimeServiceServer struct {
 }
 
 func (UnimplementedRuntimeServiceServer) Version(context.Context, *VersionRequest) (*VersionResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Version not implemented")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
-func (UnimplementedRuntimeServiceServer) mustEmbedUnimplementedRuntimeServiceServer() {}
 
-// UnsafeRuntimeServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to RuntimeServiceServer will
-// result in compilation errors.
+func (UnimplementedRuntimeServiceServer) mustEmbedUnimplementedRuntimeServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeRuntimeServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to RuntimeServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeRuntimeServiceServer interface {
 	mustEmbedUnimplementedRuntimeServiceServer()
 }
 
 func RegisterRuntimeServiceServer(s grpc.ServiceRegistrar, srv RuntimeServiceServer) {
-	s.RegisterService(&RuntimeService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _RuntimeService_Version_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(VersionRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(RuntimeServiceServer).Version(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.RuntimeService/Version",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(RuntimeServiceServer).Version(ctx, req.(*VersionRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // RuntimeService_ServiceDesc is the grpc.ServiceDesc for RuntimeService service.

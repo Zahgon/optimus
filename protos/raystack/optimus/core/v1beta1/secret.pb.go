@@ -7,13 +7,13 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -34,65 +34,30 @@ type RegisterSecretRequest struct {
 	NamespaceName string `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *RegisterSecretRequest) Reset() {
-	*x = RegisterSecretRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterSecretRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterSecretRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterSecretRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterSecretRequest) ProtoMessage() {}
+func (*RegisterSecretRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterSecretRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterSecretRequest.ProtoReflect.Descriptor instead.
 func (*RegisterSecretRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *RegisterSecretRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *RegisterSecretRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *RegisterSecretRequest) GetSecretName() string {
-	if x != nil {
-		return x.SecretName
-	}
-	return ""
-}
+func (x *RegisterSecretRequest) GetSecretName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *RegisterSecretRequest) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *RegisterSecretRequest) GetValue() string { _ = "STUB: not implemented"; return "" }
 
-func (x *RegisterSecretRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *RegisterSecretRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type RegisterSecretResponse struct {
 	state         protoimpl.MessageState
@@ -100,36 +65,21 @@ type RegisterSecretResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *RegisterSecretResponse) Reset() {
-	*x = RegisterSecretResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterSecretResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterSecretResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterSecretResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterSecretResponse) ProtoMessage() {}
+func (*RegisterSecretResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterSecretResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterSecretResponse.ProtoReflect.Descriptor instead.
 func (*RegisterSecretResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type UpdateSecretRequest struct {
@@ -143,65 +93,30 @@ type UpdateSecretRequest struct {
 	NamespaceName string `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *UpdateSecretRequest) Reset() {
-	*x = UpdateSecretRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateSecretRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateSecretRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateSecretRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateSecretRequest) ProtoMessage() {}
+func (*UpdateSecretRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateSecretRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateSecretRequest.ProtoReflect.Descriptor instead.
 func (*UpdateSecretRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *UpdateSecretRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *UpdateSecretRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateSecretRequest) GetSecretName() string {
-	if x != nil {
-		return x.SecretName
-	}
-	return ""
-}
+func (x *UpdateSecretRequest) GetSecretName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateSecretRequest) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *UpdateSecretRequest) GetValue() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateSecretRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *UpdateSecretRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type UpdateSecretResponse struct {
 	state         protoimpl.MessageState
@@ -209,36 +124,21 @@ type UpdateSecretResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *UpdateSecretResponse) Reset() {
-	*x = UpdateSecretResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateSecretResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateSecretResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateSecretResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateSecretResponse) ProtoMessage() {}
+func (*UpdateSecretResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateSecretResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateSecretResponse.ProtoReflect.Descriptor instead.
 func (*UpdateSecretResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ListSecretsRequest struct {
@@ -249,44 +149,21 @@ type ListSecretsRequest struct {
 	ProjectName string `protobuf:"bytes,1,opt,name=project_name,json=projectName,proto3" json:"project_name,omitempty"`
 }
 
-func (x *ListSecretsRequest) Reset() {
-	*x = ListSecretsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListSecretsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListSecretsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListSecretsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListSecretsRequest) ProtoMessage() {}
+func (*ListSecretsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListSecretsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListSecretsRequest.ProtoReflect.Descriptor instead.
-func (*ListSecretsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{4}
-}
+func (*ListSecretsRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *ListSecretsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ListSecretsRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 type ListSecretsResponse struct {
 	state         protoimpl.MessageState
@@ -296,42 +173,25 @@ type ListSecretsResponse struct {
 	Secrets []*ListSecretsResponse_Secret `protobuf:"bytes,1,rep,name=secrets,proto3" json:"secrets,omitempty"`
 }
 
-func (x *ListSecretsResponse) Reset() {
-	*x = ListSecretsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListSecretsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListSecretsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListSecretsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListSecretsResponse) ProtoMessage() {}
+func (*ListSecretsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListSecretsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListSecretsResponse.ProtoReflect.Descriptor instead.
 func (*ListSecretsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{5}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListSecretsResponse) GetSecrets() []*ListSecretsResponse_Secret {
-	if x != nil {
-		return x.Secrets
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -345,58 +205,28 @@ type DeleteSecretRequest struct {
 	NamespaceName string `protobuf:"bytes,3,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *DeleteSecretRequest) Reset() {
-	*x = DeleteSecretRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeleteSecretRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeleteSecretRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeleteSecretRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeleteSecretRequest) ProtoMessage() {}
+func (*DeleteSecretRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeleteSecretRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeleteSecretRequest.ProtoReflect.Descriptor instead.
 func (*DeleteSecretRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{6}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *DeleteSecretRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *DeleteSecretRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *DeleteSecretRequest) GetSecretName() string {
-	if x != nil {
-		return x.SecretName
-	}
-	return ""
-}
+func (x *DeleteSecretRequest) GetSecretName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *DeleteSecretRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *DeleteSecretRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type DeleteSecretResponse struct {
 	state         protoimpl.MessageState
@@ -404,36 +234,21 @@ type DeleteSecretResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *DeleteSecretResponse) Reset() {
-	*x = DeleteSecretResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeleteSecretResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeleteSecretResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeleteSecretResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeleteSecretResponse) ProtoMessage() {}
+func (*DeleteSecretResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeleteSecretResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeleteSecretResponse.ProtoReflect.Descriptor instead.
 func (*DeleteSecretResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{7}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ListSecretsResponse_Secret struct {
@@ -447,63 +262,31 @@ type ListSecretsResponse_Secret struct {
 	UpdatedAt *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
 }
 
-func (x *ListSecretsResponse_Secret) Reset() {
-	*x = ListSecretsResponse_Secret{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListSecretsResponse_Secret) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListSecretsResponse_Secret) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListSecretsResponse_Secret) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListSecretsResponse_Secret) ProtoMessage() {}
+func (*ListSecretsResponse_Secret) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListSecretsResponse_Secret) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListSecretsResponse_Secret.ProtoReflect.Descriptor instead.
 func (*ListSecretsResponse_Secret) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP(), []int{5, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ListSecretsResponse_Secret) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *ListSecretsResponse_Secret) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ListSecretsResponse_Secret) GetDigest() string {
-	if x != nil {
-		return x.Digest
-	}
-	return ""
-}
+func (x *ListSecretsResponse_Secret) GetDigest() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ListSecretsResponse_Secret) GetNamespace() string {
-	if x != nil {
-		return x.Namespace
-	}
-	return ""
-}
+func (x *ListSecretsResponse_Secret) GetNamespace() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ListSecretsResponse_Secret) GetUpdatedAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.UpdatedAt
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -641,10 +424,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_secret_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_secret_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_secret_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_secret_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_secret_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_secret_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
@@ -678,137 +459,5 @@ var file_raystack_optimus_core_v1beta1_secret_proto_depIdxs = []int32{
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_secret_proto_init() }
-func file_raystack_optimus_core_v1beta1_secret_proto_init() {
-	if File_raystack_optimus_core_v1beta1_secret_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterSecretRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterSecretResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateSecretRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateSecretResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListSecretsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListSecretsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteSecretRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteSecretResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_secret_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListSecretsResponse_Secret); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_secret_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   9,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_secret_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_secret_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_secret_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_secret_proto = out.File
-	file_raystack_optimus_core_v1beta1_secret_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_secret_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_secret_proto_depIdxs = nil
-}
+func init()                                                 { file_raystack_optimus_core_v1beta1_secret_proto_init() }
+func file_raystack_optimus_core_v1beta1_secret_proto_init() { _ = "STUB: not implemented"; return }

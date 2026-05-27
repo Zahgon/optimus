@@ -1,10 +1,5 @@
 package config
 
-import (
-	"fmt"
-	"strings"
-)
-
 type ClientConfig struct {
 	Version    Version      `mapstructure:"version"`
 	Log        LogConfig    `mapstructure:"log"`
@@ -44,60 +39,20 @@ type Namespace struct {
 }
 
 func (c *ClientConfig) GetNamespaceByName(name string) (*Namespace, error) {
-	if c.namespaceNameToNamespace == nil {
-		c.buildDictionary()
-	}
-
-	if c.namespaceNameToNamespace[name] == nil {
-		return nil, fmt.Errorf("namespace [%s] is not found", name)
-	}
-
-	return c.namespaceNameToNamespace[name], nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *ClientConfig) ValidateNamespaceNames(namespaceNames ...string) error {
-	if c.namespaceNameToNamespace == nil {
-		c.buildDictionary()
-	}
-
-	var invalidNames []string
-	for _, n := range namespaceNames {
-		if c.namespaceNameToNamespace[n] == nil {
-			invalidNames = append(invalidNames, n)
-		}
-	}
-	var err error
-	if len(invalidNames) > 0 {
-		err = fmt.Errorf("namespace names [%s] are invalid", strings.Join(invalidNames, ", "))
-	}
-	return err
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (c *ClientConfig) GetSelectedNamespaces(namespaceNames ...string) ([]*Namespace, error) {
-	if err := c.ValidateNamespaceNames(namespaceNames...); err != nil {
-		return nil, err
-	}
-	output := make([]*Namespace, len(namespaceNames))
-	for i, n := range namespaceNames {
-		output[i] = c.namespaceNameToNamespace[n]
-	}
-	return output, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (c *ClientConfig) GetAllNamespaceNames() []string {
-	output := make([]string, len(c.Namespaces))
-	for i, n := range c.Namespaces {
-		output[i] = n.Name
-	}
-	return output
-}
+func (c *ClientConfig) GetAllNamespaceNames() []string { _ = "STUB: not implemented"; return nil }
 
-func (c *ClientConfig) buildDictionary() {
-	c.namespaceNameToNamespace = map[string]*Namespace{}
-	for _, namespace := range c.Namespaces {
-		if namespace == nil {
-			continue
-		}
-		c.namespaceNameToNamespace[namespace.Name] = namespace
-	}
-}
+func (c *ClientConfig) buildDictionary() { _ = "STUB: not implemented"; return }

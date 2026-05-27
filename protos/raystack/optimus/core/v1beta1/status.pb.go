@@ -7,10 +7,10 @@
 package optimus
 
 import (
+	sync "sync"
+
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -54,32 +54,27 @@ var (
 	}
 )
 
-func (x Level) Enum() *Level {
-	p := new(Level)
-	*p = x
-	return p
-}
+func (x Level) Enum() *Level { _ = "STUB: not implemented"; return nil }
 
-func (x Level) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
+func (x Level) String() string { _ = "STUB: not implemented"; return "" }
 
 func (Level) Descriptor() protoreflect.EnumDescriptor {
-	return file_raystack_optimus_core_v1beta1_status_proto_enumTypes[0].Descriptor()
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumDescriptor)
 }
 
 func (Level) Type() protoreflect.EnumType {
-	return &file_raystack_optimus_core_v1beta1_status_proto_enumTypes[0]
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumType)
 }
 
 func (x Level) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumNumber)
 }
 
 // Deprecated: Use Level.Descriptor instead.
-func (Level) EnumDescriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_status_proto_rawDescGZIP(), []int{0}
-}
+func (Level) EnumDescriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 type Log struct {
 	state         protoimpl.MessageState
@@ -90,51 +85,23 @@ type Log struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *Log) Reset() {
-	*x = Log{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_status_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *Log) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *Log) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *Log) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*Log) ProtoMessage() {}
+func (*Log) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *Log) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_status_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use Log.ProtoReflect.Descriptor instead.
-func (*Log) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_status_proto_rawDescGZIP(), []int{0}
-}
+func (*Log) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *Log) GetLevel() Level {
-	if x != nil {
-		return x.Level
-	}
-	return Level_LEVEL_UNSPECIFIED
-}
+func (x *Log) GetLevel() Level { _ = "STUB: not implemented"; return *new(Level) }
 
-func (x *Log) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *Log) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 var File_raystack_optimus_core_v1beta1_status_proto protoreflect.FileDescriptor
 
@@ -172,10 +139,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_status_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_status_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_status_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_status_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_status_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
@@ -193,42 +158,5 @@ var file_raystack_optimus_core_v1beta1_status_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_status_proto_init() }
-func file_raystack_optimus_core_v1beta1_status_proto_init() {
-	if File_raystack_optimus_core_v1beta1_status_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_status_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Log); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_status_proto_rawDesc,
-			NumEnums:      1,
-			NumMessages:   1,
-			NumExtensions: 0,
-			NumServices:   0,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_status_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_status_proto_depIdxs,
-		EnumInfos:         file_raystack_optimus_core_v1beta1_status_proto_enumTypes,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_status_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_status_proto = out.File
-	file_raystack_optimus_core_v1beta1_status_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_status_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_status_proto_depIdxs = nil
-}
+func init()                                                 { file_raystack_optimus_core_v1beta1_status_proto_init() }
+func file_raystack_optimus_core_v1beta1_status_proto_init() { _ = "STUB: not implemented"; return }

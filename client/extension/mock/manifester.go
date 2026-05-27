@@ -15,37 +15,12 @@ type Manifester struct {
 
 // Flush provides a mock function with given fields: manifest, dirPath
 func (_m *Manifester) Flush(manifest *model.Manifest, dirPath string) error {
-	ret := _m.Called(manifest, dirPath)
-
-	var r0 error
-	if rf, ok := ret.Get(0).(func(*model.Manifest, string) error); ok {
-		r0 = rf(manifest, dirPath)
-	} else {
-		r0 = ret.Error(0)
-	}
-
-	return r0
+	_ = "STUB: not implemented"
+	return nil
 }
 
 // Load provides a mock function with given fields: dirPath
 func (_m *Manifester) Load(dirPath string) (*model.Manifest, error) {
-	ret := _m.Called(dirPath)
-
-	var r0 *model.Manifest
-	if rf, ok := ret.Get(0).(func(string) *model.Manifest); ok {
-		r0 = rf(dirPath)
-	} else {
-		if ret.Get(0) != nil {
-			r0 = ret.Get(0).(*model.Manifest)
-		}
-	}
-
-	var r1 error
-	if rf, ok := ret.Get(1).(func(string) error); ok {
-		r1 = rf(dirPath)
-	} else {
-		r1 = ret.Error(1)
-	}
-
-	return r0, r1
+	_ = "STUB: not implemented"
+	return nil, nil
 }

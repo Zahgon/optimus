@@ -1,13 +1,11 @@
 package scheduler
 
 import (
-	"strings"
 	"time"
 
 	"github.com/google/uuid"
 
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 const (
@@ -40,33 +38,13 @@ type (
 )
 
 func ReplayStateFromString(state string) (ReplayState, error) {
-	switch strings.ToLower(state) {
-	case string(ReplayStateCreated):
-		return ReplayStateCreated, nil
-	case string(ReplayStateInProgress):
-		return ReplayStateInProgress, nil
-	case string(ReplayStateInvalid):
-		return ReplayStateInvalid, nil
-	case string(ReplayStatePartialReplayed):
-		return ReplayStatePartialReplayed, nil
-	case string(ReplayStateReplayed):
-		return ReplayStateReplayed, nil
-	case string(ReplayStateSuccess):
-		return ReplayStateSuccess, nil
-	case string(ReplayStateFailed):
-		return ReplayStateFailed, nil
-	default:
-		return "", errors.InvalidArgument(EntityJobRun, "invalid state for replay "+state)
-	}
+	_ = "STUB: not implemented"
+	return *new(ReplayState), nil
 }
 
-func (j ReplayState) String() string {
-	return string(j)
-}
+func (j ReplayState) String() string { _ = "STUB: not implemented"; return "" }
 
-func (j ReplayUserState) String() string {
-	return string(j)
-}
+func (j ReplayUserState) String() string { _ = "STUB: not implemented"; return "" }
 
 type Replay struct {
 	id uuid.UUID
@@ -81,57 +59,33 @@ type Replay struct {
 	createdAt time.Time
 }
 
-func (r *Replay) ID() uuid.UUID {
-	return r.id
-}
+func (r *Replay) ID() uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
-func (r *Replay) JobName() JobName {
-	return r.jobName
-}
+func (r *Replay) JobName() JobName { _ = "STUB: not implemented"; return *new(JobName) }
 
-func (r *Replay) Tenant() tenant.Tenant {
-	return r.tenant
-}
+func (r *Replay) Tenant() tenant.Tenant { _ = "STUB: not implemented"; return *new(tenant.Tenant) }
 
-func (r *Replay) Config() *ReplayConfig {
-	return r.config
-}
+func (r *Replay) Config() *ReplayConfig { _ = "STUB: not implemented"; return nil }
 
-func (r *Replay) State() ReplayState {
-	return r.state
-}
+func (r *Replay) State() ReplayState { _ = "STUB: not implemented"; return *new(ReplayState) }
 
 func (r *Replay) UserState() ReplayUserState {
-	switch r.state {
-	case ReplayStateCreated:
-		return ReplayUserStateCreated
-	case ReplayStateInProgress, ReplayStatePartialReplayed, ReplayStateReplayed:
-		return ReplayUserStateInProgress
-	case ReplayStateInvalid:
-		return ReplayUserStateInvalid
-	case ReplayStateSuccess:
-		return ReplayUserStateSuccess
-	case ReplayStateFailed:
-		return ReplayUserStateFailed
-	default:
-		return ""
-	}
+	_ = "STUB: not implemented"
+	return *new(ReplayUserState)
 }
 
-func (r *Replay) Message() string {
-	return r.message
-}
+func (r *Replay) Message() string { _ = "STUB: not implemented"; return "" }
 
-func (r *Replay) CreatedAt() time.Time {
-	return r.createdAt
-}
+func (r *Replay) CreatedAt() time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
 func NewReplayRequest(jobName JobName, tenant tenant.Tenant, config *ReplayConfig, state ReplayState) *Replay {
-	return &Replay{jobName: jobName, tenant: tenant, config: config, state: state}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func NewReplay(id uuid.UUID, jobName JobName, tenant tenant.Tenant, config *ReplayConfig, state ReplayState, createdAt time.Time) *Replay {
-	return &Replay{id: id, jobName: jobName, tenant: tenant, config: config, state: state, createdAt: createdAt}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type ReplayWithRun struct {
@@ -140,20 +94,11 @@ type ReplayWithRun struct {
 }
 
 func (r *ReplayWithRun) GetFirstExecutableRun() *JobRunStatus {
-	runs := JobRunStatusList(r.Runs).GetSortedRunsByStates([]State{StatePending})
-	if len(runs) > 0 {
-		return runs[0]
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (r *ReplayWithRun) GetLastExecutableRun() *JobRunStatus {
-	runs := JobRunStatusList(r.Runs).GetSortedRunsByStates([]State{StatePending})
-	if len(runs) > 0 {
-		return runs[len(runs)-1]
-	}
-	return nil
-}
+func (r *ReplayWithRun) GetLastExecutableRun() *JobRunStatus { _ = "STUB: not implemented"; return nil }
 
 type ReplayConfig struct {
 	StartTime   time.Time
@@ -164,5 +109,6 @@ type ReplayConfig struct {
 }
 
 func NewReplayConfig(startTime, endTime time.Time, parallel bool, jobConfig map[string]string, description string) *ReplayConfig {
-	return &ReplayConfig{StartTime: startTime.UTC(), EndTime: endTime.UTC(), Parallel: parallel, JobConfig: jobConfig, Description: description}
+	_ = "STUB: not implemented"
+	return nil
 }

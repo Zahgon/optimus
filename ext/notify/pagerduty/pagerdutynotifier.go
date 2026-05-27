@@ -2,7 +2,6 @@ package pagerduty
 
 import (
 	"context"
-	"fmt"
 	"io"
 	"sync"
 	"time"
@@ -50,78 +49,31 @@ type Event struct {
 }
 
 func NewEvent(routingKey, owner string, meta *scheduler.Event) Event {
-	return Event{
-		routingKey: routingKey,
-		owner:      owner,
-		meta:       meta,
-	}
+	_ = "STUB: not implemented"
+	return *new(Event)
 }
 
-func (s *Notifier) Notify(_ context.Context, attr scheduler.NotifyAttrs) error { //nolint:unparam
-	s.queueNotification(attr.Secret, attr)
+func (s *Notifier) Notify(_ context.Context, attr scheduler.NotifyAttrs) error {
+	_ = "STUB: not implemented" //nolint:unparam
 	return nil
 }
 
 func (s *Notifier) queueNotification(routingKey string, attr scheduler.NotifyAttrs) {
-	s.mu.Lock()
-	defer s.mu.Unlock()
-	evt := Event{
-		routingKey: routingKey,
-		owner:      attr.Owner,
-		meta:       attr.JobEvent,
-	}
-	s.msgQueue = append(s.msgQueue, evt)
-	pagerdutyQueueCounter.Inc()
+	_ = "STUB: not implemented"
+	return
 }
 
-func (s *Notifier) Worker(ctx context.Context) {
-	defer s.wg.Done()
+func (s *Notifier) Worker(ctx context.Context) { _ = "STUB: not implemented"; return }
 
-	for {
-		s.mu.Lock()
-		for _, evt := range s.msgQueue {
-			err := s.pdService.SendAlert(ctx, evt)
-			if err != nil {
-				s.workerErrChan <- fmt.Errorf("Worker_SendMessageContext: %w", err)
-			}
-		}
-		s.msgQueue = nil // empty the queue
-		s.mu.Unlock()
+// empty the queue
 
-		pagerdutyWorkerBatchCounter.Inc()
-		select {
-		case <-ctx.Done():
-			close(s.workerErrChan)
-			return
-		default:
-			time.Sleep(s.eventBatchInterval)
-		}
-	}
-}
-
-func (s *Notifier) Close() error { // nolint: unparam
+func (s *Notifier) Close() error {
+	_ = "STUB: not implemented" // nolint: unparam
 	// drain batches
-	s.wg.Wait()
 	return nil
 }
 
 func NewNotifier(ctx context.Context, eventBatchInterval time.Duration, errHandler func(error), pdService PagerDutyService) *Notifier {
-	notifier := &Notifier{
-		msgQueue:           make([]Event, 0),
-		workerErrChan:      make(chan error),
-		eventBatchInterval: eventBatchInterval,
-		pdService:          pdService,
-	}
-
-	notifier.wg.Add(1)
-	go func() {
-		for err := range notifier.workerErrChan {
-			errHandler(err)
-			pagerdutyWorkerSendErrCounter.Inc()
-		}
-		notifier.wg.Done()
-	}()
-	notifier.wg.Add(1)
-	go notifier.Worker(ctx)
-	return notifier
+	_ = "STUB: not implemented"
+	return nil
 }

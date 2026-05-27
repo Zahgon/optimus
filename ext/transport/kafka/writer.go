@@ -1,7 +1,6 @@
 package kafka
 
 import (
-	"context"
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -24,37 +23,10 @@ type Writer struct {
 }
 
 func NewWriter(kafkaBrokerUrls []string, topic string, logger log.Logger) *Writer {
-	writer := &kafka.Writer{
-		Addr:                   kafka.TCP(kafkaBrokerUrls...),
-		Topic:                  topic,
-		AllowAutoTopicCreation: true,
-		Balancer:               &kafka.LeastBytes{},
-		RequiredAcks:           kafka.RequireOne,
-		MaxAttempts:            1,
-		WriteTimeout:           writeTimeout,
-		Logger:                 kafka.LoggerFunc(logger.Info),
-		ErrorLogger:            kafka.LoggerFunc(logger.Error),
-	}
-
-	return &Writer{kafkaWriter: writer}
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (w *Writer) Close() error {
-	return w.kafkaWriter.Close()
-}
+func (w *Writer) Close() error { _ = "STUB: not implemented"; return nil }
 
-func (w *Writer) Write(messages [][]byte) error {
-	kafkaMessages := make([]kafka.Message, len(messages))
-	for i, m := range messages {
-		kafkaMessages[i] = kafka.Message{
-			Value: m,
-		}
-	}
-
-	err := w.kafkaWriter.WriteMessages(context.Background(), kafkaMessages...)
-	if err == nil {
-		kafkaQueueCounter.Add(float64(len(messages)))
-		return nil
-	}
-	return err
-}
+func (w *Writer) Write(messages [][]byte) error { _ = "STUB: not implemented"; return nil }

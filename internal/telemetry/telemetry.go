@@ -1,23 +1,11 @@
 package telemetry
 
 import (
-	"context"
-	"fmt"
 	"net/http"
-	"net/http/pprof"
 	"time"
 
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promauto"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/raystack/salt/log"
-	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/exporters/jaeger"
-	"go.opentelemetry.io/otel/propagation"
-	"go.opentelemetry.io/otel/sdk/resource"
 	tracesdk "go.opentelemetry.io/otel/sdk/trace"
-	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 
 	"github.com/raystack/optimus/config"
 )
@@ -25,110 +13,38 @@ import (
 const MetricWaitInterval = time.Second * 2
 
 func Init(l log.Logger, conf config.TelemetryConfig) (func(), error) {
-	var tp *tracesdk.TracerProvider
-	var err error
-	if conf.JaegerAddr != "" {
-		l.Debug("enabling jaeger traces", "addr", conf.JaegerAddr)
-		tp, err = tracerProvider(conf.JaegerAddr)
-		if err != nil {
-			return nil, err
-		}
-
-		// Register our TracerProvider as the global so any imported
-		// instrumentation in the future will default to using it.
-		otel.SetTracerProvider(tp)
-
-		// Traces can extend beyond a single process. This requires context propagation, a mechanism where identifiers for a trace are sent to remote processes.
-		// TextMapPropagator performs the injection and extraction of a cross-cutting concern value as string key/values
-		// pairs into carriers that travel in-band across process boundaries.
-		// The carrier of propagated data on both the client (injector) and server (extractor) side is usually an HTTP request.
-		// In order to increase compatibility, the key/value pairs MUST only consist of US-ASCII characters that make up
-		// valid HTTP header fields as per RFC 7230.
-		otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))
-	}
-
-	var metricServer *http.Server
-	if conf.ProfileAddr != "" {
-		l.Debug("enabling profile metrics", "addr", conf.ProfileAddr)
-		// custom metric for app uptime
-		go func() {
-			appUptime := promauto.NewGauge(prometheus.GaugeOpts{
-				Name: "application_uptime_seconds",
-				Help: "Seconds since the application started",
-			})
-			appHeartbeat := promauto.NewCounter(prometheus.CounterOpts{
-				Name: "application_heartbeat",
-				Help: "Application heartbeat pings",
-			})
-			startTime := time.Now()
-			for {
-				time.Sleep(MetricWaitInterval)
-				appUptime.Set(time.Since(startTime).Seconds())
-				appHeartbeat.Inc()
-			}
-		}()
-
-		// start exposing metrics
-		metricServer = MetricsServer(conf.ProfileAddr)
-		go func() {
-			if err := metricServer.ListenAndServe(); err != http.ErrServerClosed {
-				l.Warn("failed while serving metrics", "err", err)
-			}
-		}()
-	}
-	return func() {
-		if tp != nil {
-			if err = tp.Shutdown(context.Background()); err != nil {
-				l.Warn("failed to shutdown trace provider", "err", err)
-			}
-		}
-		if metricServer != nil {
-			if err := metricServer.Close(); err != nil {
-				l.Warn("failed to shutdown metrics http server", "err", fmt.Errorf("metricServer.Close: %w", err))
-			}
-		}
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
+
+// Register our TracerProvider as the global so any imported
+// instrumentation in the future will default to using it.
+
+// Traces can extend beyond a single process. This requires context propagation, a mechanism where identifiers for a trace are sent to remote processes.
+// TextMapPropagator performs the injection and extraction of a cross-cutting concern value as string key/values
+// pairs into carriers that travel in-band across process boundaries.
+// The carrier of propagated data on both the client (injector) and server (extractor) side is usually an HTTP request.
+// In order to increase compatibility, the key/value pairs MUST only consist of US-ASCII characters that make up
+// valid HTTP header fields as per RFC 7230.
+
+// custom metric for app uptime
+
+// start exposing metrics
 
 // tracerProvider returns an OpenTelemetry TracerProvider configured to use
 // the Jaeger exporter that will send spans to the provided url. The returned
 // TracerProvider will also use a Resource configured with all the information
 // about the application.
 func tracerProvider(url string) (*tracesdk.TracerProvider, error) {
+	_ = "STUB: not implemented"
 	// create the Jaeger exporter
-	jaegerExporter, err := jaeger.New(jaeger.WithCollectorEndpoint(jaeger.WithEndpoint(url)))
-	if err != nil {
-		return nil, err
-	}
-	tp := tracesdk.NewTracerProvider(
-		// Always be sure to batch in production
-		tracesdk.WithBatcher(jaegerExporter),
-
-		// Record information about this application in an Resource
-		tracesdk.WithResource(resource.NewWithAttributes(
-			semconv.SchemaURL,
-			semconv.ServiceNameKey.String(config.AppName()),
-			semconv.ServiceVersionKey.String(config.BuildVersion),
-			attribute.String("build_commit", config.BuildCommit),
-			attribute.String("build_date", config.BuildDate),
-		)),
-	)
-
-	return tp, nil
+	return nil, nil
 }
 
-func MetricsServer(addr string) *http.Server {
-	mux := http.NewServeMux()
-	mux.Handle("/metrics", promhttp.Handler())
+// Always be sure to batch in production
 
-	mux.HandleFunc("/debug/pprof/", pprof.Index)
-	mux.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
-	mux.HandleFunc("/debug/pprof/profile", pprof.Profile)
-	mux.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
-	mux.HandleFunc("/debug/pprof/trace", pprof.Trace)
+// Record information about this application in an Resource
 
-	return &http.Server{ //nolint: gosec
-		Addr:    addr,
-		Handler: mux,
-	}
-}
+func MetricsServer(addr string) *http.Server { _ = "STUB: not implemented"; return nil }
+
+//nolint: gosec

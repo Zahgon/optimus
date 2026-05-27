@@ -24,19 +24,11 @@ const (
 )
 
 func WithString(operand Operand, value string) FilterOpt {
-	return func(f *filter) {
-		if value != "" {
-			f.bits |= uint64(operand)
-			f.value[operand] = value
-		}
-	}
+	_ = "STUB: not implemented"
+	return *new(FilterOpt)
 }
 
 func WithStringArray(operand Operand, value []string) FilterOpt {
-	return func(f *filter) {
-		if len(value) > 0 {
-			f.bits |= uint64(operand)
-			f.value[operand] = value
-		}
-	}
+	_ = "STUB: not implemented"
+	return *new(FilterOpt)
 }

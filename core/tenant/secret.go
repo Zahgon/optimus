@@ -1,7 +1,5 @@
 package tenant
 
-import "github.com/raystack/optimus/internal/errors"
-
 const (
 	EntitySecret = "secret"
 
@@ -13,15 +11,11 @@ const (
 type SecretName string
 
 func SecretNameFrom(name string) (SecretName, error) {
-	if name == "" {
-		return "", errors.InvalidArgument(EntitySecret, "secret name is empty")
-	}
-	return SecretName(name), nil
+	_ = "STUB: not implemented"
+	return *new(SecretName), nil
 }
 
-func (sn SecretName) String() string {
-	return string(sn)
-}
+func (sn SecretName) String() string { _ = "STUB: not implemented"; return "" }
 
 type PlainTextSecret struct {
 	name  SecretName
@@ -29,38 +23,17 @@ type PlainTextSecret struct {
 }
 
 func NewPlainTextSecret(name, value string) (*PlainTextSecret, error) {
-	secretName, err := SecretNameFrom(name)
-	if err != nil {
-		return nil, err
-	}
-
-	if value == "" {
-		return nil, errors.InvalidArgument(EntitySecret, "empty secret value")
-	}
-
-	return &PlainTextSecret{
-		name:  secretName,
-		value: value,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (p *PlainTextSecret) Value() string {
-	return p.value
-}
+func (p *PlainTextSecret) Value() string { _ = "STUB: not implemented"; return "" }
 
-func (p *PlainTextSecret) Name() SecretName {
-	return p.name
-}
+func (p *PlainTextSecret) Name() SecretName { _ = "STUB: not implemented"; return *new(SecretName) }
 
 type PlainTextSecrets []*PlainTextSecret
 
-func (p PlainTextSecrets) ToMap() map[string]string {
-	secretMap := map[string]string{}
-	for _, item := range p {
-		secretMap[item.Name().String()] = item.Value()
-	}
-	return secretMap
-}
+func (p PlainTextSecrets) ToMap() map[string]string { _ = "STUB: not implemented"; return nil }
 
 type Secret struct {
 	name         SecretName
@@ -70,40 +43,15 @@ type Secret struct {
 	namespaceName string
 }
 
-func (s *Secret) Name() SecretName {
-	return s.name
-}
+func (s *Secret) Name() SecretName { _ = "STUB: not implemented"; return *new(SecretName) }
 
-func (s *Secret) EncodedValue() string {
-	return s.encodedValue
-}
+func (s *Secret) EncodedValue() string { _ = "STUB: not implemented"; return "" }
 
-func (s *Secret) ProjectName() ProjectName {
-	return s.projName
-}
+func (s *Secret) ProjectName() ProjectName { _ = "STUB: not implemented"; return *new(ProjectName) }
 
-func (s *Secret) NamespaceName() string {
-	return s.namespaceName
-}
+func (s *Secret) NamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func NewSecret(name, encodedValue string, projName ProjectName, nsName string) (*Secret, error) {
-	secretName, err := SecretNameFrom(name)
-	if err != nil {
-		return nil, err
-	}
-
-	if encodedValue == "" {
-		return nil, errors.InvalidArgument(EntitySecret, "empty encoded secret")
-	}
-
-	if projName == "" {
-		return nil, errors.InvalidArgument(EntitySecret, "invalid tenant details")
-	}
-
-	return &Secret{
-		name:          secretName,
-		encodedValue:  encodedValue,
-		projName:      projName,
-		namespaceName: nsName,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

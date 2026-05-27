@@ -6,7 +6,6 @@ import (
 	"github.com/raystack/salt/log"
 
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 type ProjectGetter interface {
@@ -31,61 +30,26 @@ type TenantService struct {
 }
 
 func (t TenantService) GetDetails(ctx context.Context, tnnt tenant.Tenant) (*tenant.WithDetails, error) {
-	if tnnt.IsInvalid() {
-		t.logger.Error("tenant information is invalid")
-		return nil, errors.InvalidArgument(tenant.EntityTenant, "invalid tenant details provided")
-	}
-
-	proj, err := t.projGetter.Get(ctx, tnnt.ProjectName())
-	if err != nil {
-		t.logger.Error("error getting project [%s]: %s", tnnt.ProjectName().String(), err)
-		return nil, err
-	}
-
-	namespace, err := t.namespaceGetter.Get(ctx, tnnt.ProjectName(), tnnt.NamespaceName())
-	if err != nil {
-		t.logger.Error("error getting namespace [%s]: %s", tnnt.NamespaceName().String(), err)
-		return nil, err
-	}
-
-	secrets, err := t.secretsGetter.GetAll(ctx, tnnt.ProjectName(), tnnt.NamespaceName().String())
-	if err != nil {
-		t.logger.Error("error getting all secrets for project [%s] namespace [%s]: %s", tnnt.ProjectName(), tnnt.NamespaceName(), err)
-		return nil, err
-	}
-
-	return tenant.NewTenantDetails(proj, namespace, secrets)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (t TenantService) GetProject(ctx context.Context, name tenant.ProjectName) (*tenant.Project, error) {
-	if name == "" {
-		t.logger.Error("project name is empty")
-		return nil, errors.InvalidArgument(tenant.EntityTenant, "invalid project name")
-	}
-	return t.projGetter.Get(ctx, name)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (t TenantService) GetSecrets(ctx context.Context, tnnt tenant.Tenant) ([]*tenant.PlainTextSecret, error) {
-	if tnnt.IsInvalid() {
-		t.logger.Error("tenant information is invalid")
-		return nil, errors.InvalidArgument(tenant.EntityTenant, "tenant is invalid")
-	}
-	return t.secretsGetter.GetAll(ctx, tnnt.ProjectName(), tnnt.NamespaceName().String())
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (t TenantService) GetSecret(ctx context.Context, tnnt tenant.Tenant, name string) (*tenant.PlainTextSecret, error) {
-	if tnnt.IsInvalid() {
-		t.logger.Error("tenant information is invalid")
-		return nil, errors.InvalidArgument(tenant.EntityTenant, "tenant is invalid")
-	}
-	return t.secretsGetter.Get(ctx, tnnt.ProjectName(), tnnt.NamespaceName().String(), name)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func NewTenantService(projGetter ProjectGetter, nsGetter NamespaceGetter, secretsGetter SecretsGetter, logger log.Logger) *TenantService {
-	return &TenantService{
-		projGetter:      projGetter,
-		namespaceGetter: nsGetter,
-		secretsGetter:   secretsGetter,
-		logger:          logger,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

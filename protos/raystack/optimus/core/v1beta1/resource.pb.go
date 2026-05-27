@@ -7,13 +7,13 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	structpb "google.golang.org/protobuf/types/known/structpb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -34,63 +34,40 @@ type DeployResourceSpecificationRequest struct {
 	NamespaceName string                   `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *DeployResourceSpecificationRequest) Reset() {
-	*x = DeployResourceSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeployResourceSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeployResourceSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeployResourceSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeployResourceSpecificationRequest) ProtoMessage() {}
+func (*DeployResourceSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeployResourceSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeployResourceSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*DeployResourceSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *DeployResourceSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *DeployResourceSpecificationRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *DeployResourceSpecificationRequest) GetResources() []*ResourceSpecification {
-	if x != nil {
-		return x.Resources
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *DeployResourceSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -102,42 +79,25 @@ type DeployResourceSpecificationResponse struct {
 	LogStatus *Log `protobuf:"bytes,5,opt,name=log_status,json=logStatus,proto3" json:"log_status,omitempty"`
 }
 
-func (x *DeployResourceSpecificationResponse) Reset() {
-	*x = DeployResourceSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeployResourceSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeployResourceSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeployResourceSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeployResourceSpecificationResponse) ProtoMessage() {}
+func (*DeployResourceSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeployResourceSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeployResourceSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*DeployResourceSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *DeployResourceSpecificationResponse) GetLogStatus() *Log {
-	if x != nil {
-		return x.LogStatus
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -152,56 +112,35 @@ type ListResourceSpecificationRequest struct {
 	NamespaceName string `protobuf:"bytes,3,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *ListResourceSpecificationRequest) Reset() {
-	*x = ListResourceSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListResourceSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListResourceSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListResourceSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListResourceSpecificationRequest) ProtoMessage() {}
+func (*ListResourceSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListResourceSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListResourceSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*ListResourceSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListResourceSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ListResourceSpecificationRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ListResourceSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -213,42 +152,25 @@ type ListResourceSpecificationResponse struct {
 	Resources []*ResourceSpecification `protobuf:"bytes,1,rep,name=resources,proto3" json:"resources,omitempty"`
 }
 
-func (x *ListResourceSpecificationResponse) Reset() {
-	*x = ListResourceSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListResourceSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListResourceSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListResourceSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListResourceSpecificationResponse) ProtoMessage() {}
+func (*ListResourceSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListResourceSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListResourceSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*ListResourceSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListResourceSpecificationResponse) GetResources() []*ResourceSpecification {
-	if x != nil {
-		return x.Resources
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -263,65 +185,33 @@ type CreateResourceRequest struct {
 	NamespaceName string                 `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *CreateResourceRequest) Reset() {
-	*x = CreateResourceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CreateResourceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CreateResourceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CreateResourceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CreateResourceRequest) ProtoMessage() {}
+func (*CreateResourceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CreateResourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CreateResourceRequest.ProtoReflect.Descriptor instead.
 func (*CreateResourceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{4}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CreateResourceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *CreateResourceRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *CreateResourceRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
-	return ""
-}
+func (x *CreateResourceRequest) GetDatastoreName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *CreateResourceRequest) GetResource() *ResourceSpecification {
-	if x != nil {
-		return x.Resource
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *CreateResourceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *CreateResourceRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type CreateResourceResponse struct {
 	state         protoimpl.MessageState
@@ -332,51 +222,26 @@ type CreateResourceResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *CreateResourceResponse) Reset() {
-	*x = CreateResourceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CreateResourceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CreateResourceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CreateResourceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CreateResourceResponse) ProtoMessage() {}
+func (*CreateResourceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CreateResourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CreateResourceResponse.ProtoReflect.Descriptor instead.
 func (*CreateResourceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{5}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CreateResourceResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *CreateResourceResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *CreateResourceResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *CreateResourceResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 type ReadResourceRequest struct {
 	state         protoimpl.MessageState
@@ -389,65 +254,30 @@ type ReadResourceRequest struct {
 	NamespaceName string `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *ReadResourceRequest) Reset() {
-	*x = ReadResourceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReadResourceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReadResourceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReadResourceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReadResourceRequest) ProtoMessage() {}
+func (*ReadResourceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReadResourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReadResourceRequest.ProtoReflect.Descriptor instead.
 func (*ReadResourceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{6}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ReadResourceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ReadResourceRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReadResourceRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
-	return ""
-}
+func (x *ReadResourceRequest) GetDatastoreName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReadResourceRequest) GetResourceName() string {
-	if x != nil {
-		return x.ResourceName
-	}
-	return ""
-}
+func (x *ReadResourceRequest) GetResourceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ReadResourceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *ReadResourceRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type ReadResourceResponse struct {
 	state         protoimpl.MessageState
@@ -459,56 +289,29 @@ type ReadResourceResponse struct {
 	Resource *ResourceSpecification `protobuf:"bytes,3,opt,name=resource,proto3" json:"resource,omitempty"`
 }
 
-func (x *ReadResourceResponse) Reset() {
-	*x = ReadResourceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReadResourceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReadResourceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReadResourceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReadResourceResponse) ProtoMessage() {}
+func (*ReadResourceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReadResourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReadResourceResponse.ProtoReflect.Descriptor instead.
 func (*ReadResourceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{7}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ReadResourceResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *ReadResourceResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *ReadResourceResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *ReadResourceResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ReadResourceResponse) GetResource() *ResourceSpecification {
-	if x != nil {
-		return x.Resource
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -523,65 +326,33 @@ type UpdateResourceRequest struct {
 	NamespaceName string                 `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *UpdateResourceRequest) Reset() {
-	*x = UpdateResourceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateResourceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateResourceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateResourceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateResourceRequest) ProtoMessage() {}
+func (*UpdateResourceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateResourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateResourceRequest.ProtoReflect.Descriptor instead.
 func (*UpdateResourceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{8}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *UpdateResourceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *UpdateResourceRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateResourceRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
-	return ""
-}
+func (x *UpdateResourceRequest) GetDatastoreName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *UpdateResourceRequest) GetResource() *ResourceSpecification {
-	if x != nil {
-		return x.Resource
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *UpdateResourceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *UpdateResourceRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type UpdateResourceResponse struct {
 	state         protoimpl.MessageState
@@ -592,51 +363,26 @@ type UpdateResourceResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *UpdateResourceResponse) Reset() {
-	*x = UpdateResourceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateResourceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateResourceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateResourceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateResourceResponse) ProtoMessage() {}
+func (*UpdateResourceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateResourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateResourceResponse.ProtoReflect.Descriptor instead.
 func (*UpdateResourceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{9}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *UpdateResourceResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *UpdateResourceResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *UpdateResourceResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *UpdateResourceResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 // ResourceSpecification are datastore specification representation of a resource
 type ResourceSpecification struct {
@@ -652,77 +398,38 @@ type ResourceSpecification struct {
 	Labels  map[string]string `protobuf:"bytes,7,rep,name=labels,proto3" json:"labels,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
-func (x *ResourceSpecification) Reset() {
-	*x = ResourceSpecification{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ResourceSpecification) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ResourceSpecification) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ResourceSpecification) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ResourceSpecification) ProtoMessage() {}
+func (*ResourceSpecification) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ResourceSpecification) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ResourceSpecification.ProtoReflect.Descriptor instead.
 func (*ResourceSpecification) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{10}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ResourceSpecification) GetVersion() int32 {
-	if x != nil {
-		return x.Version
-	}
-	return 0
-}
+func (x *ResourceSpecification) GetVersion() int32 { _ = "STUB: not implemented"; return 0 }
 
-func (x *ResourceSpecification) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *ResourceSpecification) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ResourceSpecification) GetType() string {
-	if x != nil {
-		return x.Type
-	}
-	return ""
-}
+func (x *ResourceSpecification) GetType() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ResourceSpecification) GetSpec() *structpb.Struct {
-	if x != nil {
-		return x.Spec
-	}
-	return nil
-}
+func (x *ResourceSpecification) GetSpec() *structpb.Struct { _ = "STUB: not implemented"; return nil }
 
 func (x *ResourceSpecification) GetAssets() map[string]string {
-	if x != nil {
-		return x.Assets
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *ResourceSpecification) GetLabels() map[string]string {
-	if x != nil {
-		return x.Labels
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -738,70 +445,45 @@ type ChangeResourceNamespaceRequest struct {
 	NewNamespaceName string `protobuf:"bytes,5,opt,name=new_namespace_name,json=newNamespaceName,proto3" json:"new_namespace_name,omitempty"`
 }
 
-func (x *ChangeResourceNamespaceRequest) Reset() {
-	*x = ChangeResourceNamespaceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[11]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ChangeResourceNamespaceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ChangeResourceNamespaceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ChangeResourceNamespaceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ChangeResourceNamespaceRequest) ProtoMessage() {}
+func (*ChangeResourceNamespaceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ChangeResourceNamespaceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[11]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ChangeResourceNamespaceRequest.ProtoReflect.Descriptor instead.
 func (*ChangeResourceNamespaceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{11}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ChangeResourceNamespaceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ChangeResourceNamespaceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ChangeResourceNamespaceRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ChangeResourceNamespaceRequest) GetResourceName() string {
-	if x != nil {
-		return x.ResourceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ChangeResourceNamespaceRequest) GetNewNamespaceName() string {
-	if x != nil {
-		return x.NewNamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -811,36 +493,21 @@ type ChangeResourceNamespaceResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *ChangeResourceNamespaceResponse) Reset() {
-	*x = ChangeResourceNamespaceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[12]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ChangeResourceNamespaceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ChangeResourceNamespaceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ChangeResourceNamespaceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ChangeResourceNamespaceResponse) ProtoMessage() {}
+func (*ChangeResourceNamespaceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ChangeResourceNamespaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[12]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ChangeResourceNamespaceResponse.ProtoReflect.Descriptor instead.
 func (*ChangeResourceNamespaceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{12}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ApplyResourcesRequest struct {
@@ -854,65 +521,30 @@ type ApplyResourcesRequest struct {
 	ResourceNames []string `protobuf:"bytes,4,rep,name=resource_names,json=resourceNames,proto3" json:"resource_names,omitempty"`
 }
 
-func (x *ApplyResourcesRequest) Reset() {
-	*x = ApplyResourcesRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[13]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ApplyResourcesRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ApplyResourcesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ApplyResourcesRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ApplyResourcesRequest) ProtoMessage() {}
+func (*ApplyResourcesRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ApplyResourcesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[13]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ApplyResourcesRequest.ProtoReflect.Descriptor instead.
 func (*ApplyResourcesRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{13}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ApplyResourcesRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ApplyResourcesRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ApplyResourcesRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *ApplyResourcesRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ApplyResourcesRequest) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
-	return ""
-}
+func (x *ApplyResourcesRequest) GetDatastoreName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ApplyResourcesRequest) GetResourceNames() []string {
-	if x != nil {
-		return x.ResourceNames
-	}
-	return nil
-}
+func (x *ApplyResourcesRequest) GetResourceNames() []string { _ = "STUB: not implemented"; return nil }
 
 type ApplyResourcesResponse struct {
 	state         protoimpl.MessageState
@@ -922,42 +554,25 @@ type ApplyResourcesResponse struct {
 	Statuses []*ApplyResourcesResponse_ResourceStatus `protobuf:"bytes,1,rep,name=statuses,proto3" json:"statuses,omitempty"`
 }
 
-func (x *ApplyResourcesResponse) Reset() {
-	*x = ApplyResourcesResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[14]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ApplyResourcesResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ApplyResourcesResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ApplyResourcesResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ApplyResourcesResponse) ProtoMessage() {}
+func (*ApplyResourcesResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ApplyResourcesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[14]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ApplyResourcesResponse.ProtoReflect.Descriptor instead.
 func (*ApplyResourcesResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{14}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ApplyResourcesResponse) GetStatuses() []*ApplyResourcesResponse_ResourceStatus {
-	if x != nil {
-		return x.Statuses
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -971,56 +586,38 @@ type ApplyResourcesResponse_ResourceStatus struct {
 	Reason       string `protobuf:"bytes,3,opt,name=reason,proto3" json:"reason,omitempty"`
 }
 
-func (x *ApplyResourcesResponse_ResourceStatus) Reset() {
-	*x = ApplyResourcesResponse_ResourceStatus{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[17]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ApplyResourcesResponse_ResourceStatus) Reset() { _ = "STUB: not implemented"; return }
 
 func (x *ApplyResourcesResponse_ResourceStatus) String() string {
-	return protoimpl.X.MessageStringOf(x)
+	_ = "STUB: not implemented"
+	return ""
 }
 
-func (*ApplyResourcesResponse_ResourceStatus) ProtoMessage() {}
+func (*ApplyResourcesResponse_ResourceStatus) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ApplyResourcesResponse_ResourceStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[17]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ApplyResourcesResponse_ResourceStatus.ProtoReflect.Descriptor instead.
 func (*ApplyResourcesResponse_ResourceStatus) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP(), []int{14, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ApplyResourcesResponse_ResourceStatus) GetResourceName() string {
-	if x != nil {
-		return x.ResourceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ApplyResourcesResponse_ResourceStatus) GetStatus() string {
-	if x != nil {
-		return x.Status
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ApplyResourcesResponse_ResourceStatus) GetReason() string {
-	if x != nil {
-		return x.Reason
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -1334,10 +931,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_resource_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_resource_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_resource_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_resource_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_resource_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_resource_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
@@ -1395,222 +990,5 @@ var file_raystack_optimus_core_v1beta1_resource_proto_depIdxs = []int32{
 	0,  // [0:10] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_resource_proto_init() }
-func file_raystack_optimus_core_v1beta1_resource_proto_init() {
-	if File_raystack_optimus_core_v1beta1_resource_proto != nil {
-		return
-	}
-	file_raystack_optimus_core_v1beta1_status_proto_init()
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeployResourceSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeployResourceSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListResourceSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListResourceSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateResourceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateResourceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReadResourceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReadResourceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateResourceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateResourceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ResourceSpecification); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ChangeResourceNamespaceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ChangeResourceNamespaceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyResourcesRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyResourcesResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_resource_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ApplyResourcesResponse_ResourceStatus); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_resource_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   18,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_resource_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_resource_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_resource_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_resource_proto = out.File
-	file_raystack_optimus_core_v1beta1_resource_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_resource_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_resource_proto_depIdxs = nil
-}
+func init()                                                   { file_raystack_optimus_core_v1beta1_resource_proto_init() }
+func file_raystack_optimus_core_v1beta1_resource_proto_init() { _ = "STUB: not implemented"; return }

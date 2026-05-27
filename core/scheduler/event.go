@@ -1,15 +1,9 @@
 package scheduler
 
 import (
-	"fmt"
-	"strings"
 	"time"
 
-	"github.com/mitchellh/mapstructure"
-
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
-	"github.com/raystack/optimus/internal/utils"
 )
 
 type (
@@ -47,41 +41,8 @@ const (
 )
 
 func FromStringToEventType(name string) (JobEventType, error) {
-	name = strings.TrimPrefix(strings.ToLower(name), strings.ToLower("TYPE_"))
-	switch name {
-	case string(JobFailureEvent):
-		return JobFailureEvent, nil
-	case string(JobSuccessEvent):
-		return JobSuccessEvent, nil
-	case string(SLAMissEvent):
-		return SLAMissEvent, nil
-	case string(TaskStartEvent):
-		return TaskStartEvent, nil
-	case string(TaskRetryEvent):
-		return TaskRetryEvent, nil
-	case string(TaskFailEvent):
-		return TaskFailEvent, nil
-	case string(TaskSuccessEvent):
-		return TaskSuccessEvent, nil
-	case string(HookStartEvent):
-		return HookStartEvent, nil
-	case string(HookRetryEvent):
-		return HookRetryEvent, nil
-	case string(HookFailEvent):
-		return HookFailEvent, nil
-	case string(HookSuccessEvent):
-		return HookSuccessEvent, nil
-	case string(SensorStartEvent):
-		return SensorStartEvent, nil
-	case string(SensorRetryEvent):
-		return SensorRetryEvent, nil
-	case string(SensorFailEvent):
-		return SensorFailEvent, nil
-	case string(SensorSuccessEvent):
-		return SensorSuccessEvent, nil
-	default:
-		return "", errors.InvalidArgument(EntityEvent, "unknown event "+name)
-	}
+	_ = "STUB: not implemented"
+	return *new(JobEventType), nil
 }
 
 type SLAObject struct {
@@ -89,9 +50,7 @@ type SLAObject struct {
 	JobScheduledAt time.Time
 }
 
-func (s *SLAObject) String() string {
-	return fmt.Sprintf("(job: %s,scheduledAt: %s)", s.JobName, s.JobScheduledAt.Format(time.RFC3339))
-}
+func (s *SLAObject) String() string { _ = "STUB: not implemented"; return "" }
 
 type Event struct {
 	JobName        JobName
@@ -106,95 +65,13 @@ type Event struct {
 }
 
 func (event JobEventType) IsOfType(category JobEventCategory) bool {
-	switch category {
-	case EventCategoryJobFailure:
-		if event == JobFailureEvent {
-			return true
-		}
-	case EventCategorySLAMiss:
-		if event == SLAMissEvent {
-			return true
-		}
-	}
+	_ = "STUB: not implemented"
 	return false
 }
 
-func (event JobEventType) String() string {
-	return string(event)
-}
+func (event JobEventType) String() string { _ = "STUB: not implemented"; return "" }
 
 func EventFrom(eventTypeName string, eventValues map[string]any, jobName JobName, tenent tenant.Tenant) (*Event, error) {
-	eventType, err := FromStringToEventType(eventTypeName)
-	if err != nil {
-		return nil, err
-	}
-	eventObj := Event{
-		JobName: jobName,
-		Tenant:  tenent,
-		Type:    eventType,
-		Values:  eventValues,
-	}
-
-	if eventType.IsOfType(EventCategorySLAMiss) {
-		type slaInput struct {
-			Slas []struct {
-				DagID       string `mapstructure:"dag_id"`
-				ScheduledAt string `mapstructure:"scheduled_at"`
-			} `mapstructure:"slas"`
-		}
-		var slaInputPayload slaInput
-		err = mapstructure.Decode(eventValues, &slaInputPayload)
-		if err != nil {
-			return nil, errors.InvalidArgument(EntityEvent, "bad sla payload")
-		}
-		var slaObjectList []*SLAObject
-		for _, slaObject := range slaInputPayload.Slas {
-			schedulerJobName, err := JobNameFrom(slaObject.DagID)
-			if err != nil {
-				return nil, errors.InvalidArgument(EntityEvent, "empty job name")
-			}
-			scheduledAt, err := time.Parse(ISODateFormat, slaObject.ScheduledAt)
-			if err != nil {
-				return nil, errors.InvalidArgument(EntityEvent, "property 'scheduled_at' in slas list is not in appropriate format")
-			}
-			slaObjectList = append(slaObjectList, &SLAObject{
-				JobName:        schedulerJobName,
-				JobScheduledAt: scheduledAt,
-			})
-		}
-		if len(slaObjectList) == 0 {
-			return nil, errors.InvalidArgument(EntityEvent, "could not parse sla list or received an empty sla list nothing to process")
-		}
-		eventObj.SLAObjectList = slaObjectList
-	} else {
-		statusString := utils.ConfigAs[string](eventValues, "status")
-		status, err := StateFromString(statusString)
-		if err != nil {
-			return nil, err
-		}
-		eventObj.Status = status
-
-		eventTimeFloat := utils.ConfigAs[float64](eventValues, "event_time")
-		if eventTimeFloat == float64(0) {
-			return nil, errors.InvalidArgument(EntityEvent, "property 'event_time'(number) is missing in event payload")
-		}
-		eventObj.EventTime = time.Unix(int64(eventTimeFloat), 0).UTC()
-
-		operatorName := utils.ConfigAs[string](eventValues, "task_id")
-		if operatorName == "" {
-			return nil, errors.InvalidArgument(EntityEvent, "property 'task_id'(string) is missing in event payload")
-		}
-		eventObj.OperatorName = operatorName
-
-		scheduledAtString := utils.ConfigAs[string](eventValues, "scheduled_at")
-		if scheduledAtString == "" {
-			return nil, errors.InvalidArgument(EntityEvent, "property 'scheduled_at'(string) is missing in event payload")
-		}
-		scheduledAtTimeStamp, err := time.Parse(ISODateFormat, scheduledAtString)
-		if err != nil {
-			return nil, errors.InvalidArgument(EntityEvent, "property 'scheduled_at' is not in appropriate format")
-		}
-		eventObj.JobScheduledAt = scheduledAtTimeStamp
-	}
-	return &eventObj, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

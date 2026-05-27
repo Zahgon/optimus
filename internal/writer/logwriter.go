@@ -10,27 +10,10 @@ type saltLogger struct {
 	l log.Logger
 }
 
-func NewLogWriter(l log.Logger) LogWriter {
-	return &saltLogger{
-		l: l,
-	}
-}
+func NewLogWriter(l log.Logger) LogWriter { _ = "STUB: not implemented"; return *new(LogWriter) }
 
 func (l *saltLogger) Write(level LogLevel, message string) error {
-	switch level {
-	case LogLevelTrace:
-		l.l.Debug(message)
-	case LogLevelDebug:
-		l.l.Debug(message)
-	case LogLevelInfo:
-		l.l.Info(message)
-	case LogLevelWarning:
-		l.l.Warn(message)
-	case LogLevelError:
-		l.l.Error(message)
-	case LogLevelFatal:
-		l.l.Fatal(message)
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -40,6 +23,6 @@ type BufferedLogger struct {
 
 // nolint: unparam
 func (b *BufferedLogger) Write(level LogLevel, message string) error {
-	b.Messages = append(b.Messages, newLogStatusProto(level, message))
+	_ = "STUB: not implemented"
 	return nil
 }

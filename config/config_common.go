@@ -1,7 +1,5 @@
 package config
 
-import "strconv"
-
 // Contains shared config for server and client (project)
 
 // Config is just an alias for interface{}
@@ -27,10 +25,6 @@ type LogConfig struct {
 	Format string   `mapstructure:"format"`               // format strategy - plain, json
 }
 
-func (v Version) String() string {
-	return strconv.Itoa(int(v))
-}
+func (v Version) String() string { _ = "STUB: not implemented"; return "" }
 
-func (l LogLevel) String() string {
-	return string(l)
-}
+func (l LogLevel) String() string { _ = "STUB: not implemented"; return "" }

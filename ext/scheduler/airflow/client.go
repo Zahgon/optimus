@@ -1,21 +1,13 @@
 package airflow
 
 import (
-	"bytes"
 	"context"
-	"encoding/base64"
-	"fmt"
-	"io"
 	"net/http"
-	"net/url"
-	"strings"
 	"time"
 
-	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"
 
 	"github.com/raystack/optimus/core/scheduler"
-	"github.com/raystack/optimus/internal/errors"
 	"github.com/raystack/optimus/internal/lib/cron"
 )
 
@@ -58,70 +50,27 @@ type ClientAirflow struct {
 	client *http.Client
 }
 
-func NewAirflowClient() *ClientAirflow {
-	return &ClientAirflow{client: &http.Client{}}
-}
+func NewAirflowClient() *ClientAirflow { _ = "STUB: not implemented"; return nil }
 
 func (ac ClientAirflow) Invoke(ctx context.Context, r airflowRequest, auth SchedulerAuth) ([]byte, error) {
-	var resp []byte
-
-	endpoint := buildEndPoint(auth.host, r.path)
-	request, err := http.NewRequestWithContext(ctx, r.method, endpoint, bytes.NewBuffer(r.body))
-	if err != nil {
-		return resp, fmt.Errorf("failed to build http request for %s due to %w", endpoint, err)
-	}
-	request.Header.Set("Content-Type", "application/json")
-	request.Header.Set("Authorization", fmt.Sprintf("Basic %s", base64.StdEncoding.EncodeToString([]byte(auth.token))))
-
-	httpResp, respErr := ac.client.Do(request)
-	if respErr != nil {
-		return resp, fmt.Errorf("failed to call airflow %s due to %w", endpoint, respErr)
-	}
-	if httpResp.StatusCode != http.StatusOK {
-		httpResp.Body.Close()
-		return resp, fmt.Errorf("status code received %d on calling %s", httpResp.StatusCode, endpoint)
-	}
-	return parseResponse(httpResp)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func parseResponse(resp *http.Response) ([]byte, error) {
-	var body []byte
-	body, err := io.ReadAll(resp.Body)
-	resp.Body.Close()
-	if err != nil {
-		return body, errors.Wrap(EntityAirflow, "failed to read airflow response", err)
-	}
-	return body, nil
-}
+func parseResponse(resp *http.Response) ([]byte, error) { _ = "STUB: not implemented"; return nil, nil }
 
-func buildEndPoint(host, path string) string {
-	host = strings.Trim(host, "/")
-	u := &url.URL{
-		Scheme: "http",
-		Host:   host,
-		Path:   path,
-	}
-	return u.String()
-}
+func buildEndPoint(host, path string) string { _ = "STUB: not implemented"; return "" }
 
 func getJobRuns(res DagRunListResponse, spec *cron.ScheduleSpec) ([]*scheduler.JobRunStatus, error) {
-	var jobRunList []*scheduler.JobRunStatus
-	if res.TotalEntries > pageLimit {
-		return jobRunList, errors.InternalError(EntityAirflow, "total number of entries exceed page limit", nil)
-	}
-	for _, dag := range res.DagRuns {
-		if !dag.ExternalTrigger { // only include scheduled runs
-			scheduledAt := spec.Next(dag.ExecutionDate)
-			jobRunStatus, _ := scheduler.JobRunStatusFrom(scheduledAt, dag.State)
-			// use multi error to collect errors and proceed
-			jobRunList = append(jobRunList, &jobRunStatus)
-		}
-	}
-	return jobRunList, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func startChildSpan(ctx context.Context, name string) (context.Context, trace.Span) {
-	tracer := otel.Tracer("scheduler/airflow")
+// only include scheduled runs
 
-	return tracer.Start(ctx, name)
+// use multi error to collect errors and proceed
+
+func startChildSpan(ctx context.Context, name string) (context.Context, trace.Span) {
+	_ = "STUB: not implemented"
+	return *new(context.Context), *new(trace.Span)
 }

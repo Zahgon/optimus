@@ -4,20 +4,15 @@ import (
 	"context"
 
 	"cloud.google.com/go/bigquery"
-	"golang.org/x/oauth2/google"
-	"google.golang.org/api/option"
-
-	"github.com/raystack/optimus/internal/errors"
 )
 
 type BqClientProvider struct{}
 
-func NewClientProvider() *BqClientProvider {
-	return &BqClientProvider{}
-}
+func NewClientProvider() *BqClientProvider { _ = "STUB: not implemented"; return nil }
 
 func (BqClientProvider) Get(ctx context.Context, account string) (Client, error) {
-	return NewClient(ctx, account)
+	_ = "STUB: not implemented"
+	return *new(Client), nil
 }
 
 type BqClient struct {
@@ -25,39 +20,28 @@ type BqClient struct {
 }
 
 func NewClient(ctx context.Context, svcAccount string) (*BqClient, error) {
-	cred, err := google.CredentialsFromJSON(ctx, []byte(svcAccount), bigquery.Scope)
-	if err != nil {
-		return nil, errors.InternalError(store, "failed to read account", err)
-	}
-
-	c, err := bigquery.NewClient(ctx, cred.ProjectID, option.WithCredentials(cred))
-	if err != nil {
-		return nil, errors.InternalError(store, "failed to create BQ client", err)
-	}
-
-	return &BqClient{bq: c}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *BqClient) DatasetHandleFrom(ds Dataset) ResourceHandle {
-	dsHandle := c.bq.DatasetInProject(ds.Project, ds.DatasetName)
-	return NewDatasetHandle(dsHandle)
+	_ = "STUB: not implemented"
+	return *new(ResourceHandle)
 }
 
 func (c *BqClient) TableHandleFrom(ds Dataset, name string) TableResourceHandle {
-	t := c.bq.DatasetInProject(ds.Project, ds.DatasetName).Table(name)
-	return NewTableHandle(t)
+	_ = "STUB: not implemented"
+	return *new(TableResourceHandle)
 }
 
 func (c *BqClient) ExternalTableHandleFrom(ds Dataset, name string) ResourceHandle {
-	t := c.bq.DatasetInProject(ds.Project, ds.DatasetName).Table(name)
-	return NewExternalTableHandle(t)
+	_ = "STUB: not implemented"
+	return *new(ResourceHandle)
 }
 
 func (c *BqClient) ViewHandleFrom(ds Dataset, name string) ResourceHandle {
-	t := c.bq.DatasetInProject(ds.Project, ds.DatasetName).Table(name)
-	return NewViewHandle(t)
+	_ = "STUB: not implemented"
+	return *new(ResourceHandle)
 }
 
-func (c *BqClient) Close() {
-	c.bq.Close()
-}
+func (c *BqClient) Close() { _ = "STUB: not implemented"; return }

@@ -7,6 +7,8 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -14,8 +16,6 @@ import (
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
 	structpb "google.golang.org/protobuf/types/known/structpb"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -47,32 +47,27 @@ var (
 	}
 )
 
-func (x JobState) Enum() *JobState {
-	p := new(JobState)
-	*p = x
-	return p
-}
+func (x JobState) Enum() *JobState { _ = "STUB: not implemented"; return nil }
 
-func (x JobState) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
+func (x JobState) String() string { _ = "STUB: not implemented"; return "" }
 
 func (JobState) Descriptor() protoreflect.EnumDescriptor {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes[0].Descriptor()
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumDescriptor)
 }
 
 func (JobState) Type() protoreflect.EnumType {
-	return &file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes[0]
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumType)
 }
 
 func (x JobState) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumNumber)
 }
 
 // Deprecated: Use JobState.Descriptor instead.
-func (JobState) EnumDescriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{0}
-}
+func (JobState) EnumDescriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 type JobEvent_Type int32
 
@@ -135,32 +130,27 @@ var (
 	}
 )
 
-func (x JobEvent_Type) Enum() *JobEvent_Type {
-	p := new(JobEvent_Type)
-	*p = x
-	return p
-}
+func (x JobEvent_Type) Enum() *JobEvent_Type { _ = "STUB: not implemented"; return nil }
 
-func (x JobEvent_Type) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
+func (x JobEvent_Type) String() string { _ = "STUB: not implemented"; return "" }
 
 func (JobEvent_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes[1].Descriptor()
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumDescriptor)
 }
 
 func (JobEvent_Type) Type() protoreflect.EnumType {
-	return &file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes[1]
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumType)
 }
 
 func (x JobEvent_Type) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumNumber)
 }
 
 // Deprecated: Use JobEvent_Type.Descriptor instead.
-func (JobEvent_Type) EnumDescriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{28, 0}
-}
+func (JobEvent_Type) EnumDescriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 type DeployJobSpecificationRequest struct {
 	state         protoimpl.MessageState
@@ -172,56 +162,35 @@ type DeployJobSpecificationRequest struct {
 	NamespaceName string              `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *DeployJobSpecificationRequest) Reset() {
-	*x = DeployJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeployJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeployJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeployJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeployJobSpecificationRequest) ProtoMessage() {}
+func (*DeployJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeployJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeployJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*DeployJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *DeployJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *DeployJobSpecificationRequest) GetJobs() []*JobSpecification {
-	if x != nil {
-		return x.Jobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *DeployJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -236,51 +205,29 @@ type DeployJobSpecificationResponse struct {
 	LogStatus    *Log   `protobuf:"bytes,8,opt,name=log_status,json=logStatus,proto3" json:"log_status,omitempty"`
 }
 
-func (x *DeployJobSpecificationResponse) Reset() {
-	*x = DeployJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeployJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeployJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeployJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeployJobSpecificationResponse) ProtoMessage() {}
+func (*DeployJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeployJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeployJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*DeployJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *DeployJobSpecificationResponse) GetDeploymentId() string {
-	if x != nil {
-		return x.DeploymentId
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
-func (x *DeployJobSpecificationResponse) GetLogStatus() *Log {
-	if x != nil {
-		return x.LogStatus
-	}
-	return nil
-}
+func (x *DeployJobSpecificationResponse) GetLogStatus() *Log { _ = "STUB: not implemented"; return nil }
 
 type AddJobSpecificationsRequest struct {
 	state         protoimpl.MessageState
@@ -292,56 +239,32 @@ type AddJobSpecificationsRequest struct {
 	Specs         []*JobSpecification `protobuf:"bytes,3,rep,name=specs,proto3" json:"specs,omitempty"`
 }
 
-func (x *AddJobSpecificationsRequest) Reset() {
-	*x = AddJobSpecificationsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *AddJobSpecificationsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *AddJobSpecificationsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *AddJobSpecificationsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*AddJobSpecificationsRequest) ProtoMessage() {}
+func (*AddJobSpecificationsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *AddJobSpecificationsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use AddJobSpecificationsRequest.ProtoReflect.Descriptor instead.
 func (*AddJobSpecificationsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *AddJobSpecificationsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *AddJobSpecificationsRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *AddJobSpecificationsRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *AddJobSpecificationsRequest) GetSpecs() []*JobSpecification {
-	if x != nil {
-		return x.Specs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -353,44 +276,24 @@ type AddJobSpecificationsResponse struct {
 	Log string `protobuf:"bytes,2,opt,name=log,proto3" json:"log,omitempty"`
 }
 
-func (x *AddJobSpecificationsResponse) Reset() {
-	*x = AddJobSpecificationsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *AddJobSpecificationsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *AddJobSpecificationsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *AddJobSpecificationsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*AddJobSpecificationsResponse) ProtoMessage() {}
+func (*AddJobSpecificationsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *AddJobSpecificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use AddJobSpecificationsResponse.ProtoReflect.Descriptor instead.
 func (*AddJobSpecificationsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *AddJobSpecificationsResponse) GetLog() string {
-	if x != nil {
-		return x.Log
-	}
-	return ""
-}
+func (x *AddJobSpecificationsResponse) GetLog() string { _ = "STUB: not implemented"; return "" }
 
 type UpdateJobSpecificationsRequest struct {
 	state         protoimpl.MessageState
@@ -402,56 +305,35 @@ type UpdateJobSpecificationsRequest struct {
 	Specs         []*JobSpecification `protobuf:"bytes,3,rep,name=specs,proto3" json:"specs,omitempty"`
 }
 
-func (x *UpdateJobSpecificationsRequest) Reset() {
-	*x = UpdateJobSpecificationsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateJobSpecificationsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateJobSpecificationsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateJobSpecificationsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateJobSpecificationsRequest) ProtoMessage() {}
+func (*UpdateJobSpecificationsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateJobSpecificationsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateJobSpecificationsRequest.ProtoReflect.Descriptor instead.
 func (*UpdateJobSpecificationsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{4}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *UpdateJobSpecificationsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *UpdateJobSpecificationsRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *UpdateJobSpecificationsRequest) GetSpecs() []*JobSpecification {
-	if x != nil {
-		return x.Specs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -463,44 +345,24 @@ type UpdateJobSpecificationsResponse struct {
 	Log string `protobuf:"bytes,1,opt,name=log,proto3" json:"log,omitempty"`
 }
 
-func (x *UpdateJobSpecificationsResponse) Reset() {
-	*x = UpdateJobSpecificationsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateJobSpecificationsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateJobSpecificationsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateJobSpecificationsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateJobSpecificationsResponse) ProtoMessage() {}
+func (*UpdateJobSpecificationsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateJobSpecificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateJobSpecificationsResponse.ProtoReflect.Descriptor instead.
 func (*UpdateJobSpecificationsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{5}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *UpdateJobSpecificationsResponse) GetLog() string {
-	if x != nil {
-		return x.Log
-	}
-	return ""
-}
+func (x *UpdateJobSpecificationsResponse) GetLog() string { _ = "STUB: not implemented"; return "" }
 
 type JobInspectRequest struct {
 	state         protoimpl.MessageState
@@ -514,70 +376,30 @@ type JobInspectRequest struct {
 	ScheduledAt   *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=scheduled_at,json=scheduledAt,proto3" json:"scheduled_at,omitempty"`
 }
 
-func (x *JobInspectRequest) Reset() {
-	*x = JobInspectRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobInspectRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobInspectRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobInspectRequest) ProtoMessage() {}
+func (*JobInspectRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectRequest.ProtoReflect.Descriptor instead.
-func (*JobInspectRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{6}
-}
+func (*JobInspectRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobInspectRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *JobInspectRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobInspectRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *JobInspectRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobInspectRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *JobInspectRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobInspectRequest) GetSpec() *JobSpecification {
-	if x != nil {
-		return x.Spec
-	}
-	return nil
-}
+func (x *JobInspectRequest) GetSpec() *JobSpecification { _ = "STUB: not implemented"; return nil }
 
 func (x *JobInspectRequest) GetScheduledAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ScheduledAt
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -590,51 +412,23 @@ type JobRun struct {
 	ScheduledAt *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=scheduled_at,json=scheduledAt,proto3" json:"scheduled_at,omitempty"`
 }
 
-func (x *JobRun) Reset() {
-	*x = JobRun{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobRun) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobRun) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobRun) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobRun) ProtoMessage() {}
+func (*JobRun) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobRun) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobRun.ProtoReflect.Descriptor instead.
-func (*JobRun) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{7}
-}
+func (*JobRun) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobRun) GetState() string {
-	if x != nil {
-		return x.State
-	}
-	return ""
-}
+func (x *JobRun) GetState() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobRun) GetScheduledAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ScheduledAt
-	}
-	return nil
-}
+func (x *JobRun) GetScheduledAt() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
 type JobInspectResponse struct {
 	state         protoimpl.MessageState
@@ -646,56 +440,32 @@ type JobInspectResponse struct {
 	Downstreams *JobInspectResponse_DownstreamSection `protobuf:"bytes,3,opt,name=downstreams,proto3" json:"downstreams,omitempty"`
 }
 
-func (x *JobInspectResponse) Reset() {
-	*x = JobInspectResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobInspectResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobInspectResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobInspectResponse) ProtoMessage() {}
+func (*JobInspectResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse.ProtoReflect.Descriptor instead.
-func (*JobInspectResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8}
-}
+func (*JobInspectResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 func (x *JobInspectResponse) GetBasicInfo() *JobInspectResponse_BasicInfoSection {
-	if x != nil {
-		return x.BasicInfo
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse) GetUpstreams() *JobInspectResponse_UpstreamSection {
-	if x != nil {
-		return x.Upstreams
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse) GetDownstreams() *JobInspectResponse_DownstreamSection {
-	if x != nil {
-		return x.Downstreams
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -709,56 +479,35 @@ type CreateJobSpecificationRequest struct {
 	Spec          *JobSpecification `protobuf:"bytes,3,opt,name=spec,proto3" json:"spec,omitempty"`
 }
 
-func (x *CreateJobSpecificationRequest) Reset() {
-	*x = CreateJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CreateJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CreateJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CreateJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CreateJobSpecificationRequest) ProtoMessage() {}
+func (*CreateJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CreateJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CreateJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*CreateJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{9}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *CreateJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *CreateJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *CreateJobSpecificationRequest) GetSpec() *JobSpecification {
-	if x != nil {
-		return x.Spec
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -771,51 +520,26 @@ type CreateJobSpecificationResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *CreateJobSpecificationResponse) Reset() {
-	*x = CreateJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CreateJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CreateJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CreateJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CreateJobSpecificationResponse) ProtoMessage() {}
+func (*CreateJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CreateJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CreateJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*CreateJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{10}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CreateJobSpecificationResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *CreateJobSpecificationResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *CreateJobSpecificationResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *CreateJobSpecificationResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 type GetJobSpecificationRequest struct {
 	state         protoimpl.MessageState
@@ -827,58 +551,31 @@ type GetJobSpecificationRequest struct {
 	JobName       string `protobuf:"bytes,3,opt,name=job_name,json=jobName,proto3" json:"job_name,omitempty"`
 }
 
-func (x *GetJobSpecificationRequest) Reset() {
-	*x = GetJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[11]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobSpecificationRequest) ProtoMessage() {}
+func (*GetJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[11]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*GetJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{11}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GetJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetJobSpecificationRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *GetJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
-func (x *GetJobSpecificationRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *GetJobSpecificationRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 type GetJobSpecificationResponse struct {
 	state         protoimpl.MessageState
@@ -888,42 +585,25 @@ type GetJobSpecificationResponse struct {
 	Spec *JobSpecification `protobuf:"bytes,1,opt,name=spec,proto3" json:"spec,omitempty"`
 }
 
-func (x *GetJobSpecificationResponse) Reset() {
-	*x = GetJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[12]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobSpecificationResponse) ProtoMessage() {}
+func (*GetJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[12]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*GetJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{12}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *GetJobSpecificationResponse) GetSpec() *JobSpecification {
-	if x != nil {
-		return x.Spec
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -939,72 +619,41 @@ type DeleteJobSpecificationRequest struct {
 	Force         bool   `protobuf:"varint,5,opt,name=force,proto3" json:"force,omitempty"`
 }
 
-func (x *DeleteJobSpecificationRequest) Reset() {
-	*x = DeleteJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[13]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeleteJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeleteJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeleteJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeleteJobSpecificationRequest) ProtoMessage() {}
+func (*DeleteJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeleteJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[13]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeleteJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*DeleteJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{13}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *DeleteJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *DeleteJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
-func (x *DeleteJobSpecificationRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *DeleteJobSpecificationRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *DeleteJobSpecificationRequest) GetCleanHistory() bool {
-	if x != nil {
-		return x.CleanHistory
-	}
+	_ = "STUB: not implemented"
 	return false
 }
 
-func (x *DeleteJobSpecificationRequest) GetForce() bool {
-	if x != nil {
-		return x.Force
-	}
-	return false
-}
+func (x *DeleteJobSpecificationRequest) GetForce() bool { _ = "STUB: not implemented"; return false }
 
 type DeleteJobSpecificationResponse struct {
 	state         protoimpl.MessageState
@@ -1015,51 +664,26 @@ type DeleteJobSpecificationResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *DeleteJobSpecificationResponse) Reset() {
-	*x = DeleteJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[14]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeleteJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeleteJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeleteJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeleteJobSpecificationResponse) ProtoMessage() {}
+func (*DeleteJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeleteJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[14]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeleteJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*DeleteJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{14}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *DeleteJobSpecificationResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *DeleteJobSpecificationResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
-func (x *DeleteJobSpecificationResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *DeleteJobSpecificationResponse) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 type ChangeJobNamespaceRequest struct {
 	state         protoimpl.MessageState
@@ -1072,63 +696,31 @@ type ChangeJobNamespaceRequest struct {
 	NewNamespaceName string `protobuf:"bytes,4,opt,name=new_namespace_name,json=newNamespaceName,proto3" json:"new_namespace_name,omitempty"`
 }
 
-func (x *ChangeJobNamespaceRequest) Reset() {
-	*x = ChangeJobNamespaceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[15]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ChangeJobNamespaceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ChangeJobNamespaceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ChangeJobNamespaceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ChangeJobNamespaceRequest) ProtoMessage() {}
+func (*ChangeJobNamespaceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ChangeJobNamespaceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[15]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ChangeJobNamespaceRequest.ProtoReflect.Descriptor instead.
 func (*ChangeJobNamespaceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{15}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ChangeJobNamespaceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ChangeJobNamespaceRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ChangeJobNamespaceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *ChangeJobNamespaceRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *ChangeJobNamespaceRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *ChangeJobNamespaceRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ChangeJobNamespaceRequest) GetNewNamespaceName() string {
-	if x != nil {
-		return x.NewNamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -1138,36 +730,21 @@ type ChangeJobNamespaceResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *ChangeJobNamespaceResponse) Reset() {
-	*x = ChangeJobNamespaceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[16]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ChangeJobNamespaceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ChangeJobNamespaceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ChangeJobNamespaceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ChangeJobNamespaceResponse) ProtoMessage() {}
+func (*ChangeJobNamespaceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ChangeJobNamespaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[16]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ChangeJobNamespaceResponse.ProtoReflect.Descriptor instead.
 func (*ChangeJobNamespaceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{16}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ListJobSpecificationRequest struct {
@@ -1179,49 +756,27 @@ type ListJobSpecificationRequest struct {
 	NamespaceName string `protobuf:"bytes,2,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *ListJobSpecificationRequest) Reset() {
-	*x = ListJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[17]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListJobSpecificationRequest) ProtoMessage() {}
+func (*ListJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[17]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*ListJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{17}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ListJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *ListJobSpecificationRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ListJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -1233,42 +788,25 @@ type ListJobSpecificationResponse struct {
 	Jobs []*JobSpecification `protobuf:"bytes,1,rep,name=jobs,proto3" json:"jobs,omitempty"`
 }
 
-func (x *ListJobSpecificationResponse) Reset() {
-	*x = ListJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[18]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListJobSpecificationResponse) ProtoMessage() {}
+func (*ListJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[18]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*ListJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{18}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListJobSpecificationResponse) GetJobs() []*JobSpecification {
-	if x != nil {
-		return x.Jobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -1282,56 +820,35 @@ type CheckJobSpecificationRequest struct {
 	NamespaceName string            `protobuf:"bytes,3,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *CheckJobSpecificationRequest) Reset() {
-	*x = CheckJobSpecificationRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[19]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CheckJobSpecificationRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CheckJobSpecificationRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CheckJobSpecificationRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CheckJobSpecificationRequest) ProtoMessage() {}
+func (*CheckJobSpecificationRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CheckJobSpecificationRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[19]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CheckJobSpecificationRequest.ProtoReflect.Descriptor instead.
 func (*CheckJobSpecificationRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{19}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *CheckJobSpecificationRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *CheckJobSpecificationRequest) GetJob() *JobSpecification {
-	if x != nil {
-		return x.Job
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *CheckJobSpecificationRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -1343,44 +860,24 @@ type CheckJobSpecificationResponse struct {
 	Success bool `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 }
 
-func (x *CheckJobSpecificationResponse) Reset() {
-	*x = CheckJobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[20]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CheckJobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CheckJobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CheckJobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CheckJobSpecificationResponse) ProtoMessage() {}
+func (*CheckJobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CheckJobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[20]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CheckJobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*CheckJobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{20}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CheckJobSpecificationResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
-}
+func (x *CheckJobSpecificationResponse) GetSuccess() bool { _ = "STUB: not implemented"; return false }
 
 type CheckJobSpecificationsRequest struct {
 	state         protoimpl.MessageState
@@ -1392,56 +889,35 @@ type CheckJobSpecificationsRequest struct {
 	NamespaceName string              `protobuf:"bytes,3,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *CheckJobSpecificationsRequest) Reset() {
-	*x = CheckJobSpecificationsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[21]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CheckJobSpecificationsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CheckJobSpecificationsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CheckJobSpecificationsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CheckJobSpecificationsRequest) ProtoMessage() {}
+func (*CheckJobSpecificationsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CheckJobSpecificationsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[21]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CheckJobSpecificationsRequest.ProtoReflect.Descriptor instead.
 func (*CheckJobSpecificationsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{21}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *CheckJobSpecificationsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *CheckJobSpecificationsRequest) GetJobs() []*JobSpecification {
-	if x != nil {
-		return x.Jobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *CheckJobSpecificationsRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -1453,44 +929,24 @@ type CheckJobSpecificationsResponse struct {
 	LogStatus *Log `protobuf:"bytes,5,opt,name=log_status,json=logStatus,proto3" json:"log_status,omitempty"`
 }
 
-func (x *CheckJobSpecificationsResponse) Reset() {
-	*x = CheckJobSpecificationsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[22]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *CheckJobSpecificationsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *CheckJobSpecificationsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *CheckJobSpecificationsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*CheckJobSpecificationsResponse) ProtoMessage() {}
+func (*CheckJobSpecificationsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *CheckJobSpecificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[22]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use CheckJobSpecificationsResponse.ProtoReflect.Descriptor instead.
 func (*CheckJobSpecificationsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{22}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *CheckJobSpecificationsResponse) GetLogStatus() *Log {
-	if x != nil {
-		return x.LogStatus
-	}
-	return nil
-}
+func (x *CheckJobSpecificationsResponse) GetLogStatus() *Log { _ = "STUB: not implemented"; return nil }
 
 type JobSpecification struct {
 	state         protoimpl.MessageState
@@ -1522,192 +978,70 @@ type JobSpecification struct {
 	Sources          []string                   `protobuf:"bytes,22,rep,name=sources,proto3" json:"sources,omitempty"`
 }
 
-func (x *JobSpecification) Reset() {
-	*x = JobSpecification{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[23]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecification) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecification) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecification) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecification) ProtoMessage() {}
+func (*JobSpecification) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecification) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[23]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecification.ProtoReflect.Descriptor instead.
-func (*JobSpecification) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{23}
-}
+func (*JobSpecification) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobSpecification) GetVersion() int32 {
-	if x != nil {
-		return x.Version
-	}
-	return 0
-}
+func (x *JobSpecification) GetVersion() int32 { _ = "STUB: not implemented"; return 0 }
 
-func (x *JobSpecification) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobSpecification) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetOwner() string {
-	if x != nil {
-		return x.Owner
-	}
-	return ""
-}
+func (x *JobSpecification) GetOwner() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetStartDate() string {
-	if x != nil {
-		return x.StartDate
-	}
-	return ""
-}
+func (x *JobSpecification) GetStartDate() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetEndDate() string {
-	if x != nil {
-		return x.EndDate
-	}
-	return ""
-}
+func (x *JobSpecification) GetEndDate() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetInterval() string {
-	if x != nil {
-		return x.Interval
-	}
-	return ""
-}
+func (x *JobSpecification) GetInterval() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetDependsOnPast() bool {
-	if x != nil {
-		return x.DependsOnPast
-	}
-	return false
-}
+func (x *JobSpecification) GetDependsOnPast() bool { _ = "STUB: not implemented"; return false }
 
 // Deprecated: Do not use.
-func (x *JobSpecification) GetCatchUp() bool {
-	if x != nil {
-		return x.CatchUp
-	}
-	return false
-}
+func (x *JobSpecification) GetCatchUp() bool { _ = "STUB: not implemented"; return false }
 
-func (x *JobSpecification) GetTaskName() string {
-	if x != nil {
-		return x.TaskName
-	}
-	return ""
-}
+func (x *JobSpecification) GetTaskName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetConfig() []*JobConfigItem {
-	if x != nil {
-		return x.Config
-	}
-	return nil
-}
+func (x *JobSpecification) GetConfig() []*JobConfigItem { _ = "STUB: not implemented"; return nil }
 
-func (x *JobSpecification) GetWindowSize() string {
-	if x != nil {
-		return x.WindowSize
-	}
-	return ""
-}
+func (x *JobSpecification) GetWindowSize() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetWindowOffset() string {
-	if x != nil {
-		return x.WindowOffset
-	}
-	return ""
-}
+func (x *JobSpecification) GetWindowOffset() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetWindowTruncateTo() string {
-	if x != nil {
-		return x.WindowTruncateTo
-	}
-	return ""
-}
+func (x *JobSpecification) GetWindowTruncateTo() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobSpecification) GetDependencies() []*JobDependency {
-	if x != nil {
-		return x.Dependencies
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *JobSpecification) GetAssets() map[string]string {
-	if x != nil {
-		return x.Assets
-	}
-	return nil
-}
+func (x *JobSpecification) GetAssets() map[string]string { _ = "STUB: not implemented"; return nil }
 
-func (x *JobSpecification) GetHooks() []*JobSpecHook {
-	if x != nil {
-		return x.Hooks
-	}
-	return nil
-}
+func (x *JobSpecification) GetHooks() []*JobSpecHook { _ = "STUB: not implemented"; return nil }
 
-func (x *JobSpecification) GetDescription() string {
-	if x != nil {
-		return x.Description
-	}
-	return ""
-}
+func (x *JobSpecification) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetLabels() map[string]string {
-	if x != nil {
-		return x.Labels
-	}
-	return nil
-}
+func (x *JobSpecification) GetLabels() map[string]string { _ = "STUB: not implemented"; return nil }
 
 func (x *JobSpecification) GetBehavior() *JobSpecification_Behavior {
-	if x != nil {
-		return x.Behavior
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *JobSpecification) GetMetadata() *JobMetadata {
-	if x != nil {
-		return x.Metadata
-	}
-	return nil
-}
+func (x *JobSpecification) GetMetadata() *JobMetadata { _ = "STUB: not implemented"; return nil }
 
-func (x *JobSpecification) GetDestination() string {
-	if x != nil {
-		return x.Destination
-	}
-	return ""
-}
+func (x *JobSpecification) GetDestination() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecification) GetSources() []string {
-	if x != nil {
-		return x.Sources
-	}
-	return nil
-}
+func (x *JobSpecification) GetSources() []string { _ = "STUB: not implemented"; return nil }
 
 type JobDependency struct {
 	state         protoimpl.MessageState
@@ -1719,58 +1053,25 @@ type JobDependency struct {
 	HttpDependency *HttpDependency `protobuf:"bytes,3,opt,name=http_dependency,json=httpDependency,proto3" json:"http_dependency,omitempty"` // http sensor dependency
 }
 
-func (x *JobDependency) Reset() {
-	*x = JobDependency{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[24]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobDependency) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobDependency) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobDependency) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobDependency) ProtoMessage() {}
+func (*JobDependency) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobDependency) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[24]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobDependency.ProtoReflect.Descriptor instead.
-func (*JobDependency) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{24}
-}
+func (*JobDependency) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobDependency) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobDependency) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobDependency) GetType() string {
-	if x != nil {
-		return x.Type
-	}
-	return ""
-}
+func (x *JobDependency) GetType() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobDependency) GetHttpDependency() *HttpDependency {
-	if x != nil {
-		return x.HttpDependency
-	}
-	return nil
-}
+func (x *JobDependency) GetHttpDependency() *HttpDependency { _ = "STUB: not implemented"; return nil }
 
 type HttpDependency struct {
 	state         protoimpl.MessageState
@@ -1783,65 +1084,27 @@ type HttpDependency struct {
 	Params  map[string]string `protobuf:"bytes,4,rep,name=params,proto3" json:"params,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
-func (x *HttpDependency) Reset() {
-	*x = HttpDependency{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[25]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *HttpDependency) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *HttpDependency) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *HttpDependency) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*HttpDependency) ProtoMessage() {}
+func (*HttpDependency) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *HttpDependency) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[25]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use HttpDependency.ProtoReflect.Descriptor instead.
-func (*HttpDependency) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{25}
-}
+func (*HttpDependency) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *HttpDependency) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *HttpDependency) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *HttpDependency) GetUrl() string {
-	if x != nil {
-		return x.Url
-	}
-	return ""
-}
+func (x *HttpDependency) GetUrl() string { _ = "STUB: not implemented"; return "" }
 
-func (x *HttpDependency) GetHeaders() map[string]string {
-	if x != nil {
-		return x.Headers
-	}
-	return nil
-}
+func (x *HttpDependency) GetHeaders() map[string]string { _ = "STUB: not implemented"; return nil }
 
-func (x *HttpDependency) GetParams() map[string]string {
-	if x != nil {
-		return x.Params
-	}
-	return nil
-}
+func (x *HttpDependency) GetParams() map[string]string { _ = "STUB: not implemented"; return nil }
 
 type JobSpecHook struct {
 	state         protoimpl.MessageState
@@ -1852,51 +1115,23 @@ type JobSpecHook struct {
 	Config []*JobConfigItem `protobuf:"bytes,2,rep,name=config,proto3" json:"config,omitempty"`
 }
 
-func (x *JobSpecHook) Reset() {
-	*x = JobSpecHook{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[26]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecHook) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecHook) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecHook) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecHook) ProtoMessage() {}
+func (*JobSpecHook) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecHook) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[26]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecHook.ProtoReflect.Descriptor instead.
-func (*JobSpecHook) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{26}
-}
+func (*JobSpecHook) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobSpecHook) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobSpecHook) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecHook) GetConfig() []*JobConfigItem {
-	if x != nil {
-		return x.Config
-	}
-	return nil
-}
+func (x *JobSpecHook) GetConfig() []*JobConfigItem { _ = "STUB: not implemented"; return nil }
 
 type JobConfigItem struct {
 	state         protoimpl.MessageState
@@ -1907,51 +1142,23 @@ type JobConfigItem struct {
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
-func (x *JobConfigItem) Reset() {
-	*x = JobConfigItem{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[27]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobConfigItem) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobConfigItem) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobConfigItem) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobConfigItem) ProtoMessage() {}
+func (*JobConfigItem) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobConfigItem) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[27]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobConfigItem.ProtoReflect.Descriptor instead.
-func (*JobConfigItem) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{27}
-}
+func (*JobConfigItem) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobConfigItem) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobConfigItem) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobConfigItem) GetValue() string {
-	if x != nil {
-		return x.Value
-	}
-	return ""
-}
+func (x *JobConfigItem) GetValue() string { _ = "STUB: not implemented"; return "" }
 
 type JobEvent struct {
 	state         protoimpl.MessageState
@@ -1962,51 +1169,23 @@ type JobEvent struct {
 	Value *structpb.Struct `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 }
 
-func (x *JobEvent) Reset() {
-	*x = JobEvent{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[28]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobEvent) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobEvent) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobEvent) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobEvent) ProtoMessage() {}
+func (*JobEvent) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[28]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobEvent.ProtoReflect.Descriptor instead.
-func (*JobEvent) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{28}
-}
+func (*JobEvent) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobEvent) GetType() JobEvent_Type {
-	if x != nil {
-		return x.Type
-	}
-	return JobEvent_TYPE_UNSPECIFIED
-}
+func (x *JobEvent) GetType() JobEvent_Type { _ = "STUB: not implemented"; return *new(JobEvent_Type) }
 
-func (x *JobEvent) GetValue() *structpb.Struct {
-	if x != nil {
-		return x.Value
-	}
-	return nil
-}
+func (x *JobEvent) GetValue() *structpb.Struct { _ = "STUB: not implemented"; return nil }
 
 type JobMetadata struct {
 	state         protoimpl.MessageState
@@ -2017,51 +1196,23 @@ type JobMetadata struct {
 	Airflow  *JobSpecMetadataAirflow  `protobuf:"bytes,2,opt,name=airflow,proto3" json:"airflow,omitempty"`
 }
 
-func (x *JobMetadata) Reset() {
-	*x = JobMetadata{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[29]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobMetadata) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobMetadata) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobMetadata) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobMetadata) ProtoMessage() {}
+func (*JobMetadata) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobMetadata) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[29]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobMetadata.ProtoReflect.Descriptor instead.
-func (*JobMetadata) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{29}
-}
+func (*JobMetadata) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobMetadata) GetResource() *JobSpecMetadataResource {
-	if x != nil {
-		return x.Resource
-	}
-	return nil
-}
+func (x *JobMetadata) GetResource() *JobSpecMetadataResource { _ = "STUB: not implemented"; return nil }
 
-func (x *JobMetadata) GetAirflow() *JobSpecMetadataAirflow {
-	if x != nil {
-		return x.Airflow
-	}
-	return nil
-}
+func (x *JobMetadata) GetAirflow() *JobSpecMetadataAirflow { _ = "STUB: not implemented"; return nil }
 
 type JobSpecMetadataResource struct {
 	state         protoimpl.MessageState
@@ -2072,49 +1223,30 @@ type JobSpecMetadataResource struct {
 	Limit   *JobSpecMetadataResourceConfig `protobuf:"bytes,2,opt,name=limit,proto3" json:"limit,omitempty"`
 }
 
-func (x *JobSpecMetadataResource) Reset() {
-	*x = JobSpecMetadataResource{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[30]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecMetadataResource) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecMetadataResource) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecMetadataResource) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecMetadataResource) ProtoMessage() {}
+func (*JobSpecMetadataResource) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecMetadataResource) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[30]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecMetadataResource.ProtoReflect.Descriptor instead.
 func (*JobSpecMetadataResource) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{30}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobSpecMetadataResource) GetRequest() *JobSpecMetadataResourceConfig {
-	if x != nil {
-		return x.Request
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobSpecMetadataResource) GetLimit() *JobSpecMetadataResourceConfig {
-	if x != nil {
-		return x.Limit
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2127,51 +1259,26 @@ type JobSpecMetadataResourceConfig struct {
 	Memory string `protobuf:"bytes,2,opt,name=memory,proto3" json:"memory,omitempty"`
 }
 
-func (x *JobSpecMetadataResourceConfig) Reset() {
-	*x = JobSpecMetadataResourceConfig{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[31]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecMetadataResourceConfig) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecMetadataResourceConfig) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecMetadataResourceConfig) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecMetadataResourceConfig) ProtoMessage() {}
+func (*JobSpecMetadataResourceConfig) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecMetadataResourceConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[31]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecMetadataResourceConfig.ProtoReflect.Descriptor instead.
 func (*JobSpecMetadataResourceConfig) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{31}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobSpecMetadataResourceConfig) GetCpu() string {
-	if x != nil {
-		return x.Cpu
-	}
-	return ""
-}
+func (x *JobSpecMetadataResourceConfig) GetCpu() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecMetadataResourceConfig) GetMemory() string {
-	if x != nil {
-		return x.Memory
-	}
-	return ""
-}
+func (x *JobSpecMetadataResourceConfig) GetMemory() string { _ = "STUB: not implemented"; return "" }
 
 type JobSpecMetadataAirflow struct {
 	state         protoimpl.MessageState
@@ -2182,51 +1289,26 @@ type JobSpecMetadataAirflow struct {
 	Queue string `protobuf:"bytes,2,opt,name=queue,proto3" json:"queue,omitempty"`
 }
 
-func (x *JobSpecMetadataAirflow) Reset() {
-	*x = JobSpecMetadataAirflow{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[32]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecMetadataAirflow) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecMetadataAirflow) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecMetadataAirflow) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecMetadataAirflow) ProtoMessage() {}
+func (*JobSpecMetadataAirflow) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecMetadataAirflow) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[32]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecMetadataAirflow.ProtoReflect.Descriptor instead.
 func (*JobSpecMetadataAirflow) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{32}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobSpecMetadataAirflow) GetPool() string {
-	if x != nil {
-		return x.Pool
-	}
-	return ""
-}
+func (x *JobSpecMetadataAirflow) GetPool() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecMetadataAirflow) GetQueue() string {
-	if x != nil {
-		return x.Queue
-	}
-	return ""
-}
+func (x *JobSpecMetadataAirflow) GetQueue() string { _ = "STUB: not implemented"; return "" }
 
 type RefreshJobsRequest struct {
 	state         protoimpl.MessageState
@@ -2238,58 +1320,25 @@ type RefreshJobsRequest struct {
 	JobNames       []string `protobuf:"bytes,3,rep,name=job_names,json=jobNames,proto3" json:"job_names,omitempty"`
 }
 
-func (x *RefreshJobsRequest) Reset() {
-	*x = RefreshJobsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[33]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RefreshJobsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RefreshJobsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RefreshJobsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RefreshJobsRequest) ProtoMessage() {}
+func (*RefreshJobsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RefreshJobsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[33]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RefreshJobsRequest.ProtoReflect.Descriptor instead.
-func (*RefreshJobsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{33}
-}
+func (*RefreshJobsRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *RefreshJobsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *RefreshJobsRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *RefreshJobsRequest) GetNamespaceNames() []string {
-	if x != nil {
-		return x.NamespaceNames
-	}
-	return nil
-}
+func (x *RefreshJobsRequest) GetNamespaceNames() []string { _ = "STUB: not implemented"; return nil }
 
-func (x *RefreshJobsRequest) GetJobNames() []string {
-	if x != nil {
-		return x.JobNames
-	}
-	return nil
-}
+func (x *RefreshJobsRequest) GetJobNames() []string { _ = "STUB: not implemented"; return nil }
 
 type RefreshJobsResponse struct {
 	state         protoimpl.MessageState
@@ -2299,44 +1348,24 @@ type RefreshJobsResponse struct {
 	LogStatus *Log `protobuf:"bytes,6,opt,name=log_status,json=logStatus,proto3" json:"log_status,omitempty"`
 }
 
-func (x *RefreshJobsResponse) Reset() {
-	*x = RefreshJobsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[34]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RefreshJobsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RefreshJobsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RefreshJobsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RefreshJobsResponse) ProtoMessage() {}
+func (*RefreshJobsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RefreshJobsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[34]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RefreshJobsResponse.ProtoReflect.Descriptor instead.
 func (*RefreshJobsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{34}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *RefreshJobsResponse) GetLogStatus() *Log {
-	if x != nil {
-		return x.LogStatus
-	}
-	return nil
-}
+func (x *RefreshJobsResponse) GetLogStatus() *Log { _ = "STUB: not implemented"; return nil }
 
 type GetDeployJobsStatusRequest struct {
 	state         protoimpl.MessageState
@@ -2346,44 +1375,24 @@ type GetDeployJobsStatusRequest struct {
 	DeployId string `protobuf:"bytes,1,opt,name=deploy_id,json=deployId,proto3" json:"deploy_id,omitempty"`
 }
 
-func (x *GetDeployJobsStatusRequest) Reset() {
-	*x = GetDeployJobsStatusRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[35]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetDeployJobsStatusRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetDeployJobsStatusRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetDeployJobsStatusRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetDeployJobsStatusRequest) ProtoMessage() {}
+func (*GetDeployJobsStatusRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetDeployJobsStatusRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[35]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetDeployJobsStatusRequest.ProtoReflect.Descriptor instead.
 func (*GetDeployJobsStatusRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{35}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GetDeployJobsStatusRequest) GetDeployId() string {
-	if x != nil {
-		return x.DeployId
-	}
-	return ""
-}
+func (x *GetDeployJobsStatusRequest) GetDeployId() string { _ = "STUB: not implemented"; return "" }
 
 type GetDeployJobsStatusResponse struct {
 	state         protoimpl.MessageState
@@ -2397,70 +1406,36 @@ type GetDeployJobsStatusResponse struct {
 	UnknownDependencies map[string]string   `protobuf:"bytes,5,rep,name=unknown_dependencies,json=unknownDependencies,proto3" json:"unknown_dependencies,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
-func (x *GetDeployJobsStatusResponse) Reset() {
-	*x = GetDeployJobsStatusResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[36]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetDeployJobsStatusResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetDeployJobsStatusResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetDeployJobsStatusResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetDeployJobsStatusResponse) ProtoMessage() {}
+func (*GetDeployJobsStatusResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetDeployJobsStatusResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[36]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetDeployJobsStatusResponse.ProtoReflect.Descriptor instead.
 func (*GetDeployJobsStatusResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{36}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GetDeployJobsStatusResponse) GetStatus() string {
-	if x != nil {
-		return x.Status
-	}
-	return ""
-}
+func (x *GetDeployJobsStatusResponse) GetStatus() string { _ = "STUB: not implemented"; return "" }
 
 func (x *GetDeployJobsStatusResponse) GetFailures() []*DeployJobFailure {
-	if x != nil {
-		return x.Failures
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *GetDeployJobsStatusResponse) GetSuccessCount() int32 {
-	if x != nil {
-		return x.SuccessCount
-	}
-	return 0
-}
+func (x *GetDeployJobsStatusResponse) GetSuccessCount() int32 { _ = "STUB: not implemented"; return 0 }
 
-func (x *GetDeployJobsStatusResponse) GetFailureCount() int32 {
-	if x != nil {
-		return x.FailureCount
-	}
-	return 0
-}
+func (x *GetDeployJobsStatusResponse) GetFailureCount() int32 { _ = "STUB: not implemented"; return 0 }
 
 func (x *GetDeployJobsStatusResponse) GetUnknownDependencies() map[string]string {
-	if x != nil {
-		return x.UnknownDependencies
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2473,51 +1448,23 @@ type DeployJobFailure struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *DeployJobFailure) Reset() {
-	*x = DeployJobFailure{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[37]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *DeployJobFailure) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *DeployJobFailure) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *DeployJobFailure) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*DeployJobFailure) ProtoMessage() {}
+func (*DeployJobFailure) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *DeployJobFailure) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[37]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use DeployJobFailure.ProtoReflect.Descriptor instead.
-func (*DeployJobFailure) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{37}
-}
+func (*DeployJobFailure) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *DeployJobFailure) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *DeployJobFailure) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *DeployJobFailure) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
-	return ""
-}
+func (x *DeployJobFailure) GetMessage() string { _ = "STUB: not implemented"; return "" }
 
 type GetJobSpecificationsRequest struct {
 	state         protoimpl.MessageState
@@ -2530,63 +1477,34 @@ type GetJobSpecificationsRequest struct {
 	NamespaceName       string `protobuf:"bytes,4,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *GetJobSpecificationsRequest) Reset() {
-	*x = GetJobSpecificationsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[38]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobSpecificationsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobSpecificationsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobSpecificationsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobSpecificationsRequest) ProtoMessage() {}
+func (*GetJobSpecificationsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobSpecificationsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[38]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobSpecificationsRequest.ProtoReflect.Descriptor instead.
 func (*GetJobSpecificationsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{38}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GetJobSpecificationsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetJobSpecificationsRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *GetJobSpecificationsRequest) GetResourceDestination() string {
-	if x != nil {
-		return x.ResourceDestination
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
-func (x *GetJobSpecificationsRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *GetJobSpecificationsRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *GetJobSpecificationsRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -2600,50 +1518,31 @@ type GetJobSpecificationsResponse struct {
 	JobSpecificationResponses []*JobSpecificationResponse `protobuf:"bytes,2,rep,name=job_specification_responses,json=jobSpecificationResponses,proto3" json:"job_specification_responses,omitempty"`
 }
 
-func (x *GetJobSpecificationsResponse) Reset() {
-	*x = GetJobSpecificationsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[39]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobSpecificationsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobSpecificationsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobSpecificationsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobSpecificationsResponse) ProtoMessage() {}
+func (*GetJobSpecificationsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobSpecificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[39]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobSpecificationsResponse.ProtoReflect.Descriptor instead.
 func (*GetJobSpecificationsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{39}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // Deprecated: Do not use.
 func (x *GetJobSpecificationsResponse) GetJobs() []*JobSpecification {
-	if x != nil {
-		return x.Jobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *GetJobSpecificationsResponse) GetJobSpecificationResponses() []*JobSpecificationResponse {
-	if x != nil {
-		return x.JobSpecificationResponses
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2657,56 +1556,29 @@ type JobSpecificationResponse struct {
 	Job           *JobSpecification `protobuf:"bytes,3,opt,name=job,proto3" json:"job,omitempty"`
 }
 
-func (x *JobSpecificationResponse) Reset() {
-	*x = JobSpecificationResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[40]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecificationResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecificationResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecificationResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecificationResponse) ProtoMessage() {}
+func (*JobSpecificationResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecificationResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[40]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecificationResponse.ProtoReflect.Descriptor instead.
 func (*JobSpecificationResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{40}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobSpecificationResponse) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *JobSpecificationResponse) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobSpecificationResponse) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *JobSpecificationResponse) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobSpecificationResponse) GetJob() *JobSpecification {
-	if x != nil {
-		return x.Job
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2720,56 +1592,35 @@ type ReplaceAllJobSpecificationsRequest struct {
 	Jobs          []*JobSpecification `protobuf:"bytes,3,rep,name=jobs,proto3" json:"jobs,omitempty"`
 }
 
-func (x *ReplaceAllJobSpecificationsRequest) Reset() {
-	*x = ReplaceAllJobSpecificationsRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[41]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplaceAllJobSpecificationsRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplaceAllJobSpecificationsRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplaceAllJobSpecificationsRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplaceAllJobSpecificationsRequest) ProtoMessage() {}
+func (*ReplaceAllJobSpecificationsRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplaceAllJobSpecificationsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[41]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplaceAllJobSpecificationsRequest.ProtoReflect.Descriptor instead.
 func (*ReplaceAllJobSpecificationsRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{41}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ReplaceAllJobSpecificationsRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ReplaceAllJobSpecificationsRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *ReplaceAllJobSpecificationsRequest) GetJobs() []*JobSpecification {
-	if x != nil {
-		return x.Jobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2781,42 +1632,25 @@ type ReplaceAllJobSpecificationsResponse struct {
 	LogStatus *Log `protobuf:"bytes,1,opt,name=log_status,json=logStatus,proto3" json:"log_status,omitempty"`
 }
 
-func (x *ReplaceAllJobSpecificationsResponse) Reset() {
-	*x = ReplaceAllJobSpecificationsResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[42]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ReplaceAllJobSpecificationsResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ReplaceAllJobSpecificationsResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ReplaceAllJobSpecificationsResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ReplaceAllJobSpecificationsResponse) ProtoMessage() {}
+func (*ReplaceAllJobSpecificationsResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ReplaceAllJobSpecificationsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[42]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ReplaceAllJobSpecificationsResponse.ProtoReflect.Descriptor instead.
 func (*ReplaceAllJobSpecificationsResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{42}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ReplaceAllJobSpecificationsResponse) GetLogStatus() *Log {
-	if x != nil {
-		return x.LogStatus
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -2830,58 +1664,25 @@ type GetJobTaskRequest struct {
 	JobName       string `protobuf:"bytes,3,opt,name=job_name,json=jobName,proto3" json:"job_name,omitempty"`
 }
 
-func (x *GetJobTaskRequest) Reset() {
-	*x = GetJobTaskRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[43]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobTaskRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobTaskRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobTaskRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobTaskRequest) ProtoMessage() {}
+func (*GetJobTaskRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[43]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobTaskRequest.ProtoReflect.Descriptor instead.
-func (*GetJobTaskRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{43}
-}
+func (*GetJobTaskRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetJobTaskRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetJobTaskRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetJobTaskRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *GetJobTaskRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetJobTaskRequest) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *GetJobTaskRequest) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 type GetJobTaskResponse struct {
 	state         protoimpl.MessageState
@@ -2891,44 +1692,21 @@ type GetJobTaskResponse struct {
 	Task *JobTask `protobuf:"bytes,1,opt,name=task,proto3" json:"task,omitempty"`
 }
 
-func (x *GetJobTaskResponse) Reset() {
-	*x = GetJobTaskResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[44]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetJobTaskResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetJobTaskResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetJobTaskResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetJobTaskResponse) ProtoMessage() {}
+func (*GetJobTaskResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetJobTaskResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[44]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetJobTaskResponse.ProtoReflect.Descriptor instead.
-func (*GetJobTaskResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{44}
-}
+func (*GetJobTaskResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *GetJobTaskResponse) GetTask() *JobTask {
-	if x != nil {
-		return x.Task
-	}
-	return nil
-}
+func (x *GetJobTaskResponse) GetTask() *JobTask { _ = "STUB: not implemented"; return nil }
 
 // JobTask is part of a job that dictates main transformation
 // each job has exactly one task
@@ -2944,72 +1722,29 @@ type JobTask struct {
 	Dependencies []*JobTask_Dependency `protobuf:"bytes,5,rep,name=dependencies,proto3" json:"dependencies,omitempty"`
 }
 
-func (x *JobTask) Reset() {
-	*x = JobTask{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[45]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobTask) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobTask) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobTask) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobTask) ProtoMessage() {}
+func (*JobTask) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobTask) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[45]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobTask.ProtoReflect.Descriptor instead.
-func (*JobTask) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{45}
-}
+func (*JobTask) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobTask) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobTask) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobTask) GetDescription() string {
-	if x != nil {
-		return x.Description
-	}
-	return ""
-}
+func (x *JobTask) GetDescription() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobTask) GetImage() string {
-	if x != nil {
-		return x.Image
-	}
-	return ""
-}
+func (x *JobTask) GetImage() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobTask) GetDestination() *JobTask_Destination {
-	if x != nil {
-		return x.Destination
-	}
-	return nil
-}
+func (x *JobTask) GetDestination() *JobTask_Destination { _ = "STUB: not implemented"; return nil }
 
-func (x *JobTask) GetDependencies() []*JobTask_Dependency {
-	if x != nil {
-		return x.Dependencies
-	}
-	return nil
-}
+func (x *JobTask) GetDependencies() []*JobTask_Dependency { _ = "STUB: not implemented"; return nil }
 
 type GetWindowRequest struct {
 	state         protoimpl.MessageState
@@ -3023,72 +1758,32 @@ type GetWindowRequest struct {
 	Version     int32                  `protobuf:"varint,5,opt,name=version,proto3" json:"version,omitempty"`
 }
 
-func (x *GetWindowRequest) Reset() {
-	*x = GetWindowRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[46]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetWindowRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetWindowRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetWindowRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetWindowRequest) ProtoMessage() {}
+func (*GetWindowRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetWindowRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[46]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetWindowRequest.ProtoReflect.Descriptor instead.
-func (*GetWindowRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{46}
-}
+func (*GetWindowRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 func (x *GetWindowRequest) GetScheduledAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ScheduledAt
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *GetWindowRequest) GetSize() string {
-	if x != nil {
-		return x.Size
-	}
-	return ""
-}
+func (x *GetWindowRequest) GetSize() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetWindowRequest) GetOffset() string {
-	if x != nil {
-		return x.Offset
-	}
-	return ""
-}
+func (x *GetWindowRequest) GetOffset() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetWindowRequest) GetTruncateTo() string {
-	if x != nil {
-		return x.TruncateTo
-	}
-	return ""
-}
+func (x *GetWindowRequest) GetTruncateTo() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetWindowRequest) GetVersion() int32 {
-	if x != nil {
-		return x.Version
-	}
-	return 0
-}
+func (x *GetWindowRequest) GetVersion() int32 { _ = "STUB: not implemented"; return 0 }
 
 type GetWindowResponse struct {
 	state         protoimpl.MessageState
@@ -3099,51 +1794,26 @@ type GetWindowResponse struct {
 	End   *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=end,proto3" json:"end,omitempty"`
 }
 
-func (x *GetWindowResponse) Reset() {
-	*x = GetWindowResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[47]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetWindowResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetWindowResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetWindowResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetWindowResponse) ProtoMessage() {}
+func (*GetWindowResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetWindowResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[47]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetWindowResponse.ProtoReflect.Descriptor instead.
-func (*GetWindowResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{47}
-}
+func (*GetWindowResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
 func (x *GetWindowResponse) GetStart() *timestamppb.Timestamp {
-	if x != nil {
-		return x.Start
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *GetWindowResponse) GetEnd() *timestamppb.Timestamp {
-	if x != nil {
-		return x.End
-	}
-	return nil
-}
+func (x *GetWindowResponse) GetEnd() *timestamppb.Timestamp { _ = "STUB: not implemented"; return nil }
 
 type UpdateJobsStateRequest struct {
 	state         protoimpl.MessageState
@@ -3157,72 +1827,35 @@ type UpdateJobsStateRequest struct {
 	JobNames      []string `protobuf:"bytes,5,rep,name=job_names,json=jobNames,proto3" json:"job_names,omitempty"`
 }
 
-func (x *UpdateJobsStateRequest) Reset() {
-	*x = UpdateJobsStateRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[48]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateJobsStateRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateJobsStateRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateJobsStateRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateJobsStateRequest) ProtoMessage() {}
+func (*UpdateJobsStateRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateJobsStateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[48]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateJobsStateRequest.ProtoReflect.Descriptor instead.
 func (*UpdateJobsStateRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{48}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *UpdateJobsStateRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *UpdateJobsStateRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateJobsStateRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *UpdateJobsStateRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *UpdateJobsStateRequest) GetRemark() string {
-	if x != nil {
-		return x.Remark
-	}
-	return ""
-}
+func (x *UpdateJobsStateRequest) GetRemark() string { _ = "STUB: not implemented"; return "" }
 
 func (x *UpdateJobsStateRequest) GetState() JobState {
-	if x != nil {
-		return x.State
-	}
-	return JobState_JOB_STATE_UNSPECIFIED
+	_ = "STUB: not implemented"
+	return *new(JobState)
 }
 
-func (x *UpdateJobsStateRequest) GetJobNames() []string {
-	if x != nil {
-		return x.JobNames
-	}
-	return nil
-}
+func (x *UpdateJobsStateRequest) GetJobNames() []string { _ = "STUB: not implemented"; return nil }
 
 type UpdateJobsStateResponse struct {
 	state         protoimpl.MessageState
@@ -3230,36 +1863,21 @@ type UpdateJobsStateResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *UpdateJobsStateResponse) Reset() {
-	*x = UpdateJobsStateResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[49]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *UpdateJobsStateResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *UpdateJobsStateResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *UpdateJobsStateResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*UpdateJobsStateResponse) ProtoMessage() {}
+func (*UpdateJobsStateResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *UpdateJobsStateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[49]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use UpdateJobsStateResponse.ProtoReflect.Descriptor instead.
 func (*UpdateJobsStateResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{49}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type SyncJobsStateRequest struct {
@@ -3272,56 +1890,29 @@ type SyncJobsStateRequest struct {
 	JobStates     []*SyncJobsStateRequest_JobStatePair `protobuf:"bytes,3,rep,name=job_states,json=jobStates,proto3" json:"job_states,omitempty"`
 }
 
-func (x *SyncJobsStateRequest) Reset() {
-	*x = SyncJobsStateRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[50]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *SyncJobsStateRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *SyncJobsStateRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *SyncJobsStateRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*SyncJobsStateRequest) ProtoMessage() {}
+func (*SyncJobsStateRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *SyncJobsStateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[50]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use SyncJobsStateRequest.ProtoReflect.Descriptor instead.
 func (*SyncJobsStateRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{50}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *SyncJobsStateRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *SyncJobsStateRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *SyncJobsStateRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *SyncJobsStateRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *SyncJobsStateRequest) GetJobStates() []*SyncJobsStateRequest_JobStatePair {
-	if x != nil {
-		return x.JobStates
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3331,36 +1922,21 @@ type SyncJobsStateResponse struct {
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *SyncJobsStateResponse) Reset() {
-	*x = SyncJobsStateResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[51]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *SyncJobsStateResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *SyncJobsStateResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *SyncJobsStateResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*SyncJobsStateResponse) ProtoMessage() {}
+func (*SyncJobsStateResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *SyncJobsStateResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[51]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use SyncJobsStateResponse.ProtoReflect.Descriptor instead.
 func (*SyncJobsStateResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{51}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type JobInspectResponse_BasicInfoSection struct {
@@ -3374,63 +1950,40 @@ type JobInspectResponse_BasicInfoSection struct {
 	Notice      []*Log            `protobuf:"bytes,4,rep,name=notice,proto3" json:"notice,omitempty"`
 }
 
-func (x *JobInspectResponse_BasicInfoSection) Reset() {
-	*x = JobInspectResponse_BasicInfoSection{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[52]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectResponse_BasicInfoSection) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobInspectResponse_BasicInfoSection) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobInspectResponse_BasicInfoSection) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobInspectResponse_BasicInfoSection) ProtoMessage() {}
+func (*JobInspectResponse_BasicInfoSection) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse_BasicInfoSection) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[52]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse_BasicInfoSection.ProtoReflect.Descriptor instead.
 func (*JobInspectResponse_BasicInfoSection) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobInspectResponse_BasicInfoSection) GetJob() *JobSpecification {
-	if x != nil {
-		return x.Job
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_BasicInfoSection) GetSource() []string {
-	if x != nil {
-		return x.Source
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_BasicInfoSection) GetDestination() string {
-	if x != nil {
-		return x.Destination
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_BasicInfoSection) GetNotice() []*Log {
-	if x != nil {
-		return x.Notice
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3447,77 +2000,44 @@ type JobInspectResponse_JobDependency struct {
 	Runs          []*JobRun `protobuf:"bytes,6,rep,name=runs,proto3" json:"runs,omitempty"`
 }
 
-func (x *JobInspectResponse_JobDependency) Reset() {
-	*x = JobInspectResponse_JobDependency{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[53]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectResponse_JobDependency) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobInspectResponse_JobDependency) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobInspectResponse_JobDependency) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobInspectResponse_JobDependency) ProtoMessage() {}
+func (*JobInspectResponse_JobDependency) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse_JobDependency) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[53]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse_JobDependency.ProtoReflect.Descriptor instead.
 func (*JobInspectResponse_JobDependency) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8, 1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobInspectResponse_JobDependency) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *JobInspectResponse_JobDependency) GetName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobInspectResponse_JobDependency) GetHost() string {
-	if x != nil {
-		return x.Host
-	}
-	return ""
-}
+func (x *JobInspectResponse_JobDependency) GetHost() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobInspectResponse_JobDependency) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_JobDependency) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_JobDependency) GetTaskName() string {
-	if x != nil {
-		return x.TaskName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_JobDependency) GetRuns() []*JobRun {
-	if x != nil {
-		return x.Runs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3533,70 +2053,45 @@ type JobInspectResponse_UpstreamSection struct {
 	Notice              []*Log                                                    `protobuf:"bytes,5,rep,name=notice,proto3" json:"notice,omitempty"`
 }
 
-func (x *JobInspectResponse_UpstreamSection) Reset() {
-	*x = JobInspectResponse_UpstreamSection{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[54]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectResponse_UpstreamSection) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobInspectResponse_UpstreamSection) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobInspectResponse_UpstreamSection) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobInspectResponse_UpstreamSection) ProtoMessage() {}
+func (*JobInspectResponse_UpstreamSection) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse_UpstreamSection) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[54]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse_UpstreamSection.ProtoReflect.Descriptor instead.
 func (*JobInspectResponse_UpstreamSection) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8, 2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobInspectResponse_UpstreamSection) GetExternalDependency() []*JobInspectResponse_JobDependency {
-	if x != nil {
-		return x.ExternalDependency
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_UpstreamSection) GetInternalDependency() []*JobInspectResponse_JobDependency {
-	if x != nil {
-		return x.InternalDependency
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_UpstreamSection) GetHttpDependency() []*HttpDependency {
-	if x != nil {
-		return x.HttpDependency
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_UpstreamSection) GetUnknownDependencies() []*JobInspectResponse_UpstreamSection_UnknownDependencies {
-	if x != nil {
-		return x.UnknownDependencies
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_UpstreamSection) GetNotice() []*Log {
-	if x != nil {
-		return x.Notice
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3609,49 +2104,33 @@ type JobInspectResponse_DownstreamSection struct {
 	Notice         []*Log                              `protobuf:"bytes,2,rep,name=notice,proto3" json:"notice,omitempty"`
 }
 
-func (x *JobInspectResponse_DownstreamSection) Reset() {
-	*x = JobInspectResponse_DownstreamSection{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[55]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobInspectResponse_DownstreamSection) Reset() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse_DownstreamSection) String() string {
-	return protoimpl.X.MessageStringOf(x)
+	_ = "STUB: not implemented"
+	return ""
 }
 
-func (*JobInspectResponse_DownstreamSection) ProtoMessage() {}
+func (*JobInspectResponse_DownstreamSection) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobInspectResponse_DownstreamSection) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[55]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse_DownstreamSection.ProtoReflect.Descriptor instead.
 func (*JobInspectResponse_DownstreamSection) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8, 3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobInspectResponse_DownstreamSection) GetDownstreamJobs() []*JobInspectResponse_JobDependency {
-	if x != nil {
-		return x.DownstreamJobs
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobInspectResponse_DownstreamSection) GetNotice() []*Log {
-	if x != nil {
-		return x.Notice
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3666,55 +2145,43 @@ type JobInspectResponse_UpstreamSection_UnknownDependencies struct {
 }
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) Reset() {
-	*x = JobInspectResponse_UpstreamSection_UnknownDependencies{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[56]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
+	_ = "STUB: not implemented"
+	return
 }
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) String() string {
-	return protoimpl.X.MessageStringOf(x)
+	_ = "STUB: not implemented"
+	return ""
 }
 
-func (*JobInspectResponse_UpstreamSection_UnknownDependencies) ProtoMessage() {}
+func (*JobInspectResponse_UpstreamSection_UnknownDependencies) ProtoMessage() {
+	_ = "STUB: not implemented"
+	return
+}
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[56]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobInspectResponse_UpstreamSection_UnknownDependencies.ProtoReflect.Descriptor instead.
 func (*JobInspectResponse_UpstreamSection_UnknownDependencies) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{8, 2, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *JobInspectResponse_UpstreamSection_UnknownDependencies) GetResourceDestination() string {
-	if x != nil {
-		return x.ResourceDestination
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -3727,49 +2194,30 @@ type JobSpecification_Behavior struct {
 	Notify []*JobSpecification_Behavior_Notifiers `protobuf:"bytes,2,rep,name=notify,proto3" json:"notify,omitempty"`
 }
 
-func (x *JobSpecification_Behavior) Reset() {
-	*x = JobSpecification_Behavior{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[59]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecification_Behavior) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecification_Behavior) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecification_Behavior) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecification_Behavior) ProtoMessage() {}
+func (*JobSpecification_Behavior) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecification_Behavior) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[59]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecification_Behavior.ProtoReflect.Descriptor instead.
 func (*JobSpecification_Behavior) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{23, 2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobSpecification_Behavior) GetRetry() *JobSpecification_Behavior_Retry {
-	if x != nil {
-		return x.Retry
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobSpecification_Behavior) GetNotify() []*JobSpecification_Behavior_Notifiers {
-	if x != nil {
-		return x.Notify
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3784,56 +2232,32 @@ type JobSpecification_Behavior_Retry struct {
 	ExponentialBackoff bool                 `protobuf:"varint,3,opt,name=exponential_backoff,json=exponentialBackoff,proto3" json:"exponential_backoff,omitempty"`
 }
 
-func (x *JobSpecification_Behavior_Retry) Reset() {
-	*x = JobSpecification_Behavior_Retry{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[60]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecification_Behavior_Retry) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecification_Behavior_Retry) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecification_Behavior_Retry) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecification_Behavior_Retry) ProtoMessage() {}
+func (*JobSpecification_Behavior_Retry) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecification_Behavior_Retry) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[60]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecification_Behavior_Retry.ProtoReflect.Descriptor instead.
 func (*JobSpecification_Behavior_Retry) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{23, 2, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobSpecification_Behavior_Retry) GetCount() int32 {
-	if x != nil {
-		return x.Count
-	}
-	return 0
-}
+func (x *JobSpecification_Behavior_Retry) GetCount() int32 { _ = "STUB: not implemented"; return 0 }
 
 func (x *JobSpecification_Behavior_Retry) GetDelay() *durationpb.Duration {
-	if x != nil {
-		return x.Delay
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobSpecification_Behavior_Retry) GetExponentialBackoff() bool {
-	if x != nil {
-		return x.ExponentialBackoff
-	}
+	_ = "STUB: not implemented"
 	return false
 }
 
@@ -3848,56 +2272,35 @@ type JobSpecification_Behavior_Notifiers struct {
 	Config   map[string]string `protobuf:"bytes,3,rep,name=config,proto3" json:"config,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
-func (x *JobSpecification_Behavior_Notifiers) Reset() {
-	*x = JobSpecification_Behavior_Notifiers{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[61]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobSpecification_Behavior_Notifiers) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobSpecification_Behavior_Notifiers) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobSpecification_Behavior_Notifiers) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobSpecification_Behavior_Notifiers) ProtoMessage() {}
+func (*JobSpecification_Behavior_Notifiers) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobSpecification_Behavior_Notifiers) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[61]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobSpecification_Behavior_Notifiers.ProtoReflect.Descriptor instead.
 func (*JobSpecification_Behavior_Notifiers) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{23, 2, 1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *JobSpecification_Behavior_Notifiers) GetOn() JobEvent_Type {
-	if x != nil {
-		return x.On
-	}
-	return JobEvent_TYPE_UNSPECIFIED
+	_ = "STUB: not implemented"
+	return *new(JobEvent_Type)
 }
 
 func (x *JobSpecification_Behavior_Notifiers) GetChannels() []string {
-	if x != nil {
-		return x.Channels
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *JobSpecification_Behavior_Notifiers) GetConfig() map[string]string {
-	if x != nil {
-		return x.Config
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -3910,51 +2313,26 @@ type JobTask_Destination struct {
 	Type        string `protobuf:"bytes,2,opt,name=type,proto3" json:"type,omitempty"`
 }
 
-func (x *JobTask_Destination) Reset() {
-	*x = JobTask_Destination{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[66]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobTask_Destination) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobTask_Destination) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobTask_Destination) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobTask_Destination) ProtoMessage() {}
+func (*JobTask_Destination) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobTask_Destination) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[66]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobTask_Destination.ProtoReflect.Descriptor instead.
 func (*JobTask_Destination) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{45, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobTask_Destination) GetDestination() string {
-	if x != nil {
-		return x.Destination
-	}
-	return ""
-}
+func (x *JobTask_Destination) GetDestination() string { _ = "STUB: not implemented"; return "" }
 
-func (x *JobTask_Destination) GetType() string {
-	if x != nil {
-		return x.Type
-	}
-	return ""
-}
+func (x *JobTask_Destination) GetType() string { _ = "STUB: not implemented"; return "" }
 
 type JobTask_Dependency struct {
 	state         protoimpl.MessageState
@@ -3964,44 +2342,21 @@ type JobTask_Dependency struct {
 	Dependency string `protobuf:"bytes,1,opt,name=dependency,proto3" json:"dependency,omitempty"`
 }
 
-func (x *JobTask_Dependency) Reset() {
-	*x = JobTask_Dependency{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[67]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobTask_Dependency) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobTask_Dependency) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobTask_Dependency) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobTask_Dependency) ProtoMessage() {}
+func (*JobTask_Dependency) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobTask_Dependency) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[67]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobTask_Dependency.ProtoReflect.Descriptor instead.
-func (*JobTask_Dependency) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{45, 1}
-}
+func (*JobTask_Dependency) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobTask_Dependency) GetDependency() string {
-	if x != nil {
-		return x.Dependency
-	}
-	return ""
-}
+func (x *JobTask_Dependency) GetDependency() string { _ = "STUB: not implemented"; return "" }
 
 type SyncJobsStateRequest_JobStatePair struct {
 	state         protoimpl.MessageState
@@ -4012,50 +2367,31 @@ type SyncJobsStateRequest_JobStatePair struct {
 	State   JobState `protobuf:"varint,2,opt,name=state,proto3,enum=raystack.optimus.core.v1beta1.JobState" json:"state,omitempty"`
 }
 
-func (x *SyncJobsStateRequest_JobStatePair) Reset() {
-	*x = SyncJobsStateRequest_JobStatePair{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[68]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *SyncJobsStateRequest_JobStatePair) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *SyncJobsStateRequest_JobStatePair) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *SyncJobsStateRequest_JobStatePair) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*SyncJobsStateRequest_JobStatePair) ProtoMessage() {}
+func (*SyncJobsStateRequest_JobStatePair) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *SyncJobsStateRequest_JobStatePair) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[68]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use SyncJobsStateRequest_JobStatePair.ProtoReflect.Descriptor instead.
 func (*SyncJobsStateRequest_JobStatePair) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP(), []int{50, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *SyncJobsStateRequest_JobStatePair) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *SyncJobsStateRequest_JobStatePair) GetState() JobState {
-	if x != nil {
-		return x.State
-	}
-	return JobState_JOB_STATE_UNSPECIFIED
+	_ = "STUB: not implemented"
+	return *new(JobState)
 }
 
 var File_raystack_optimus_core_v1beta1_job_spec_proto protoreflect.FileDescriptor
@@ -5038,10 +3374,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_job_spec_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
@@ -5234,787 +3568,5 @@ var file_raystack_optimus_core_v1beta1_job_spec_proto_depIdxs = []int32{
 	0,  // [0:65] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_job_spec_proto_init() }
-func file_raystack_optimus_core_v1beta1_job_spec_proto_init() {
-	if File_raystack_optimus_core_v1beta1_job_spec_proto != nil {
-		return
-	}
-	file_raystack_optimus_core_v1beta1_status_proto_init()
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeployJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeployJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AddJobSpecificationsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AddJobSpecificationsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateJobSpecificationsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateJobSpecificationsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobRun); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CreateJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ChangeJobNamespaceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ChangeJobNamespaceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CheckJobSpecificationRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CheckJobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CheckJobSpecificationsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CheckJobSpecificationsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecification); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobDependency); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HttpDependency); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecHook); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobConfigItem); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobEvent); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobMetadata); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecMetadataResource); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecMetadataResourceConfig); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecMetadataAirflow); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RefreshJobsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RefreshJobsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDeployJobsStatusRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDeployJobsStatusResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeployJobFailure); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobSpecificationsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobSpecificationsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecificationResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplaceAllJobSpecificationsRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplaceAllJobSpecificationsResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobTaskRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetJobTaskResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobTask); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetWindowRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetWindowResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateJobsStateRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateJobsStateResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SyncJobsStateRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SyncJobsStateResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse_BasicInfoSection); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse_JobDependency); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse_UpstreamSection); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse_DownstreamSection); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobInspectResponse_UpstreamSection_UnknownDependencies); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecification_Behavior); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecification_Behavior_Retry); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobSpecification_Behavior_Notifiers); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[66].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobTask_Destination); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[67].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobTask_Dependency); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes[68].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SyncJobsStateRequest_JobStatePair); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_job_spec_proto_rawDesc,
-			NumEnums:      2,
-			NumMessages:   69,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_job_spec_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_job_spec_proto_depIdxs,
-		EnumInfos:         file_raystack_optimus_core_v1beta1_job_spec_proto_enumTypes,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_job_spec_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_job_spec_proto = out.File
-	file_raystack_optimus_core_v1beta1_job_spec_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_job_spec_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_job_spec_proto_depIdxs = nil
-}
+func init()                                                   { file_raystack_optimus_core_v1beta1_job_spec_proto_init() }
+func file_raystack_optimus_core_v1beta1_job_spec_proto_init() { _ = "STUB: not implemented"; return }

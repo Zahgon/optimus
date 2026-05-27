@@ -8,9 +8,8 @@ package optimus
 
 import (
 	context "context"
+
 	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -33,43 +32,28 @@ type replayServiceClient struct {
 }
 
 func NewReplayServiceClient(cc grpc.ClientConnInterface) ReplayServiceClient {
-	return &replayServiceClient{cc}
+	_ = "STUB: not implemented"
+	return *new(ReplayServiceClient)
 }
 
 func (c *replayServiceClient) Replay(ctx context.Context, in *ReplayRequest, opts ...grpc.CallOption) (*ReplayResponse, error) {
-	out := new(ReplayResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ReplayService/Replay", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *replayServiceClient) ReplayDryRun(ctx context.Context, in *ReplayDryRunRequest, opts ...grpc.CallOption) (*ReplayDryRunResponse, error) {
-	out := new(ReplayDryRunResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ReplayService/ReplayDryRun", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *replayServiceClient) ListReplay(ctx context.Context, in *ListReplayRequest, opts ...grpc.CallOption) (*ListReplayResponse, error) {
-	out := new(ListReplayResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ReplayService/ListReplay", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (c *replayServiceClient) GetReplay(ctx context.Context, in *GetReplayRequest, opts ...grpc.CallOption) (*GetReplayResponse, error) {
-	out := new(GetReplayResponse)
-	err := c.cc.Invoke(ctx, "/raystack.optimus.core.v1beta1.ReplayService/GetReplay", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ReplayServiceServer is the server API for ReplayService service.
@@ -88,100 +72,61 @@ type UnimplementedReplayServiceServer struct {
 }
 
 func (UnimplementedReplayServiceServer) Replay(context.Context, *ReplayRequest) (*ReplayResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Replay not implemented")
+	_ = "STUB: not implemented"
+	return nil, nil
 }
-func (UnimplementedReplayServiceServer) ReplayDryRun(context.Context, *ReplayDryRunRequest) (*ReplayDryRunResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReplayDryRun not implemented")
-}
-func (UnimplementedReplayServiceServer) ListReplay(context.Context, *ListReplayRequest) (*ListReplayResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListReplay not implemented")
-}
-func (UnimplementedReplayServiceServer) GetReplay(context.Context, *GetReplayRequest) (*GetReplayResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetReplay not implemented")
-}
-func (UnimplementedReplayServiceServer) mustEmbedUnimplementedReplayServiceServer() {}
 
-// UnsafeReplayServiceServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to ReplayServiceServer will
-// result in compilation errors.
+func (UnimplementedReplayServiceServer) ReplayDryRun(context.Context, *ReplayDryRunRequest) (*ReplayDryRunResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedReplayServiceServer) ListReplay(context.Context, *ListReplayRequest) (*ListReplayResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedReplayServiceServer) GetReplay(context.Context, *GetReplayRequest) (*GetReplayResponse, error) {
+	_ = "STUB: not implemented"
+	return nil, nil
+}
+
+func (UnimplementedReplayServiceServer) mustEmbedUnimplementedReplayServiceServer() {
+	_ = "STUB: not implemented"
+
+	// UnsafeReplayServiceServer may be embedded to opt out of forward compatibility for this service.
+	// Use of this interface is not recommended, as added methods to ReplayServiceServer will
+	// result in compilation errors.
+	return
+}
+
 type UnsafeReplayServiceServer interface {
 	mustEmbedUnimplementedReplayServiceServer()
 }
 
 func RegisterReplayServiceServer(s grpc.ServiceRegistrar, srv ReplayServiceServer) {
-	s.RegisterService(&ReplayService_ServiceDesc, srv)
+	_ = "STUB: not implemented"
+	return
 }
 
 func _ReplayService_Replay_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ReplayRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ReplayServiceServer).Replay(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ReplayService/Replay",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ReplayServiceServer).Replay(ctx, req.(*ReplayRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ReplayService_ReplayDryRun_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ReplayDryRunRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ReplayServiceServer).ReplayDryRun(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ReplayService/ReplayDryRun",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ReplayServiceServer).ReplayDryRun(ctx, req.(*ReplayDryRunRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ReplayService_ListReplay_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ListReplayRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ReplayServiceServer).ListReplay(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ReplayService/ListReplay",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ReplayServiceServer).ListReplay(ctx, req.(*ListReplayRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func _ReplayService_GetReplay_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetReplayRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ReplayServiceServer).GetReplay(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/raystack.optimus.core.v1beta1.ReplayService/GetReplay",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ReplayServiceServer).GetReplay(ctx, req.(*GetReplayRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 // ReplayService_ServiceDesc is the grpc.ServiceDesc for ReplayService service.

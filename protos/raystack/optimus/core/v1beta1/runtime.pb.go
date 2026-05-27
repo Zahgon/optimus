@@ -7,12 +7,12 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -30,44 +30,21 @@ type VersionRequest struct {
 	Client string `protobuf:"bytes,1,opt,name=client,proto3" json:"client,omitempty"`
 }
 
-func (x *VersionRequest) Reset() {
-	*x = VersionRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *VersionRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *VersionRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *VersionRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*VersionRequest) ProtoMessage() {}
+func (*VersionRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *VersionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use VersionRequest.ProtoReflect.Descriptor instead.
-func (*VersionRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_runtime_proto_rawDescGZIP(), []int{0}
-}
+func (*VersionRequest) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *VersionRequest) GetClient() string {
-	if x != nil {
-		return x.Client
-	}
-	return ""
-}
+func (x *VersionRequest) GetClient() string { _ = "STUB: not implemented"; return "" }
 
 type VersionResponse struct {
 	state         protoimpl.MessageState
@@ -77,44 +54,21 @@ type VersionResponse struct {
 	Server string `protobuf:"bytes,1,opt,name=server,proto3" json:"server,omitempty"`
 }
 
-func (x *VersionResponse) Reset() {
-	*x = VersionResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *VersionResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *VersionResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *VersionResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*VersionResponse) ProtoMessage() {}
+func (*VersionResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *VersionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use VersionResponse.ProtoReflect.Descriptor instead.
-func (*VersionResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_runtime_proto_rawDescGZIP(), []int{1}
-}
+func (*VersionResponse) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *VersionResponse) GetServer() string {
-	if x != nil {
-		return x.Server
-	}
-	return ""
-}
+func (x *VersionResponse) GetServer() string { _ = "STUB: not implemented"; return "" }
 
 var File_raystack_optimus_core_v1beta1_runtime_proto protoreflect.FileDescriptor
 
@@ -163,10 +117,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_runtime_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_runtime_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_runtime_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_runtime_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_runtime_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
@@ -184,53 +136,5 @@ var file_raystack_optimus_core_v1beta1_runtime_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_runtime_proto_init() }
-func file_raystack_optimus_core_v1beta1_runtime_proto_init() {
-	if File_raystack_optimus_core_v1beta1_runtime_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VersionRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VersionResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_runtime_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   2,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_runtime_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_runtime_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_runtime_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_runtime_proto = out.File
-	file_raystack_optimus_core_v1beta1_runtime_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_runtime_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_runtime_proto_depIdxs = nil
-}
+func init()                                                  { file_raystack_optimus_core_v1beta1_runtime_proto_init() }
+func file_raystack_optimus_core_v1beta1_runtime_proto_init() { _ = "STUB: not implemented"; return }

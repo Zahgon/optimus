@@ -16,59 +16,21 @@ type GRPCServer struct {
 }
 
 func (s *GRPCServer) GetName(ctx context.Context, _ *pbp.GetNameRequest) (*pbp.GetNameResponse, error) {
-	name, err := s.Impl.GetName(ctx)
-	if err != nil {
-		return nil, err
-	}
-	return &pbp.GetNameResponse{Name: name}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (s *GRPCServer) GenerateDestination(ctx context.Context, req *pbp.GenerateDestinationRequest) (*pbp.GenerateDestinationResponse, error) {
-	resp, err := s.Impl.GenerateDestination(ctx, plugin.GenerateDestinationRequest{
-		Config:  adaptConfigsFromProto(req.Config),
-		Assets:  adaptAssetsFromProto(req.Assets),
-		Options: plugin.Options{DryRun: req.Options.DryRun},
-	})
-	if err != nil {
-		return nil, err
-	}
-	return &pbp.GenerateDestinationResponse{Destination: resp.Destination, DestinationType: resp.Type}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (s *GRPCServer) GenerateDependencies(ctx context.Context, req *pbp.GenerateDependenciesRequest) (*pbp.GenerateDependenciesResponse, error) {
-	resp, err := s.Impl.GenerateDependencies(ctx, plugin.GenerateDependenciesRequest{
-		Config:  adaptConfigsFromProto(req.Config),
-		Assets:  adaptAssetsFromProto(req.Assets),
-		Options: plugin.Options{DryRun: req.Options.DryRun},
-	})
-	if err != nil {
-		return nil, err
-	}
-	return &pbp.GenerateDependenciesResponse{Dependencies: resp.Dependencies}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (s *GRPCServer) CompileAssets(ctx context.Context, req *pbp.CompileAssetsRequest) (*pbp.CompileAssetsResponse, error) {
-	var instanceData []plugin.JobRunSpecData
-	for _, inst := range req.InstanceData {
-		instanceData = append(instanceData, plugin.JobRunSpecData{
-			Name:  inst.Name,
-			Value: inst.Value,
-			Type:  inst.Type,
-		})
-	}
-
-	resp, err := s.Impl.CompileAssets(ctx, plugin.CompileAssetsRequest{
-		Options:      plugin.Options{DryRun: req.Options.DryRun},
-		Config:       adaptConfigsFromProto(req.Configs),
-		Assets:       adaptAssetsFromProto(req.Assets),
-		InstanceData: instanceData,
-		StartTime:    req.StartTime.AsTime(),
-		EndTime:      req.EndTime.AsTime(),
-	})
-	if err != nil {
-		return nil, err
-	}
-	return &pbp.CompileAssetsResponse{
-		Assets: adaptAssetsToProto(resp.Assets),
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }

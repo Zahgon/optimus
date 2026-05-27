@@ -21,7 +21,7 @@ type Handler interface {
 
 type NoOpHandler struct{}
 
-func (NoOpHandler) HandleEvent(_ Event) {}
+func (NoOpHandler) HandleEvent(_ Event) { _ = "STUB: not implemented"; return }
 
 type EventHandler struct {
 	messageChan chan<- []byte
@@ -29,19 +29,8 @@ type EventHandler struct {
 }
 
 func NewEventHandler(messageChan chan<- []byte, logger log.Logger) *EventHandler {
-	return &EventHandler{
-		messageChan: messageChan,
-		logger:      logger,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (e EventHandler) HandleEvent(event Event) {
-	bytes, err := event.Bytes()
-	if err != nil {
-		e.logger.Error("error converting event to bytes: %v", err)
-		return
-	}
-
-	go func() { e.messageChan <- bytes }()
-	eventQueueCounter.Inc()
-}
+func (e EventHandler) HandleEvent(event Event) { _ = "STUB: not implemented"; return }

@@ -5,17 +5,4 @@ import (
 )
 
 // NewSchedulerCommand initializes command for job
-func NewSchedulerCommand() *cobra.Command {
-	cmd := &cobra.Command{
-		Use:   "scheduler",
-		Short: "scheduled/run job related functions",
-		Annotations: map[string]string{
-			"group:core": "true",
-		},
-	}
-
-	cmd.AddCommand(
-		UploadCommand(),
-	)
-	return cmd
-}
+func NewSchedulerCommand() *cobra.Command { _ = "STUB: not implemented"; return nil }

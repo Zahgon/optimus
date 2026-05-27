@@ -17,19 +17,21 @@ type NamespaceService struct {
 }
 
 func (ns NamespaceService) Save(ctx context.Context, namespace *tenant.Namespace) error {
-	return ns.nsRepo.Save(ctx, namespace)
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func (ns NamespaceService) Get(ctx context.Context, projName tenant.ProjectName, namespaceName tenant.NamespaceName) (*tenant.Namespace, error) {
-	return ns.nsRepo.GetByName(ctx, projName, namespaceName)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (ns NamespaceService) GetAll(ctx context.Context, projectName tenant.ProjectName) ([]*tenant.Namespace, error) {
-	return ns.nsRepo.GetAll(ctx, projectName)
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func NewNamespaceService(nsRepo NamespaceRepository) *NamespaceService {
-	return &NamespaceService{
-		nsRepo: nsRepo,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

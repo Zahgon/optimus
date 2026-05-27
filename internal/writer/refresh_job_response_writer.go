@@ -13,15 +13,11 @@ type refreshJobResponseWriter struct {
 }
 
 func NewRefreshJobResponseWriter(stream pb.JobSpecificationService_RefreshJobsServer) RefreshJobResponseWriter {
-	return &refreshJobResponseWriter{
-		stream: stream,
-	}
+	_ = "STUB: not implemented"
+	return *new(RefreshJobResponseWriter)
 }
 
 func (s *refreshJobResponseWriter) Write(level LogLevel, message string) error {
-	logStatus := newLogStatusProto(level, message)
-	resp := pb.RefreshJobsResponse{
-		LogStatus: logStatus,
-	}
-	return s.stream.Send(&resp)
+	_ = "STUB: not implemented"
+	return nil
 }

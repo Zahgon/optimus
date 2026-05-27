@@ -7,12 +7,12 @@
 package optimus
 
 import (
+	sync "sync"
+
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -31,49 +31,30 @@ type RegisterProjectNamespaceRequest struct {
 	Namespace   *NamespaceSpecification `protobuf:"bytes,2,opt,name=namespace,proto3" json:"namespace,omitempty"`
 }
 
-func (x *RegisterProjectNamespaceRequest) Reset() {
-	*x = RegisterProjectNamespaceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterProjectNamespaceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterProjectNamespaceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterProjectNamespaceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterProjectNamespaceRequest) ProtoMessage() {}
+func (*RegisterProjectNamespaceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterProjectNamespaceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterProjectNamespaceRequest.ProtoReflect.Descriptor instead.
 func (*RegisterProjectNamespaceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *RegisterProjectNamespaceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
 func (x *RegisterProjectNamespaceRequest) GetNamespace() *NamespaceSpecification {
-	if x != nil {
-		return x.Namespace
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -86,49 +67,30 @@ type RegisterProjectNamespaceResponse struct {
 	Message string `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *RegisterProjectNamespaceResponse) Reset() {
-	*x = RegisterProjectNamespaceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *RegisterProjectNamespaceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *RegisterProjectNamespaceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *RegisterProjectNamespaceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*RegisterProjectNamespaceResponse) ProtoMessage() {}
+func (*RegisterProjectNamespaceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *RegisterProjectNamespaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use RegisterProjectNamespaceResponse.ProtoReflect.Descriptor instead.
 func (*RegisterProjectNamespaceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{1}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *RegisterProjectNamespaceResponse) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
+	_ = "STUB: not implemented"
 	return false
 }
 
 func (x *RegisterProjectNamespaceResponse) GetMessage() string {
-	if x != nil {
-		return x.Message
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -140,42 +102,25 @@ type ListProjectNamespacesRequest struct {
 	ProjectName string `protobuf:"bytes,1,opt,name=project_name,json=projectName,proto3" json:"project_name,omitempty"`
 }
 
-func (x *ListProjectNamespacesRequest) Reset() {
-	*x = ListProjectNamespacesRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListProjectNamespacesRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListProjectNamespacesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListProjectNamespacesRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListProjectNamespacesRequest) ProtoMessage() {}
+func (*ListProjectNamespacesRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListProjectNamespacesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListProjectNamespacesRequest.ProtoReflect.Descriptor instead.
 func (*ListProjectNamespacesRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{2}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListProjectNamespacesRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
+	_ = "STUB: not implemented"
 	return ""
 }
 
@@ -187,42 +132,25 @@ type ListProjectNamespacesResponse struct {
 	Namespaces []*NamespaceSpecification `protobuf:"bytes,1,rep,name=namespaces,proto3" json:"namespaces,omitempty"`
 }
 
-func (x *ListProjectNamespacesResponse) Reset() {
-	*x = ListProjectNamespacesResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ListProjectNamespacesResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ListProjectNamespacesResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ListProjectNamespacesResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ListProjectNamespacesResponse) ProtoMessage() {}
+func (*ListProjectNamespacesResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ListProjectNamespacesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ListProjectNamespacesResponse.ProtoReflect.Descriptor instead.
 func (*ListProjectNamespacesResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *ListProjectNamespacesResponse) GetNamespaces() []*NamespaceSpecification {
-	if x != nil {
-		return x.Namespaces
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -235,51 +163,26 @@ type GetNamespaceRequest struct {
 	NamespaceName string `protobuf:"bytes,2,opt,name=namespace_name,json=namespaceName,proto3" json:"namespace_name,omitempty"`
 }
 
-func (x *GetNamespaceRequest) Reset() {
-	*x = GetNamespaceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetNamespaceRequest) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetNamespaceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetNamespaceRequest) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetNamespaceRequest) ProtoMessage() {}
+func (*GetNamespaceRequest) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetNamespaceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetNamespaceRequest.ProtoReflect.Descriptor instead.
 func (*GetNamespaceRequest) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{4}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *GetNamespaceRequest) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *GetNamespaceRequest) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *GetNamespaceRequest) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *GetNamespaceRequest) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 type GetNamespaceResponse struct {
 	state         protoimpl.MessageState
@@ -289,42 +192,25 @@ type GetNamespaceResponse struct {
 	Namespace *NamespaceSpecification `protobuf:"bytes,1,opt,name=namespace,proto3" json:"namespace,omitempty"`
 }
 
-func (x *GetNamespaceResponse) Reset() {
-	*x = GetNamespaceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *GetNamespaceResponse) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *GetNamespaceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *GetNamespaceResponse) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*GetNamespaceResponse) ProtoMessage() {}
+func (*GetNamespaceResponse) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *GetNamespaceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use GetNamespaceResponse.ProtoReflect.Descriptor instead.
 func (*GetNamespaceResponse) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{5}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (x *GetNamespaceResponse) GetNamespace() *NamespaceSpecification {
-	if x != nil {
-		return x.Namespace
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -337,49 +223,27 @@ type NamespaceSpecification struct {
 	Config map[string]string `protobuf:"bytes,2,rep,name=config,proto3" json:"config,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 }
 
-func (x *NamespaceSpecification) Reset() {
-	*x = NamespaceSpecification{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *NamespaceSpecification) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *NamespaceSpecification) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *NamespaceSpecification) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*NamespaceSpecification) ProtoMessage() {}
+func (*NamespaceSpecification) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *NamespaceSpecification) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use NamespaceSpecification.ProtoReflect.Descriptor instead.
 func (*NamespaceSpecification) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP(), []int{6}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *NamespaceSpecification) GetName() string {
-	if x != nil {
-		return x.Name
-	}
-	return ""
-}
+func (x *NamespaceSpecification) GetName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *NamespaceSpecification) GetConfig() map[string]string {
-	if x != nil {
-		return x.Config
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -508,10 +372,8 @@ var (
 )
 
 func file_raystack_optimus_core_v1beta1_namespace_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_core_v1beta1_namespace_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_core_v1beta1_namespace_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_core_v1beta1_namespace_proto_rawDescData)
-	})
-	return file_raystack_optimus_core_v1beta1_namespace_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
@@ -543,113 +405,5 @@ var file_raystack_optimus_core_v1beta1_namespace_proto_depIdxs = []int32{
 	0, // [0:4] is the sub-list for field type_name
 }
 
-func init() { file_raystack_optimus_core_v1beta1_namespace_proto_init() }
-func file_raystack_optimus_core_v1beta1_namespace_proto_init() {
-	if File_raystack_optimus_core_v1beta1_namespace_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterProjectNamespaceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*RegisterProjectNamespaceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListProjectNamespacesRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListProjectNamespacesResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNamespaceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetNamespaceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NamespaceSpecification); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_core_v1beta1_namespace_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   8,
-			NumExtensions: 0,
-			NumServices:   1,
-		},
-		GoTypes:           file_raystack_optimus_core_v1beta1_namespace_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_core_v1beta1_namespace_proto_depIdxs,
-		MessageInfos:      file_raystack_optimus_core_v1beta1_namespace_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_core_v1beta1_namespace_proto = out.File
-	file_raystack_optimus_core_v1beta1_namespace_proto_rawDesc = nil
-	file_raystack_optimus_core_v1beta1_namespace_proto_goTypes = nil
-	file_raystack_optimus_core_v1beta1_namespace_proto_depIdxs = nil
-}
+func init()                                                    { file_raystack_optimus_core_v1beta1_namespace_proto_init() }
+func file_raystack_optimus_core_v1beta1_namespace_proto_init() { _ = "STUB: not implemented"; return }

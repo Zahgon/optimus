@@ -1,10 +1,5 @@
 package plugin
 
-import (
-	"errors"
-	"strings"
-)
-
 const (
 	TypeTask Type = "task"
 	TypeHook Type = "hook"
@@ -21,21 +16,15 @@ const (
 
 type Type string
 
-func (t Type) String() string {
-	return string(t)
-}
+func (t Type) String() string { _ = "STUB: not implemented"; return "" }
 
 type HookType string
 
-func (ht HookType) String() string {
-	return string(ht)
-}
+func (ht HookType) String() string { _ = "STUB: not implemented"; return "" }
 
 type Mod string
 
-func (m Mod) String() string {
-	return string(m)
-}
+func (m Mod) String() string { _ = "STUB: not implemented"; return "" }
 
 type Entrypoint struct {
 	Shell  string
@@ -67,35 +56,13 @@ type Info struct {
 	HookType HookType `yaml:",omitempty"`
 }
 
-func (info *Info) Validate() error {
-	if info.Name == "" {
-		return errors.New("plugin name cannot be empty")
-	}
+func (info *Info) Validate() error { _ = "STUB: not implemented"; return nil }
 
-	// image is a required field
-	if info.Image == "" {
-		return errors.New("plugin image cannot be empty")
-	}
+// image is a required field
 
-	// version is a required field
-	if info.PluginVersion == "" {
-		return errors.New("plugin version cannot be empty")
-	}
+// version is a required field
 
-	// entrypoint is a required field
-	if info.Entrypoint.Script == "" {
-		return errors.New("entrypoint script cannot be empty")
-	}
-
-	switch info.PluginType {
-	case TypeTask:
-	case TypeHook:
-	default:
-		return errors.New("plugin type is not supported")
-	}
-
-	return nil
-}
+// entrypoint is a required field
 
 type YamlMod interface {
 	PluginInfo() *Info
@@ -110,23 +77,13 @@ type Config struct {
 type Configs []Config
 
 func (c Configs) Get(name string) (Config, bool) {
-	for _, con := range c {
-		if strings.EqualFold(con.Name, name) {
-			return con, true
-		}
-	}
-	return Config{}, false
+	_ = "STUB: not implemented"
+	return *new(Config), false
 }
 
 func ConfigsFromMap(configMap map[string]string) Configs {
-	taskPluginConfigs := Configs{}
-	for key, value := range configMap {
-		taskPluginConfigs = append(taskPluginConfigs, Config{
-			Name:  key,
-			Value: value,
-		})
-	}
-	return taskPluginConfigs
+	_ = "STUB: not implemented"
+	return *new(Configs)
 }
 
 type Asset struct {
@@ -137,32 +94,16 @@ type Asset struct {
 type Assets []Asset
 
 func AssetsFromMap(assetsMap map[string]string) Assets {
-	taskPluginAssets := Assets{}
-	for key, value := range assetsMap {
-		taskPluginAssets = append(taskPluginAssets, Asset{
-			Name:  key,
-			Value: value,
-		})
-	}
-	return taskPluginAssets
+	_ = "STUB: not implemented"
+	return *new(Assets)
 }
 
 func (a Assets) Get(name string) (Asset, bool) {
-	for _, con := range a {
-		if strings.EqualFold(con.Name, name) {
-			return con, true
-		}
-	}
-	return Asset{}, false
+	_ = "STUB: not implemented"
+	return *new(Asset), false
 }
 
-func (a Assets) ToMap() map[string]string {
-	mapping := map[string]string{}
-	for _, asset := range a {
-		mapping[asset.Name] = asset.Value
-	}
-	return mapping
-}
+func (a Assets) ToMap() map[string]string { _ = "STUB: not implemented"; return nil }
 
 // Plugin is an extensible module implemented outside the core optimus boundaries
 type Plugin struct {
@@ -172,17 +113,11 @@ type Plugin struct {
 	YamlMod       YamlMod
 }
 
-func (p *Plugin) IsYamlPlugin() bool {
-	return p.YamlMod != nil
-}
+func (p *Plugin) IsYamlPlugin() bool { _ = "STUB: not implemented"; return false }
 
 func (p *Plugin) GetSurveyMod() CommandLineMod {
-	return p.YamlMod
+	_ = "STUB: not implemented"
+	return *new(CommandLineMod)
 }
 
-func (p *Plugin) Info() *Info {
-	if p.YamlMod != nil {
-		return p.YamlMod.PluginInfo()
-	}
-	return nil
-}
+func (p *Plugin) Info() *Info { _ = "STUB: not implemented"; return nil }

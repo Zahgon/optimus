@@ -2,10 +2,6 @@ package survey
 
 import (
 	"context"
-	"errors"
-	"fmt"
-	"reflect"
-	"strconv"
 
 	"github.com/AlecAivazis/survey/v2"
 
@@ -18,123 +14,36 @@ import (
 type JobSurvey struct{}
 
 // NewJobSurvey initializes job survey
-func NewJobSurvey() *JobSurvey {
-	return &JobSurvey{}
-}
+func NewJobSurvey() *JobSurvey { _ = "STUB: not implemented"; return nil }
 
 // AskToSelectJobName asks to select job name
 func (*JobSurvey) AskToSelectJobName(jobSpecReader local.SpecReader[*model.JobSpec], jobDirPath string) (string, error) {
-	jobs, err := jobSpecReader.ReadAll(jobDirPath)
-	if err != nil {
-		return "", err
-	}
-	var allJobNames []string
-	for _, job := range jobs {
-		allJobNames = append(allJobNames, job.Name)
-	}
-	var selectedJobName string
-	if err := survey.AskOne(&survey.Select{
-		Message: "Select a Job",
-		Options: allJobNames,
-	}, &selectedJobName); err != nil {
-		return "", err
-	}
-	return selectedJobName, nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
-func (j *JobSurvey) askCliModSurveyQuestion(ctx context.Context, cliMod plugin.CommandLineMod, question plugin.Question) (plugin.Answers, error) { //nolint: gocritic
-	surveyPrompt := j.getSurveyPromptFromPluginQuestion(question)
-
-	var responseStr string
-	if err := survey.AskOne(
-		surveyPrompt,
-		&responseStr,
-		survey.WithValidator(j.getValidatePluginQuestion(ctx, cliMod, question)),
-	); err != nil {
-		return nil, fmt.Errorf("AskSurveyQuestion: %w", err)
-	}
-
-	answers := plugin.Answers{
-		plugin.Answer{
-			Question: question,
-			Value:    responseStr,
-		},
-	}
-
-	// check if sub questions are attached on this question
-	for _, subQues := range question.SubQuestions {
-		if responseStr == subQues.IfValue {
-			for _, subQuestion := range subQues.Questions { //nolint: gocritic
-				subQuestionAnswers, err := j.askCliModSurveyQuestion(ctx, cliMod, subQuestion)
-				if err != nil {
-					return nil, err
-				}
-				answers = append(answers, subQuestionAnswers...)
-			}
-		}
-	}
-
-	return answers, nil
+func (j *JobSurvey) askCliModSurveyQuestion(ctx context.Context, cliMod plugin.CommandLineMod, question plugin.Question) (plugin.Answers, error) {
+	_ = "STUB: not implemented" //nolint: gocritic
+	return *new(plugin.Answers), nil
 }
 
-func (*JobSurvey) getSurveyPromptFromPluginQuestion(question plugin.Question) survey.Prompt { //nolint: gocritic
-	var surveyPrompt survey.Prompt
-	if len(question.Multiselect) > 0 {
-		sel := &survey.Select{
-			Message: question.Prompt,
-			Help:    question.Help,
-			Options: question.Multiselect,
-		}
-		if len(question.Default) > 0 {
-			sel.Default = question.Default
-		}
-		surveyPrompt = sel
-	} else {
-		sel := &survey.Input{
-			Message: question.Prompt,
-			Help:    question.Help,
-		}
-		if len(question.Default) > 0 {
-			sel.Default = question.Default
-		}
-		surveyPrompt = sel
-	}
-	return surveyPrompt
+// check if sub questions are attached on this question
+
+//nolint: gocritic
+
+func (*JobSurvey) getSurveyPromptFromPluginQuestion(question plugin.Question) survey.Prompt {
+	_ = "STUB: not implemented" //nolint: gocritic
+	return *new(survey.Prompt)
 }
 
-func (j *JobSurvey) getValidatePluginQuestion(ctx context.Context, cliMod plugin.CommandLineMod, question plugin.Question) survey.Validator { //nolint: gocritic
-	return func(val interface{}) error {
-		str, err := j.convertUserInputPluginToString(val)
-		if err != nil {
-			return err
-		}
-		resp, err := cliMod.ValidateQuestion(ctx, plugin.ValidateQuestionRequest{ //nolint: gocritic
-			Answer: plugin.Answer{
-				Question: question,
-				Value:    str,
-			},
-		})
-		if err != nil {
-			return err
-		}
-		if !resp.Success {
-			return errors.New(resp.Error)
-		}
-		return nil
-	}
+func (j *JobSurvey) getValidatePluginQuestion(ctx context.Context, cliMod plugin.CommandLineMod, question plugin.Question) survey.Validator {
+	_ = "STUB: not implemented" //nolint: gocritic
+	return *new(survey.Validator)
 }
+
+//nolint: gocritic
 
 func (*JobSurvey) convertUserInputPluginToString(val interface{}) (string, error) {
-	var responseStr string
-	switch reflect.TypeOf(val).Name() {
-	case "int":
-		responseStr = strconv.Itoa(val.(int))
-	case "string":
-		responseStr = val.(string)
-	case "OptionAnswer":
-		responseStr = val.(survey.OptionAnswer).Value
-	default:
-		return "", fmt.Errorf("unknown type found while parsing input: %v", val)
-	}
-	return responseStr, nil
+	_ = "STUB: not implemented"
+	return "", nil
 }

@@ -7,12 +7,12 @@
 package optimus
 
 import (
+	sync "sync"
+
 	v1beta1 "github.com/raystack/optimus/protos/raystack/optimus/core/v1beta1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -69,30 +69,31 @@ var (
 )
 
 func (x OptimusChangeEvent_EventType) Enum() *OptimusChangeEvent_EventType {
-	p := new(OptimusChangeEvent_EventType)
-	*p = x
-	return p
+	_ = "STUB: not implemented"
+	return nil
 }
 
-func (x OptimusChangeEvent_EventType) String() string {
-	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
-}
+func (x OptimusChangeEvent_EventType) String() string { _ = "STUB: not implemented"; return "" }
 
 func (OptimusChangeEvent_EventType) Descriptor() protoreflect.EnumDescriptor {
-	return file_raystack_optimus_integration_v1beta1_event_proto_enumTypes[0].Descriptor()
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumDescriptor)
 }
 
 func (OptimusChangeEvent_EventType) Type() protoreflect.EnumType {
-	return &file_raystack_optimus_integration_v1beta1_event_proto_enumTypes[0]
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumType)
 }
 
 func (x OptimusChangeEvent_EventType) Number() protoreflect.EnumNumber {
-	return protoreflect.EnumNumber(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.EnumNumber)
 }
 
 // Deprecated: Use OptimusChangeEvent_EventType.Descriptor instead.
 func (OptimusChangeEvent_EventType) EnumDescriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{4, 0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 type ResourceChangePayload struct {
@@ -104,49 +105,27 @@ type ResourceChangePayload struct {
 	Resource      *v1beta1.ResourceSpecification `protobuf:"bytes,2,opt,name=resource,proto3" json:"resource,omitempty"`
 }
 
-func (x *ResourceChangePayload) Reset() {
-	*x = ResourceChangePayload{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *ResourceChangePayload) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *ResourceChangePayload) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *ResourceChangePayload) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*ResourceChangePayload) ProtoMessage() {}
+func (*ResourceChangePayload) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *ResourceChangePayload) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use ResourceChangePayload.ProtoReflect.Descriptor instead.
 func (*ResourceChangePayload) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{0}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *ResourceChangePayload) GetDatastoreName() string {
-	if x != nil {
-		return x.DatastoreName
-	}
-	return ""
-}
+func (x *ResourceChangePayload) GetDatastoreName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *ResourceChangePayload) GetResource() *v1beta1.ResourceSpecification {
-	if x != nil {
-		return x.Resource
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -159,49 +138,24 @@ type JobChangePayload struct {
 	JobSpec *v1beta1.JobSpecification `protobuf:"bytes,2,opt,name=job_spec,json=jobSpec,proto3" json:"job_spec,omitempty"`
 }
 
-func (x *JobChangePayload) Reset() {
-	*x = JobChangePayload{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobChangePayload) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobChangePayload) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobChangePayload) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobChangePayload) ProtoMessage() {}
+func (*JobChangePayload) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobChangePayload) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobChangePayload.ProtoReflect.Descriptor instead.
-func (*JobChangePayload) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{1}
-}
+func (*JobChangePayload) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobChangePayload) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *JobChangePayload) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobChangePayload) GetJobSpec() *v1beta1.JobSpecification {
-	if x != nil {
-		return x.JobSpec
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -216,63 +170,31 @@ type JobRunPayload struct {
 	StartTime   *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
 }
 
-func (x *JobRunPayload) Reset() {
-	*x = JobRunPayload{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobRunPayload) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobRunPayload) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobRunPayload) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobRunPayload) ProtoMessage() {}
+func (*JobRunPayload) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobRunPayload) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobRunPayload.ProtoReflect.Descriptor instead.
-func (*JobRunPayload) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{2}
-}
+func (*JobRunPayload) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *JobRunPayload) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *JobRunPayload) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobRunPayload) GetScheduledAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.ScheduledAt
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *JobRunPayload) GetJobRunId() string {
-	if x != nil {
-		return x.JobRunId
-	}
-	return ""
-}
+func (x *JobRunPayload) GetJobRunId() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobRunPayload) GetStartTime() *timestamppb.Timestamp {
-	if x != nil {
-		return x.StartTime
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -285,50 +207,28 @@ type JobStateChangePayload struct {
 	State   v1beta1.JobState `protobuf:"varint,2,opt,name=state,proto3,enum=raystack.optimus.core.v1beta1.JobState" json:"state,omitempty"`
 }
 
-func (x *JobStateChangePayload) Reset() {
-	*x = JobStateChangePayload{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *JobStateChangePayload) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *JobStateChangePayload) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *JobStateChangePayload) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*JobStateChangePayload) ProtoMessage() {}
+func (*JobStateChangePayload) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *JobStateChangePayload) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use JobStateChangePayload.ProtoReflect.Descriptor instead.
 func (*JobStateChangePayload) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{3}
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (x *JobStateChangePayload) GetJobName() string {
-	if x != nil {
-		return x.JobName
-	}
-	return ""
-}
+func (x *JobStateChangePayload) GetJobName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *JobStateChangePayload) GetState() v1beta1.JobState {
-	if x != nil {
-		return x.State
-	}
-	return v1beta1.JobState(0)
+	_ = "STUB: not implemented"
+	return *new(v1beta1.JobState)
 }
 
 type OptimusChangeEvent struct {
@@ -350,105 +250,55 @@ type OptimusChangeEvent struct {
 	Payload isOptimusChangeEvent_Payload `protobuf_oneof:"payload"`
 }
 
-func (x *OptimusChangeEvent) Reset() {
-	*x = OptimusChangeEvent{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
+func (x *OptimusChangeEvent) Reset() { _ = "STUB: not implemented"; return }
 
-func (x *OptimusChangeEvent) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
+func (x *OptimusChangeEvent) String() string { _ = "STUB: not implemented"; return "" }
 
-func (*OptimusChangeEvent) ProtoMessage() {}
+func (*OptimusChangeEvent) ProtoMessage() { _ = "STUB: not implemented"; return }
 
 func (x *OptimusChangeEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
+	_ = "STUB: not implemented"
+	return *new(protoreflect.Message)
 }
 
 // Deprecated: Use OptimusChangeEvent.ProtoReflect.Descriptor instead.
-func (*OptimusChangeEvent) Descriptor() ([]byte, []int) {
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP(), []int{4}
-}
+func (*OptimusChangeEvent) Descriptor() ([]byte, []int) { _ = "STUB: not implemented"; return nil, nil }
 
-func (x *OptimusChangeEvent) GetEventId() string {
-	if x != nil {
-		return x.EventId
-	}
-	return ""
-}
+func (x *OptimusChangeEvent) GetEventId() string { _ = "STUB: not implemented"; return "" }
 
 func (x *OptimusChangeEvent) GetOccurredAt() *timestamppb.Timestamp {
-	if x != nil {
-		return x.OccurredAt
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *OptimusChangeEvent) GetProjectName() string {
-	if x != nil {
-		return x.ProjectName
-	}
-	return ""
-}
+func (x *OptimusChangeEvent) GetProjectName() string { _ = "STUB: not implemented"; return "" }
 
-func (x *OptimusChangeEvent) GetNamespaceName() string {
-	if x != nil {
-		return x.NamespaceName
-	}
-	return ""
-}
+func (x *OptimusChangeEvent) GetNamespaceName() string { _ = "STUB: not implemented"; return "" }
 
 func (x *OptimusChangeEvent) GetEventType() OptimusChangeEvent_EventType {
-	if x != nil {
-		return x.EventType
-	}
-	return OptimusChangeEvent_EVENT_TYPE_TYPE_UNSPECIFIED
+	_ = "STUB: not implemented"
+	return *new(OptimusChangeEvent_EventType)
 }
 
 func (m *OptimusChangeEvent) GetPayload() isOptimusChangeEvent_Payload {
-	if m != nil {
-		return m.Payload
-	}
-	return nil
+	_ = "STUB: not implemented"
+	return *new(isOptimusChangeEvent_Payload)
 }
 
 func (x *OptimusChangeEvent) GetJobChange() *JobChangePayload {
-	if x, ok := x.GetPayload().(*OptimusChangeEvent_JobChange); ok {
-		return x.JobChange
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
 func (x *OptimusChangeEvent) GetResourceChange() *ResourceChangePayload {
-	if x, ok := x.GetPayload().(*OptimusChangeEvent_ResourceChange); ok {
-		return x.ResourceChange
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func (x *OptimusChangeEvent) GetJobRun() *JobRunPayload {
-	if x, ok := x.GetPayload().(*OptimusChangeEvent_JobRun); ok {
-		return x.JobRun
-	}
-	return nil
-}
+func (x *OptimusChangeEvent) GetJobRun() *JobRunPayload { _ = "STUB: not implemented"; return nil }
 
 func (x *OptimusChangeEvent) GetJobStateChange() *JobStateChangePayload {
-	if x, ok := x.GetPayload().(*OptimusChangeEvent_JobStateChange); ok {
-		return x.JobStateChange
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
@@ -472,13 +322,22 @@ type OptimusChangeEvent_JobStateChange struct {
 	JobStateChange *JobStateChangePayload `protobuf:"bytes,9,opt,name=job_state_change,json=jobStateChange,proto3,oneof"`
 }
 
-func (*OptimusChangeEvent_JobChange) isOptimusChangeEvent_Payload() {}
+func (*OptimusChangeEvent_JobChange) isOptimusChangeEvent_Payload() {
+	_ = "STUB: not implemented"
+	return
+}
 
-func (*OptimusChangeEvent_ResourceChange) isOptimusChangeEvent_Payload() {}
+func (*OptimusChangeEvent_ResourceChange) isOptimusChangeEvent_Payload() {
+	_ = "STUB: not implemented"
+	return
+}
 
-func (*OptimusChangeEvent_JobRun) isOptimusChangeEvent_Payload() {}
+func (*OptimusChangeEvent_JobRun) isOptimusChangeEvent_Payload() { _ = "STUB: not implemented"; return }
 
-func (*OptimusChangeEvent_JobStateChange) isOptimusChangeEvent_Payload() {}
+func (*OptimusChangeEvent_JobStateChange) isOptimusChangeEvent_Payload() {
+	_ = "STUB: not implemented"
+	return
+}
 
 var File_raystack_optimus_integration_v1beta1_event_proto protoreflect.FileDescriptor
 
@@ -612,10 +471,8 @@ var (
 )
 
 func file_raystack_optimus_integration_v1beta1_event_proto_rawDescGZIP() []byte {
-	file_raystack_optimus_integration_v1beta1_event_proto_rawDescOnce.Do(func() {
-		file_raystack_optimus_integration_v1beta1_event_proto_rawDescData = protoimpl.X.CompressGZIP(file_raystack_optimus_integration_v1beta1_event_proto_rawDescData)
-	})
-	return file_raystack_optimus_integration_v1beta1_event_proto_rawDescData
+	_ = "STUB: not implemented"
+	return nil
 }
 
 var file_raystack_optimus_integration_v1beta1_event_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
@@ -653,94 +510,6 @@ var file_raystack_optimus_integration_v1beta1_event_proto_depIdxs = []int32{
 
 func init() { file_raystack_optimus_integration_v1beta1_event_proto_init() }
 func file_raystack_optimus_integration_v1beta1_event_proto_init() {
-	if File_raystack_optimus_integration_v1beta1_event_proto != nil {
-		return
-	}
-	if !protoimpl.UnsafeEnabled {
-		file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ResourceChangePayload); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobChangePayload); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobRunPayload); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*JobStateChangePayload); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OptimusChangeEvent); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
-	file_raystack_optimus_integration_v1beta1_event_proto_msgTypes[4].OneofWrappers = []interface{}{
-		(*OptimusChangeEvent_JobChange)(nil),
-		(*OptimusChangeEvent_ResourceChange)(nil),
-		(*OptimusChangeEvent_JobRun)(nil),
-		(*OptimusChangeEvent_JobStateChange)(nil),
-	}
-	type x struct{}
-	out := protoimpl.TypeBuilder{
-		File: protoimpl.DescBuilder{
-			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_raystack_optimus_integration_v1beta1_event_proto_rawDesc,
-			NumEnums:      1,
-			NumMessages:   5,
-			NumExtensions: 0,
-			NumServices:   0,
-		},
-		GoTypes:           file_raystack_optimus_integration_v1beta1_event_proto_goTypes,
-		DependencyIndexes: file_raystack_optimus_integration_v1beta1_event_proto_depIdxs,
-		EnumInfos:         file_raystack_optimus_integration_v1beta1_event_proto_enumTypes,
-		MessageInfos:      file_raystack_optimus_integration_v1beta1_event_proto_msgTypes,
-	}.Build()
-	File_raystack_optimus_integration_v1beta1_event_proto = out.File
-	file_raystack_optimus_integration_v1beta1_event_proto_rawDesc = nil
-	file_raystack_optimus_integration_v1beta1_event_proto_goTypes = nil
-	file_raystack_optimus_integration_v1beta1_event_proto_depIdxs = nil
+	_ = "STUB: not implemented"
+	return
 }

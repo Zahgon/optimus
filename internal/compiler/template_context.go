@@ -1,11 +1,5 @@
 package compiler
 
-import (
-	"fmt"
-
-	"github.com/raystack/optimus/internal/utils"
-)
-
 type ContextOpts struct {
 	conf   map[string]string
 	prefix string
@@ -14,59 +8,31 @@ type ContextOpts struct {
 }
 
 func PrepareContext(builders ...ContextOpts) map[string]interface{} {
-	contextMap := map[string]interface{}{}
-	for _, b := range builders {
-		if b.name != "" {
-			contextMap[b.name] = b.conf
-		}
-		if b.prefix != "" {
-			utils.AppendToMap(contextMap, prefixKeysOf(b.conf, b.prefix))
-		}
-		if b.append {
-			utils.AppendToMap(contextMap, b.conf)
-		}
-	}
-	return contextMap
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func prefixKeysOf(configMap map[string]string, prefix string) map[string]string {
-	prefixedConfig := map[string]string{}
-	for key, val := range configMap {
-		prefixedConfig[fmt.Sprintf("%s%s", prefix, key)] = val
-	}
-	return prefixedConfig
+	_ = "STUB: not implemented"
+	return nil
 }
 
 func From(confs ...map[string]string) ContextOpts {
-	return ContextOpts{
-		conf:   utils.MergeMaps(confs...),
-		append: false,
-	}
+	_ = "STUB: not implemented"
+	return *new(ContextOpts)
 }
 
 func (b ContextOpts) WithKeyPrefix(prefix string) ContextOpts {
-	return ContextOpts{
-		conf:   b.conf,
-		name:   b.name,
-		append: b.append,
-		prefix: prefix,
-	}
+	_ = "STUB: not implemented"
+	return *new(ContextOpts)
 }
 
 func (b ContextOpts) WithName(name string) ContextOpts {
-	return ContextOpts{
-		conf:   b.conf,
-		prefix: b.prefix,
-		append: b.append,
-		name:   name,
-	}
+	_ = "STUB: not implemented"
+	return *new(ContextOpts)
 }
 
 func (b ContextOpts) AddToContext() ContextOpts {
-	return ContextOpts{
-		conf:   b.conf,
-		prefix: b.prefix,
-		name:   b.name,
-		append: true,
-	}
+	_ = "STUB: not implemented"
+	return *new(ContextOpts)
 }

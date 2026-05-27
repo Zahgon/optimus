@@ -10,12 +10,7 @@ type Upstreams struct {
 	Upstreams []Upstream
 }
 
-func (u Upstreams) Empty() bool {
-	if len(u.HTTP) == 0 && len(u.Upstreams) == 0 {
-		return true
-	}
-	return false
-}
+func (u Upstreams) Empty() bool { _ = "STUB: not implemented"; return false }
 
 type Upstream struct {
 	JobName  string
@@ -25,24 +20,6 @@ type Upstream struct {
 }
 
 func SetupUpstreams(upstreams scheduler.Upstreams, host string) Upstreams {
-	var ups []Upstream
-	for _, u := range upstreams.UpstreamJobs {
-		var upstreamHost string
-		if !u.External {
-			upstreamHost = host
-		} else {
-			upstreamHost = u.Host
-		}
-		upstream := Upstream{
-			JobName:  u.JobName,
-			Tenant:   u.Tenant,
-			Host:     upstreamHost,
-			TaskName: u.TaskName,
-		}
-		ups = append(ups, upstream)
-	}
-	return Upstreams{
-		HTTP:      upstreams.HTTP,
-		Upstreams: ups,
-	}
+	_ = "STUB: not implemented"
+	return *new(Upstreams)
 }

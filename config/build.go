@@ -1,7 +1,5 @@
 package config
 
-import "os"
-
 const (
 	ServerName = "optimus"
 	ClientName = "optimus-cli"
@@ -15,9 +13,4 @@ var (
 )
 
 // AppName returns the name used as identifier in telemetry
-func AppName() string {
-	if len(os.Args) > 1 && os.Args[1] == "serve" {
-		return ServerName
-	}
-	return ClientName
-}
+func AppName() string { _ = "STUB: not implemented"; return "" }

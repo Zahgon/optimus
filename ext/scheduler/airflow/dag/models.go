@@ -1,11 +1,8 @@
 package dag
 
 import (
-	"time"
-
 	"github.com/raystack/optimus/core/scheduler"
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 	"github.com/raystack/optimus/sdk/plugin"
 )
 
@@ -37,18 +34,8 @@ type Task struct {
 }
 
 func PrepareTask(job *scheduler.Job, pluginRepo PluginRepo) (Task, error) {
-	plugin, err := pluginRepo.GetByName(job.Task.Name)
-	if err != nil {
-		return Task{}, errors.NotFound(EntitySchedulerAirflow, "plugin not found for "+job.Task.Name)
-	}
-
-	info := plugin.Info()
-
-	return Task{
-		Name:       info.Name,
-		Image:      info.Image,
-		Entrypoint: info.Entrypoint,
-	}, nil
+	_ = "STUB: not implemented"
+	return *new(Task), nil
 }
 
 type Hook struct {
@@ -65,49 +52,14 @@ type Hooks struct {
 	Dependencies map[string]string
 }
 
-func (h Hooks) List() []Hook { //nolint: gocritic
-	list := h.Pre
-	list = append(list, h.Post...)
-	list = append(list, h.Fail...)
-	return list
+func (h Hooks) List() []Hook {
+	_ = "STUB: not implemented" //nolint: gocritic
+	return nil
 }
 
 func PrepareHooksForJob(job *scheduler.Job, pluginRepo PluginRepo) (Hooks, error) {
-	var hooks Hooks
-	hooks.Dependencies = map[string]string{}
-
-	for _, h := range job.Hooks {
-		hook, err := pluginRepo.GetByName(h.Name)
-		if err != nil {
-			return Hooks{}, errors.NotFound("schedulerAirflow", "hook not found for name "+h.Name)
-		}
-
-		info := hook.Info()
-		hk := Hook{
-			Name:       h.Name,
-			Image:      info.Image,
-			Entrypoint: info.Entrypoint,
-		}
-		switch info.HookType {
-		case plugin.HookTypePre:
-			hooks.Pre = append(hooks.Pre, hk)
-		case plugin.HookTypePost:
-			hooks.Post = append(hooks.Post, hk)
-		case plugin.HookTypeFail:
-			hk.IsFailHook = true
-			hooks.Fail = append(hooks.Fail, hk)
-		}
-
-		for _, before := range info.DependsOn {
-			_, err = job.GetHook(before)
-			if err != nil {
-				continue
-			}
-			hooks.Dependencies[before] = h.Name
-		}
-	}
-
-	return hooks, nil
+	_ = "STUB: not implemented"
+	return *new(Hooks), nil
 }
 
 type RuntimeConfig struct {
@@ -116,13 +68,8 @@ type RuntimeConfig struct {
 }
 
 func SetupRuntimeConfig(jobDetails *scheduler.JobWithDetails) RuntimeConfig {
-	runtimeConf := RuntimeConfig{
-		Airflow: ToAirflowConfig(jobDetails.RuntimeConfig.Scheduler),
-	}
-	if resource := ToResource(jobDetails.RuntimeConfig.Resource); resource != nil {
-		runtimeConf.Resource = resource
-	}
-	return runtimeConf
+	_ = "STUB: not implemented"
+	return *new(RuntimeConfig)
 }
 
 type Resource struct {
@@ -130,24 +77,7 @@ type Resource struct {
 	Limit   *ResourceConfig
 }
 
-func ToResource(resource *scheduler.Resource) *Resource {
-	if resource == nil {
-		return nil
-	}
-	req := ToResourceConfig(resource.Request)
-	limit := ToResourceConfig(resource.Limit)
-	if req == nil && limit == nil {
-		return nil
-	}
-	res := &Resource{}
-	if req != nil {
-		res.Request = req
-	}
-	if limit != nil {
-		res.Limit = limit
-	}
-	return res
-}
+func ToResource(resource *scheduler.Resource) *Resource { _ = "STUB: not implemented"; return nil }
 
 type ResourceConfig struct {
 	CPU    string
@@ -155,16 +85,8 @@ type ResourceConfig struct {
 }
 
 func ToResourceConfig(config *scheduler.ResourceConfig) *ResourceConfig {
-	if config == nil {
-		return nil
-	}
-	if config.CPU == "" && config.Memory == "" {
-		return nil
-	}
-	return &ResourceConfig{
-		CPU:    config.CPU,
-		Memory: config.Memory,
-	}
+	_ = "STUB: not implemented"
+	return nil
 }
 
 type AirflowConfig struct {
@@ -173,31 +95,13 @@ type AirflowConfig struct {
 }
 
 func ToAirflowConfig(schedulerConf map[string]string) AirflowConfig {
-	conf := AirflowConfig{}
-	if pool, ok := schedulerConf["pool"]; ok {
-		conf.Pool = pool
-	}
-	if queue, ok := schedulerConf["queue"]; ok {
-		conf.Queue = queue
-	}
-	return conf
+	_ = "STUB: not implemented"
+	return *new(AirflowConfig)
 }
 
 func SLAMissDuration(job *scheduler.JobWithDetails) (int64, error) {
-	var slaMissDurationInSec int64
-	for _, notify := range job.Alerts { // We are ranging and picking one value
-		if notify.On == scheduler.EventCategorySLAMiss {
-			duration, ok := notify.Config["duration"]
-			if !ok {
-				continue
-			}
-
-			dur, err := time.ParseDuration(duration)
-			if err != nil {
-				return 0, errors.InvalidArgument(EntitySchedulerAirflow, "failed to parse sla_miss duration "+duration)
-			}
-			slaMissDurationInSec = int64(dur.Seconds())
-		}
-	}
-	return slaMissDurationInSec, nil
+	_ = "STUB: not implemented"
+	return 0, nil
 }
+
+// We are ranging and picking one value

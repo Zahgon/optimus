@@ -1,11 +1,7 @@
 package resource
 
 import (
-	"reflect"
-	"strings"
-
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 const (
@@ -21,17 +17,9 @@ type Metadata struct {
 
 type Name string
 
-func NameFrom(name string) (Name, error) {
-	if name == "" {
-		return "", errors.InvalidArgument(EntityResource, "resource name is empty")
-	}
+func NameFrom(name string) (Name, error) { _ = "STUB: not implemented"; return *new(Name), nil }
 
-	return Name(name), nil
-}
-
-func (n Name) String() string {
-	return string(n)
-}
+func (n Name) String() string { _ = "STUB: not implemented"; return "" }
 
 type Resource struct {
 	name Name
@@ -49,126 +37,44 @@ type Resource struct {
 }
 
 func NewResource(fullName, kind string, store Store, tnnt tenant.Tenant, meta *Metadata, spec map[string]any) (*Resource, error) {
-	name, err := NameFrom(fullName)
-	if err != nil {
-		return nil, err
-	}
-
-	if len(spec) == 0 {
-		return nil, errors.InvalidArgument(EntityResource, "empty resource spec for "+fullName)
-	}
-
-	if meta == nil {
-		return nil, errors.InvalidArgument(EntityResource, "empty resource metadata for "+fullName)
-	}
-
-	return &Resource{
-		name:     name,
-		kind:     kind,
-		store:    store,
-		tenant:   tnnt,
-		spec:     spec,
-		metadata: meta,
-		status:   StatusUnknown,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func (r *Resource) Name() Name {
-	return r.name
-}
+func (r *Resource) Name() Name { _ = "STUB: not implemented"; return *new(Name) }
 
-func (r *Resource) FullName() string {
-	return r.name.String()
-}
+func (r *Resource) FullName() string { _ = "STUB: not implemented"; return "" }
 
-func (r *Resource) URN() string {
-	return r.urn
-}
+func (r *Resource) URN() string { _ = "STUB: not implemented"; return "" }
 
-func (r *Resource) UpdateURN(urn string) error {
-	if r.urn == "" {
-		r.urn = urn
-		return nil
-	}
+func (r *Resource) UpdateURN(urn string) error { _ = "STUB: not implemented"; return nil }
 
-	return errors.InvalidArgument(EntityResource, "urn already present for "+r.FullName())
-}
+func (r *Resource) UpdateTenant(tnnt tenant.Tenant) { _ = "STUB: not implemented"; return }
 
-func (r *Resource) UpdateTenant(tnnt tenant.Tenant) {
-	r.tenant = tnnt
-}
+func (r *Resource) Metadata() *Metadata { _ = "STUB: not implemented"; return nil }
 
-func (r *Resource) Metadata() *Metadata {
-	return r.metadata
-}
+func (r *Resource) NameSections() []string { _ = "STUB: not implemented"; return nil }
 
-func (r *Resource) NameSections() []string {
-	return strings.Split(r.name.String(), nameSectionSeparator)
-}
+func (r *Resource) Kind() string { _ = "STUB: not implemented"; return "" }
 
-func (r *Resource) Kind() string {
-	return r.kind
-}
+func (r *Resource) Tenant() tenant.Tenant { _ = "STUB: not implemented"; return *new(tenant.Tenant) }
 
-func (r *Resource) Tenant() tenant.Tenant {
-	return r.tenant
-}
+func (r *Resource) Store() Store { _ = "STUB: not implemented"; return *new(Store) }
 
-func (r *Resource) Store() Store {
-	return r.store
-}
+func (r *Resource) Status() Status { _ = "STUB: not implemented"; return *new(Status) }
 
-func (r *Resource) Status() Status {
-	return r.status
-}
+func (r *Resource) Spec() map[string]any { _ = "STUB: not implemented"; return nil }
 
-func (r *Resource) Spec() map[string]any {
-	return r.spec
-}
-
-func (r *Resource) Equal(incoming *Resource) bool {
-	if r == nil || incoming == nil {
-		return r == nil && incoming == nil
-	}
-	if r.name != incoming.name {
-		return false
-	}
-	if r.kind != incoming.kind {
-		return false
-	}
-	if r.store != incoming.store {
-		return false
-	}
-	if !reflect.DeepEqual(r.tenant, incoming.tenant) {
-		return false
-	}
-	if !reflect.DeepEqual(r.spec, incoming.spec) {
-		return false
-	}
-	return reflect.DeepEqual(r.metadata, incoming.metadata)
-}
+func (r *Resource) Equal(incoming *Resource) bool { _ = "STUB: not implemented"; return false }
 
 type FromExistingOpt func(r *Resource)
 
 func ReplaceStatus(status Status) FromExistingOpt {
-	return func(r *Resource) {
-		r.status = status
-	}
+	_ = "STUB: not implemented"
+	return *new(FromExistingOpt)
 }
 
 func FromExisting(existing *Resource, opts ...FromExistingOpt) *Resource {
-	output := &Resource{
-		name:     existing.name,
-		kind:     existing.kind,
-		store:    existing.store,
-		tenant:   existing.tenant,
-		spec:     existing.spec,
-		metadata: existing.metadata,
-		urn:      existing.urn,
-		status:   existing.status,
-	}
-	for _, opt := range opts {
-		opt(output)
-	}
-	return output
+	_ = "STUB: not implemented"
+	return nil
 }

@@ -6,7 +6,6 @@ import (
 	"github.com/google/uuid"
 
 	"github.com/raystack/optimus/core/tenant"
-	"github.com/raystack/optimus/internal/errors"
 )
 
 const (
@@ -16,28 +15,15 @@ const (
 type BackupID uuid.UUID
 
 func BackupIDFrom(id string) (BackupID, error) {
-	parsedID, err := uuid.Parse(id)
-	if err != nil {
-		return BackupID(uuid.Nil), errors.InvalidArgument(EntityBackup, "invalid id for backup "+id)
-	}
-	if parsedID == uuid.Nil {
-		return BackupID(uuid.Nil), errors.InvalidArgument(EntityBackup, "nil id for backup "+id)
-	}
-
-	return BackupID(parsedID), nil
+	_ = "STUB: not implemented"
+	return *new(BackupID), nil
 }
 
-func (i BackupID) String() string {
-	return i.UUID().String()
-}
+func (i BackupID) String() string { _ = "STUB: not implemented"; return "" }
 
-func (i BackupID) IsInvalid() bool {
-	return i.UUID() == uuid.Nil
-}
+func (i BackupID) IsInvalid() bool { _ = "STUB: not implemented"; return false }
 
-func (i BackupID) UUID() uuid.UUID {
-	return uuid.UUID(i)
-}
+func (i BackupID) UUID() uuid.UUID { _ = "STUB: not implemented"; return *new(uuid.UUID) }
 
 type IgnoredResource struct {
 	Name   string
@@ -63,76 +49,27 @@ type Backup struct {
 }
 
 func NewBackup(store Store, t tenant.Tenant, resNames []string, desc string, createdAt time.Time, conf map[string]string) (*Backup, error) {
-	if len(resNames) == 0 {
-		return nil, errors.InvalidArgument(EntityBackup, "list of resources to backup is empty")
-	}
-
-	for _, resourceName := range resNames {
-		if resourceName == "" {
-			return nil, errors.InvalidArgument(EntityBackup, "one of resource names is empty")
-		}
-	}
-
-	if conf == nil {
-		conf = map[string]string{}
-	}
-
-	return &Backup{
-		store:         store,
-		tenant:        t,
-		resourceNames: resNames,
-		description:   desc,
-		createdAt:     createdAt,
-		config:        conf,
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (b *Backup) GetConfigOrDefaultFor(key, fallback string) string {
-	value, ok := b.config[key]
-	if ok {
-		return value
-	}
-
-	b.config[key] = fallback
-	return fallback
+	_ = "STUB: not implemented"
+	return ""
 }
 
-func (b *Backup) UpdateID(id uuid.UUID) error {
-	if id == uuid.Nil {
-		return errors.InvalidArgument(EntityBackup, "id to update is invalid")
-	}
+func (b *Backup) UpdateID(id uuid.UUID) error { _ = "STUB: not implemented"; return nil }
 
-	if !b.id.IsInvalid() {
-		return errors.InvalidStateTransition(EntityBackup, "trying to replace valid id "+b.id.String())
-	}
-	b.id = BackupID(id)
-	return nil
-}
+func (b *Backup) ID() BackupID { _ = "STUB: not implemented"; return *new(BackupID) }
 
-func (b *Backup) ID() BackupID {
-	return b.id
-}
+func (b *Backup) Store() Store { _ = "STUB: not implemented"; return *new(Store) }
 
-func (b *Backup) Store() Store {
-	return b.store
-}
+func (b *Backup) Tenant() tenant.Tenant { _ = "STUB: not implemented"; return *new(tenant.Tenant) }
 
-func (b *Backup) Tenant() tenant.Tenant {
-	return b.tenant
-}
+func (b *Backup) ResourceNames() []string { _ = "STUB: not implemented"; return nil }
 
-func (b *Backup) ResourceNames() []string {
-	return b.resourceNames
-}
+func (b *Backup) Description() string { _ = "STUB: not implemented"; return "" }
 
-func (b *Backup) Description() string {
-	return b.description
-}
+func (b *Backup) CreatedAt() time.Time { _ = "STUB: not implemented"; return *new(time.Time) }
 
-func (b *Backup) CreatedAt() time.Time {
-	return b.createdAt
-}
-
-func (b *Backup) Config() map[string]string {
-	return b.config
-}
+func (b *Backup) Config() map[string]string { _ = "STUB: not implemented"; return nil }

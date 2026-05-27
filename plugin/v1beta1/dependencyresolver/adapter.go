@@ -5,50 +5,16 @@ import (
 	"github.com/raystack/optimus/sdk/plugin"
 )
 
-func adaptConfigsToProto(c plugin.Configs) *pb.Configs {
-	tc := &pb.Configs{
-		Configs: []*pb.Configs_Config{},
-	}
-	for _, c := range c {
-		tc.Configs = append(tc.Configs, &pb.Configs_Config{
-			Name:  c.Name,
-			Value: c.Value,
-		})
-	}
-	return tc
-}
+func adaptConfigsToProto(c plugin.Configs) *pb.Configs { _ = "STUB: not implemented"; return nil }
 
 func adaptConfigsFromProto(a *pb.Configs) plugin.Configs {
-	tc := plugin.Configs{}
-	for _, c := range a.Configs {
-		tc = append(tc, plugin.Config{
-			Name:  c.Name,
-			Value: c.Value,
-		})
-	}
-	return tc
+	_ = "STUB: not implemented"
+	return *new(plugin.Configs)
 }
 
-func adaptAssetsToProto(a plugin.Assets) *pb.Assets {
-	tc := &pb.Assets{
-		Assets: []*pb.Assets_Asset{},
-	}
-	for _, c := range a {
-		tc.Assets = append(tc.Assets, &pb.Assets_Asset{
-			Name:  c.Name,
-			Value: c.Value,
-		})
-	}
-	return tc
-}
+func adaptAssetsToProto(a plugin.Assets) *pb.Assets { _ = "STUB: not implemented"; return nil }
 
 func adaptAssetsFromProto(a *pb.Assets) plugin.Assets {
-	tc := plugin.Assets{}
-	for _, c := range a.Assets {
-		tc = append(tc, plugin.Asset{
-			Name:  c.Name,
-			Value: c.Value,
-		})
-	}
-	return tc
+	_ = "STUB: not implemented"
+	return *new(plugin.Assets)
 }

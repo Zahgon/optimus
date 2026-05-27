@@ -1,8 +1,6 @@
 package factory
 
 import (
-	"fmt"
-
 	"github.com/raystack/optimus/client/extension/model"
 )
 
@@ -19,32 +17,12 @@ type ClientFactory struct {
 
 // Add adds client based on provider
 func (c *ClientFactory) Add(provider string, newClient model.Client) error {
-	if provider == "" {
-		return model.ErrEmptyProvider
-	}
-	if newClient == nil {
-		return fmt.Errorf("[%s] newClient is nil", provider)
-	}
-	if c.registry == nil {
-		c.registry = make(map[string]model.Client)
-	}
-	if c.registry[provider] != nil {
-		return fmt.Errorf("[%s] is already registered", provider)
-	}
-	c.registry[provider] = newClient
+	_ = "STUB: not implemented"
 	return nil
 }
 
 // Get gets client for a specified provider
 func (c *ClientFactory) Get(provider string) (model.Client, error) {
-	if provider == "" {
-		return nil, model.ErrEmptyProvider
-	}
-	if c.registry == nil {
-		c.registry = make(map[string]model.Client)
-	}
-	if c.registry[provider] == nil {
-		return nil, fmt.Errorf("[%s] is not registered", provider)
-	}
-	return c.registry[provider], nil
+	_ = "STUB: not implemented"
+	return *new(model.Client), nil
 }

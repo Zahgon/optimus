@@ -13,15 +13,11 @@ type replaceAllJobSpecificationsResponseWriter struct {
 }
 
 func NewReplaceAllJobSpecificationsResponseWriter(stream pb.JobSpecificationService_ReplaceAllJobSpecificationsServer) ReplaceAllJobSpecificationsResponseWriter {
-	return &replaceAllJobSpecificationsResponseWriter{
-		stream: stream,
-	}
+	_ = "STUB: not implemented"
+	return *new(ReplaceAllJobSpecificationsResponseWriter)
 }
 
 func (s *replaceAllJobSpecificationsResponseWriter) Write(level LogLevel, message string) error {
-	logStatus := newLogStatusProto(level, message)
-	resp := pb.ReplaceAllJobSpecificationsResponse{
-		LogStatus: logStatus,
-	}
-	return s.stream.Send(&resp)
+	_ = "STUB: not implemented"
+	return nil
 }

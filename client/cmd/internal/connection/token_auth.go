@@ -2,7 +2,6 @@ package connection
 
 import (
 	"context"
-	"fmt"
 )
 
 type bearerAuthentication struct {
@@ -10,11 +9,11 @@ type bearerAuthentication struct {
 }
 
 func (a *bearerAuthentication) GetRequestMetadata(context.Context, ...string) (map[string]string, error) {
-	return map[string]string{
-		"Authorization": fmt.Sprintf("Bearer %s", a.Token),
-	}, nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
 func (*bearerAuthentication) RequireTransportSecurity() bool {
+	_ = "STUB: not implemented"
 	return false
 }
